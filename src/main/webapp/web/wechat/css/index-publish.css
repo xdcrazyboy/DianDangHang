@@ -1,0 +1,16 @@
+.publish-wrapper{
+    background: #eee;
+    overflow: hidden;
+}
+.publish-wrapper .publish-label-image{
+    float: left;
+}
+.publish-wrapper .publish-label-text{
+    float: left;
+}
+.publish-wrapper .publish-label-image img{
+    width:20px;
+    margin-right:5px;
+    margin-top: 3px;
+    display:block
+}

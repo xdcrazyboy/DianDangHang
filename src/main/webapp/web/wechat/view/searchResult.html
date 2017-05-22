@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "搜索结果"})
+    <!-- common head and css -->
+
+    <!-- for goods item css -->
+    <link rel="stylesheet" href="../css/task-item-style.css" />
+    <link rel="stylesheet" href="../css/loading-style.css" />
+
+    <!-- for load more -->
+    <link rel="stylesheet" href="../../common/css/pullToRefresh.css" />
+
+</head>
+<body>
+
+<div id="data" style="display: none">
+    @@include("include/common-task-item.html")
+</div>
+
+
+<div id="wrapper">
+    <ul></ul>
+</div>
+
+
+<!-- for jquery -->
+<script src="../../common/js/jquery-2.1.4.js"></script>
+
+<!-- for load more -->
+<script src="../../common/js/iscroll.js"></script>
+<script src="../../common/js/pullToRefresh.js"></script>
+
+<!-- for implement refresh goods -->
+<script src="../js/task-list-with-refresh.js"></script>
+
+</body>
+</html>

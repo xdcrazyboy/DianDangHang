@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "时间典当行"})
+    <!-- common head and css -->
+
+    <!-- zhao jinbo -->
+    <link rel="stylesheet" href="../css/index-main.css">
+    <link rel="stylesheet" href="../css/personcenter.css">
+    <!-- zhao jinbo -->
+
+    <!-- ALISURE -->
+    <link rel="stylesheet" href="../css/index-publish.css">
+    <link rel="stylesheet" href="../css/task-item-style.css" />
+    <!-- ALISURE -->
+
+</head>
+
+<body>
+
+    <div class="weui-tab">
+
+        <!--页面内容-->
+        <div class="weui-tab__bd index-bottom-margin">
+
+            <!--首页-->
+            <div id="tab1" class="index-body weui-tab__bd-item weui-tab__bd-item--active">
+
+                <!-- ALISURE 2017-05-21 搜索框-->
+                @@include("include/index-search.html", {"info": "this is info."})
+                <!-- ALISURE 2017-05-21 搜索框-->
+
+                <!-- ALISURE 2017-05-21 任务类型、任务排序、任务列表-->
+                @@include("include/index-task.html", {"info": "this is info."})
+                <!-- ALISURE 2017-05-21 任务类型、任务排序、任务列表-->
+
+            </div>
+            <!--首页-->
+
+            <!--发布-->
+            <div id="tab2" class="weui-tab__bd-item">
+                <!-- 2017-05-21 ALISURE 发布页面， 复制的整个publish页面的html部分-->
+                @@include("include/index-publish.html", {"info": "this is info."})
+                <!-- 2017-05-21 ALISURE 发布页面， 复制的整个publish页面的html部分-->
+            </div>
+            <!--发布-->
+
+            <!--个人中心-->
+            <div id="tab3" class="weui-tab__bd-item">
+                <!-- 2017-05-16 个人中心页面帮你弄过来了-->
+                @@include("include/index-user.html", {"info": "this is info."})
+                <!-- 2017-05-16 个人中心页面帮你弄过来了-->
+            </div>
+            <!--个人中心-->
+
+        </div>
+        <!--页面内容-->
+
+        <!-- 底部 菜单 -->
+        @@include("include/index-menu.html", {"info": "this is info."})
+        <!-- 底部 菜单 -->
+
+    </div>
+
+
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
+
+    <!-- zhao jinbo -->
+    <script src="../../common/js/city-picker.js"></script>
+    <!-- zhao jinbo -->
+
+    <!-- ALISURE -->
+    <script src="../js/index-search.js"></script>
+    <script src="../js/index-task-list.js"></script>
+    <script src="../js/index-publish.js"></script>
+    <!-- ALISURE -->
+
+</body>
+
+</html>

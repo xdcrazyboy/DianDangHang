@@ -1,0 +1,58 @@
+
+<!--任务类型-->
+<div class="index-task-type">
+    <div class="index-task-type-bar">
+        <div><img src="../img/index/task-type-4.png"></div>
+        <div class="index-task-type-bar-name">任务类型</div>
+    </div>
+    <div id="indexTaskTypeData" style="display: none">
+        <div class="index-task-type-item" data-id="1">
+            <img src="../img/index/task-type-2.png" alt="">
+            <p class="index-task-type-label">学习</p>
+        </div>
+    </div>
+    <div class="index-task-type-body">
+        <div id="indexTaskTypeDataWrapper" class="index-task-type-tabbar"></div>
+    </div>
+</div>
+<!--任务类型-->
+
+<!--任务列表-->
+<div class="index-main">
+
+    <!-- 排序 -->
+    <div class="index-main-sort">
+        <div class="sort-content">
+            <div id="indexSort" class="sort-left">
+                <div class="current" data-id="1">默认排序</div>
+                <div data-id="2">按金币</div>
+                <div data-id="3">按时间</div>
+            </div>
+            <div id="indexSortRight" class="sort-right">
+                <div class="page-refresh"><img src="../img/index/refresh.png"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 排序 -->
+
+    <!-- 任务列表 -->
+    <div>
+        <!-- HTML 数据 -->
+        <div id="taskData" style="display: none">
+            @@include("common-task-item.html")
+        </div>
+        <!-- HTML 数据 -->
+        <div id="taskWrapper" style="background-color: #ffffff">
+            <ul id="task-list">
+
+            </ul>
+            <div id="task-load-more" class="weui-loadmore">
+                <i class="weui-loading"></i>
+                <span class="weui-loadmore__tips">正在加载</span>
+            </div>
+        </div>
+    </div>
+    <!-- 任务列表 -->
+
+</div>
+<!--任务列表-->

@@ -1,0 +1,102 @@
+/*强调色*/
+/*输入框的颜色*/
+/*按钮的颜色*/
+/*item的颜色*/
+/*搜索提示内容的颜色*/
+.goods-wrapper {
+  width: 100%;
+}
+.goods-wrapper .content {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 5px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0px;
+  overflow: hidden;
+}
+.goods-wrapper .left-user {
+  flex: 0 0;
+  padding: 10px;
+}
+.goods-wrapper .right-goods {
+  flex: 1 1;
+  padding: 10px 5px;
+}
+.goods-wrapper .left-user .image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+}
+.goods-wrapper .left-user .money {
+  text-align: right;
+  margin: 2px 0;
+}
+.goods-wrapper .left-user .money img {
+  width: 12px;
+  height: 12px;
+  float: right;
+  margin-left: 3px;
+  margin-right: 17px;
+  margin-top: 3px;
+}
+.goods-wrapper .left-user .name {
+  text-align: center;
+}
+.goods-wrapper .right-goods .top {
+  overflow: hidden;
+}
+.goods-wrapper .right-goods .bottom {
+  overflow: hidden;
+}
+.goods-wrapper .right-goods .type {
+  border: 1px solid #e5e5e5;
+  padding: 2px 6px 1px;
+  background: #e5e5e5;
+  border-radius: 5px;
+  font-size: 12px;
+  float: left;
+}
+.goods-wrapper .right-goods .title {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #000000;
+  line-height: 21px;
+  padding-top: 1px;
+  max-height: 21px;
+  float: left;
+  overflow: hidden;
+}
+.goods-wrapper .right-goods .time {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #999999;
+}
+.goods-wrapper .right-goods .describe {
+  margin: 0px 0 5px;
+  font-size: 14px;
+  color: #000000;
+}
+.goods-wrapper .right-goods .describe p {
+  max-height: 44px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.goods-wrapper .right-goods .place {
+  float: left;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px;
+  padding: 1px 0;
+}
+.goods-wrapper .right-goods .operation {
+  float: right;
+  border: 1px solid #e5e5e5;
+  margin-top: 2px;
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 1px 8px;
+  background: #33cc00;
+  border-radius: 5px;
+}

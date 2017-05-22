@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "任务详情"})
+    <!-- common head and css -->
+
+    <!-- ALISURE -->
+    <link rel="stylesheet" href="../css/task-main.css">
+    <!-- ALISURE -->
+</head>
+<body>
+
+    <div class="publish-wrapper">
+        <!-- 任务名称 -->
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd"><p>任务名称</p></div>
+                <div id="task-name" class="weui-cell__ft"></div>
+            </div>
+        </div>
+
+        <!--任务文本-->
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd"><p>任务描述</p></div>
+            </div>
+            <div class="weui-cell">
+                <div class="publish-task-describe" id="task-describe"></div>
+            </div>
+        </div>
+
+        <!--私密信息-->
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd"><p>私密信息（只有当接手任务后才可见）</p></div>
+            </div>
+            <div class="weui-cell">
+                <div class="publish-task-describe" id="task-secret"></div>
+            </div>
+        </div>
+
+        <!--图片-->
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <!--图片-->
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title">图片</p>
+                            <div class="weui-uploader__info" id="uploaderFiles-num"></div>
+                        </div>
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--填写区域一-->
+        <div class="weui-cells">
+            <!--开始时间-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/time.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>开始时间</p>
+                </div>
+                <div class="weui-cell__ft" id="task-time-begin"></div>
+            </div>
+            <!--结束时间-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/time.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>结束时间</p>
+                </div>
+                <div class="weui-cell__ft" id="task-time-end"></div>
+            </div>
+            <!--类型-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/type.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>类型</p>
+                </div>
+                <div class="weui-cell__ft" id="task-type"></div>
+            </div>
+            <!--地点-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/place.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>地点</p>
+                </div>
+                <div class="weui-cell__ft" id="task-place"></div>
+            </div>
+            <!--金币-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/money.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>金币</p>
+                </div>
+                <div class="weui-cell__ft" id="task-money">0</div>
+            </div>
+        </div>
+
+        <!--填写区域二-->
+        <div class="weui-cells">
+            <!--酬劳-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/other-money.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>酬劳</p>
+                </div>
+                <div class="weui-cell__ft" id="task-other-money"></div>
+            </div>
+            <!--联系方式-选择-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/link.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p>联系方式</p>
+                </div>
+                <div class="weui-cell__ft" id="task-link-select"></div>
+            </div>
+            <!--联系方式-填写-->
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/link.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd">
+                    <p id="task-link-method"></p>
+                </div>
+                <div class="weui-cell__ft" id="task-link-content"></div>
+            </div>
+        </div>
+
+        <!--接手按钮-->
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="accept-task">接手</a>
+        </div>
+
+        <!--空白-->
+        <div style="margin-top: 1.17647059em"></div>
+    </div>
+
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
+
+    <!-- ALISURE -->
+    <script src="../js/task-main.js"></script>
+    <!-- ALISURE -->
+</body>
+</html>

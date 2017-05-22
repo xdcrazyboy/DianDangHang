@@ -1,0 +1,38 @@
+.publish-wrapper{
+    background: #f6f6f6;
+    overflow: hidden;
+}
+.publish-wrapper .publish-label-image{
+    float: left;
+}
+.publish-wrapper .publish-label-text{
+    float: left;
+}
+.publish-wrapper .publish-label-image img{
+    width:20px;
+    margin-right:10px;
+    margin-top: 3px;
+    display:block
+}
+
+.publish-wrapper .publish-task-describe{
+    font-size: 0.9em;
+}
+
+/*图片 swiper 居中*/
+.photo-container{
+    justify-content: center;
+}
+/*不知道为什么 weui 要违背自己的原则， 设置z-index=2 */
+.weui-cells:before{
+    z-index: 0;
+}
+.weui-cell:before{
+    z-index: 0;
+}
+.weui-cell:after{
+    z-index: 0;
+}
+.weui-cells:after{
+    z-index: 0;
+}

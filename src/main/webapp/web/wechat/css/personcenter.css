@@ -1,0 +1,137 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.personal-nav {
+    height: 5%;
+    width: 100%;
+    background-color: #D3E2F8;
+}
+
+.personal-main-top {
+    background: #000 url('../img/personCenter/background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 35%;
+    width: 100%;
+    color: #fff;
+    z-index: -1;
+}
+
+.personal-main-top-blur {
+    filter: blur(10px);
+}
+
+.personal-main-top-body {
+    height: 70%;
+}
+
+.personal-main-top-user {
+    text-align: center;
+}
+
+.personal--main-top-user a {
+    display: block;
+}
+
+.personal-main-top-user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.personal-main-top-money {
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.personal--main-top-username {
+    display: flex;
+    justify-content: center;
+}
+
+.personal--main-top-username img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.personal-main-top-money img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.personal-main-top-tab {
+    background-color: #3FE8C9;
+    opacity: 0.5;
+    height: 22%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vertical-bar-line {
+    width: 0px;
+    border: #fff solid 1px;
+    height: 80%;
+    margin: 5px 0 0;
+    color: #fff;
+}
+
+.personal-main-top-tab-item {
+    padding: 10px 0;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+.personal-main-top-tab_item:active {
+    background-color: #EDEDED;
+    color: #FFFD53;
+}
+
+.personal-main-top-tab-item.personal-main-top-tab-item-on {
+    color: #666;
+    background-color: #f1f1f1;
+}
+
+.personal-main-bottom {
+    height: 60%;
+    width: 100%;
+    color: #cde;
+}
+
+.personal-main-bottom-item {
+    height: 100px;
+    margin: 5px 5px;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+    display: flex;
+}
+
+.personal-main-bottom-item-left {
+    text-align: center;
+}
+
+.personal-main-bottom-item-left img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.personal-main-bottom-item-body {
+    padding: 10px;
+    overflow: hidden;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.personal-main-bottom-item-right {
+    text-align: center;
+}

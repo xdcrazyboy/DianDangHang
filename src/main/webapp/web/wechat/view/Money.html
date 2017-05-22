@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金币</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <!-- for reset css -->
+    <link rel="stylesheet" href="../../common/css/reset.css" />
+
+    <!-- for goods item css -->
+    <link rel="stylesheet" href="../css/money-item-style.css" />
+
+    <!-- for load more -->
+    <link rel="stylesheet" href="../../common/css/pullToRefresh.css" />
+</head>
+<body>
+
+<div id="data" style="display: none">
+    <li class="money-wrapper">
+        <div class="content">
+            <div class="left">
+                <div class="top"></div>
+                <div class="time"></div>
+            </div>
+            <div class="center">
+                <div class="type">
+                    <img src="">
+                </div>
+            </div>
+            <div class="right">
+                <div class="number"></div>
+                <div class="describe"></div>
+            </div>
+        </div>
+    </li>
+</div>
+<style>
+    /*加载样式的颜色*/
+    .loader span:nth-child(1) {
+        background: rgba(200, 200, 200, 0.6);
+    }
+    .loader span:nth-child(2) {
+        background: rgba(150, 150, 150, 0.8);
+    }
+    .loader span:nth-child(3) {
+        background: rgb(100, 100, 100);
+    }
+    .loader span:nth-child(4) {
+        background: rgba(150, 150, 150, 0.8);
+    }
+    .loader span:nth-child(5) {
+        background: rgba(200, 200, 200, 0.6);
+    }
+</style>
+<div id="wrapper">
+    <ul></ul>
+</div>
+
+<!-- for jquery -->
+<script src="../../common/js/jquery-2.1.4.js"></script>
+
+<!-- for load more -->
+<script src="../../common/js/iscroll.js"></script>
+<script src="../../common/js/pullToRefresh.js"></script>
+
+<!-- for implement refresh goods -->
+<script src="../js/money-list-with-refresh.js"></script>
+
+</body>
+</html>

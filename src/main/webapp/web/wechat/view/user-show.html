@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+
+    <title>个人资料</title>
+
+    <link rel="stylesheet" href="../asset/style/weui.css">
+    <link rel="stylesheet" href="../asset/style/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="../asset/style/user.css">
+</head>
+
+<body>
+    <div class="user-info-show" id="user-info-show">
+        <div class="weui-cells">
+            <div class="user-bg user-bg-blur"></div>
+            <div class="weui-cell" id="headPortrait">
+                <div class="weui-cell__hd">
+                    <img class="headimg" src="../asset/images/person-img.jpg">
+                </div>
+                <div class="weui-cell__bd">
+                </div>
+                <div class="weui-cell__ft">会飞的鱼</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>性别</p>
+                </div>
+                <div class="weui-cell__ft" id="user-gender">女</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>地区</p>
+                </div>
+                <div class="weui-cell__ft" id="user-address">陕西 西安</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>学校</p>
+                </div>
+                <div class="weui-cell__ft" id="user-school">西安电子科技大学北校区</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>手机号</p>
+                </div>
+                <div class="weui-cell__ft" id="user-tel">18292574525</div>
+            </div>
+        </div>
+        <div class="weui-cells__title">一卡通或学生证等证件上传</div>
+        <div class="user-card-show" id="user-card-show">
+            <img src="../asset/images/person-card.jpg">
+        </div>
+        <div><a href="javascript:alert( '跳到编辑界面');" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script>
+        $(function() {
+            FastClick.attach(document.body);
+        });
+    </script>
+    <script src="js/jquery-weui.js"></script>
+    <script type="text/javascript" src="../js/user.js" charset="utf-8">
+    </script>
+
+</body>
+
+</html>

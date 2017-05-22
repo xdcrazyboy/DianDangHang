@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "搜索"})
+    <!-- common head and css -->
+
+    <!-- for search css -->
+    <link rel="stylesheet" href="../css/search-page-prompt-style.css" />
+
+</head>
+<body>
+
+    <div class="weui-search-bar weui-search-bar_focusing" id="searchBar">
+        <form class="weui-search-bar__form" id="search-form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" data-default="取快递" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+
+    <div class="search-prompt-wrapper" id="search-prompt">
+        <div class="weui-cells__title">历史搜索</div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div id="search-prompt-history" class="content"></div>
+            </div>
+        </div>
+        <div class="weui-cells__title">常用搜索</div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div id="search-prompt-common" class="content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALISURE -->
+    <script src="../../common/js/jquery-2.1.4.js"></script>
+    <script src="../js/search-page-main.js"></script>
+    <!-- ALISURE -->
+</body>
+</html>

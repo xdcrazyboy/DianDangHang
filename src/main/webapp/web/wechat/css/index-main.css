@@ -1,0 +1,101 @@
+/* 抵消底部菜单的高度 */
+.index-bottom-margin{
+    padding-bottom: 53px;
+}
+
+.index-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.index-task-type {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eee;
+}
+
+.index-task-type .index-task-type-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.index-task-type .index-task-type-bar>div{
+    float: left;
+}
+.index-task-type .index-task-type-bar-name{
+    line-height: 40px;
+    text-align: center;
+    margin-left: 5px;
+}
+.index-task-type .index-task-type-bar img {
+    width: 35px;
+    height: 35px;
+    margin-top: 2.5px;
+    margin-left: 10px;
+}
+
+.index-task-type .index-task-type-body {
+
+}
+.index-task-type .index-task-type-body .index-task-type-tabbar {
+    display: flex;
+    background-color: #fff;
+    overflow: scroll;
+}
+.index-task-type .index-task-type-body .index-task-type-item{
+    padding: 10px 20px;
+    margin: 0px 2px;
+}
+.index-task-type .index-task-type-body .index-task-type-item.current p{
+    color: #33cc00;
+}
+.index-task-type .index-task-type-body img {
+    width: 35px;
+    height: 35px;
+}
+.index-task-type .index-task-type-body .index-task-type-label {
+    text-align: center;
+    color: #111;
+    font-size: 14px;
+}
+
+/* sort */
+.index-main-sort{
+}
+.index-main-sort .sort-content{
+    height: 40px;
+    width: 100%;
+}
+.index-main-sort .sort-content .sort-left{
+    float: left;
+    margin-left: 10px;
+}
+.index-main-sort .sort-content .sort-left>div{
+    float: left;
+    line-height: 26px;
+    margin: 9px 4px 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background: #e5e5e5;
+}
+.index-main-sort .sort-content .sort-left>div:hover{
+    background: #33cc00;
+}
+.index-main-sort .sort-content .sort-left>div:active{
+    background: #33cc00;
+}
+.index-main-sort .sort-content .sort-left>div.current{
+    background: #33cc00;
+}
+.index-main-sort .sort-content .sort-right{
+    float: right;
+    margin-right: 10px;
+}
+.index-main-sort .sort-content .sort-right img{
+    width: 24px;
+    height: 24px;
+    margin: 8px 5px;
+}
+/* sort */
