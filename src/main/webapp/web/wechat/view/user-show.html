@@ -7,18 +7,22 @@
 
     <title>个人资料</title>
 
-    <link rel="stylesheet" href="../asset/style/weui.css">
-    <link rel="stylesheet" href="../asset/style/jquery-weui.css">
-    <link rel="stylesheet" type="text/css" href="../asset/style/user.css">
+    <link rel="stylesheet" href="../../common/css/weui.css">
+    <link rel="stylesheet" href="../../common/css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="../css/user-info.css">
 </head>
 
 <body>
     <div class="user-info-show" id="user-info-show">
-        <div class="weui-cells">
+        <!-- 返回 主页面-->
+        <div class="user-backindex">
+            <a href="index.html"><img src="../img/personcenter/index-green.png"></a>
+        </div>
+        <div class="weui-cells my-user-cells">
             <div class="user-bg user-bg-blur"></div>
             <div class="weui-cell" id="headPortrait">
                 <div class="weui-cell__hd">
-                    <img class="headimg" src="../asset/images/person-img.jpg">
+                    <img class="headimg" src="../img/personCenter/person-img.jpg">
                 </div>
                 <div class="weui-cell__bd">
                 </div>
@@ -51,20 +55,18 @@
         </div>
         <div class="weui-cells__title">一卡通或学生证等证件上传</div>
         <div class="user-card-show" id="user-card-show">
-            <img src="../asset/images/person-card.jpg">
+            <img src="../img/personCenter/person-card.jpg">
         </div>
-        <div><a href="javascript:alert( '跳到编辑界面');" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
+        <div><a href="user-edit.html" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
     </div>
-    <script src="js/jquery-2.1.4.js"></script>
-    <script src="js/fastclick.js"></script>
+    <script src="../../common/js/jquery-2.1.4.js"></script>
+    <script src="../../common/js/fastclick.js"></script>
     <script>
         $(function() {
             FastClick.attach(document.body);
         });
     </script>
-    <script src="js/jquery-weui.js"></script>
-    <script type="text/javascript" src="../js/user.js" charset="utf-8">
-    </script>
+    <script src="../../common/js/jquery-weui.js"></script>
 
 </body>
 

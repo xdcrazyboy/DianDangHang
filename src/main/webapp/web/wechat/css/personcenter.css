@@ -5,59 +5,53 @@ body {
     height: 100%;
 }
 
-.personal-nav {
-    height: 5%;
-    width: 100%;
-    background-color: #D3E2F8;
-}
-
 .personal-main-top {
-    background: #000 url('../img/personCenter/background.jpg') no-repeat center center;
-    background-size: cover;
-    height: 35%;
     width: 100%;
     color: #fff;
     z-index: -1;
 }
 
 .personal-main-top-blur {
+    position: absolute;
+    width: 100%;
+    height: 221px;
     filter: blur(10px);
+    z-index: -2;
+    text-align: center;
 }
 
 .personal-main-top-body {
-    height: 70%;
+    margin-top: 10px;
 }
 
 .personal-main-top-user {
     text-align: center;
 }
 
-.personal--main-top-user a {
-    display: block;
-}
-
 .personal-main-top-user img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 
-.personal-main-top-money {
-    margin-top: 10px;
-    margin-left: 20px;
-    display: inline-flex;
-    justify-content: flex-start;
-}
-
-.personal--main-top-username {
+.personal-main-top-username,
+.personal-main-top-user-img {
     display: flex;
     justify-content: center;
 }
 
-.personal--main-top-username img {
+.personal-main-top-username img {
     width: 20px;
     height: 20px;
     margin-top: 2px;
+}
+
+.personal-main-top-money {
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    justify-content: flex-start;
 }
 
 .personal-main-top-money img {
@@ -65,73 +59,110 @@ body {
     height: 20px;
     margin-left: 5px;
     margin-top: 3px;
+    margin-bottom: 5px;
 }
 
-.personal-main-top-tab {
+.personal-main-top-navbar {
+    position: relative;
     background-color: #3FE8C9;
     opacity: 0.5;
-    height: 22%;
     display: flex;
-    justify-content: space-around;
+    width: 100%;
 }
 
 .vertical-bar-line {
     width: 0px;
     border: #fff solid 1px;
-    height: 80%;
-    margin: 5px 0 0;
+    height: 35px;
+    margin: 5px 0;
     color: #fff;
 }
 
-.personal-main-top-tab-item {
+.personal-main-top-navbar-item {
+    position: relative;
+    display: block;
+    background-color: #b9b9b9;
     padding: 10px 0;
     flex: 1;
     text-align: center;
     font-size: 18px;
-    color: #888;
+    color: #484848;
 }
 
-.personal-main-top-tab_item:active {
-    background-color: #EDEDED;
-    color: #FFFD53;
+.personal-main-top-navbar-item:active {
+    background-color: #ffffff;
 }
 
-.personal-main-top-tab-item.personal-main-top-tab-item-on {
-    color: #666;
-    background-color: #f1f1f1;
+.personal-main-top-navbar-item.personal-main-top-navbar-item-on {
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #26e41d;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.personal-main-top-navbar-item:after {
+    content: " ";
+}
+
+.personal-main-top-navbar-item:last-child:after {
+    display: none;
 }
 
 .personal-main-bottom {
-    height: 60%;
+    box-sizing: border-box;
     width: 100%;
     color: #cde;
 }
 
-.personal-main-bottom-item {
-    height: 100px;
-    margin: 5px 5px;
-    background-color: #fff;
-    border-bottom: 2px solid #eee;
-    display: flex;
+.personal-main-bottom .personal-task {
+    display: none;
+    height: 100%;
+    overflow: auto;
 }
 
-.personal-main-bottom-item-left {
+.personal-main-bottom .personal-task.personal-task--active {
+    display: block;
+}
+
+.personal-task-item {
+    display: flex;
+    height: 100px;
+    margin: 5px 5px;
+    color: #535353;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+}
+
+.personal-task-item-left {
     text-align: center;
 }
 
-.personal-main-bottom-item-left img {
+.personal-task-item-left img {
     width: 40px;
     height: 40px;
     margin-top: 10px;
 }
 
-.personal-main-bottom-item-body {
+.personal-task-item-body p[name="title"] {
+    font-size: 18px;
+    color: #000000;
+    overflow: hidden;
+}
+
+.personal-task-item-body {
+    font-size: 16px;
     padding: 10px;
     overflow: hidden;
     flex: 1;
     margin-bottom: 10px;
 }
 
-.personal-main-bottom-item-right {
-    text-align: center;
+.personal-task-item-right {
+    padding-top: 28px;
+    vertical-align: center;
+}
+
+.personal-task-item-right img {
+    width: 45px;
+    height: 45px;
 }
