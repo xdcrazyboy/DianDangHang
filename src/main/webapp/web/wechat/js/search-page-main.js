@@ -34,13 +34,27 @@ $(function () {
 
 $(function () {
     var datas = {
-        prompts_history:["取快递", "取快递啊取快递", "取快递哈哈", "取快value递", "取快额去泰国递"],
         prompts_common:["取快递", "取快递啊取快递", "取快递哈哈", "取快value递", "取快额去泰国递", "取快递", "取快递", "取快递", "取快递"]
-    }
+    };
+
+    var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
+
+    /* 默认不显示历史搜索 */
+    $("#historySearch").hide();
+    $("#historySearchContent").hide();
 
     /*初始化*/
     initPromptCommon(datas.prompts_common);
-    initPromptHistory(datas.prompts_history);
+    $.get(ServerUrl + "record/searchHistory",function (data) {
+        if(data.statusCode == 1000){
+            initPromptHistory(data.mySearchRecordsList);
+            /* 显示历史搜索 */
+            $("#historySearch").show();
+            $("#historySearchContent").show();
+        }else{
+            /*没有历史搜索*/
+        }
+    });
 
     /*初始化*/
     function initPromptCommon(prompts) {

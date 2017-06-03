@@ -2,35 +2,77 @@
  * Created by ALISURE on 2017/4/30.
  */
 
+/* 暂时定义成全局变量 */
+var project = "timeseller_v0.2";
+var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
+var SignatureUrl = ServerUrl + "image/signature";
+var DownImageUrl = ServerUrl + "image/downImage";
+
+/* 配置数据 */
+var ErrorInfo = {
+    SignatureError: "未获取签名",
+    CheckJsApiError: "不支持JsApi",
+    WXCheckError: "验证失败",
+};
+var LogInfo = {
+    CheckReady: "验证成功",
+};
+
 $(function () {
+
     /*配置微信*/
     var url = location.href;
     var jsApiList = ["chooseImage","uploadImage","downloadImage"];
 
-    getSignature(url, jsApiList);
+    /* 获取签名 */
+    getSignature(url, function (appId, timestamp, nonceStr, signature) {
+        /* 配置签名等信息 */
+        config(appId, timestamp, nonceStr, signature, jsApiList);
+    });
+
+    /* 通过ready接口处理成功验证 */
+    ready(function () {
+        console.log(LogInfo.CheckReady);
+    });
+
+    /* 发生错误时调用 */
+    error(function () {
+        console.log(ErrorInfo.WXCheckError);
+    });
+
+    /* 检查是否支持指定的API */
+    check(jsApiList, function (res) {
+        /* 不支持指定JS接口 */
+        console.log(ErrorInfo.CheckJsApiError);
+    });
+
+    /* ajax 异常*/
+    $(document).ajaxError(function(){
+        $.hideLoading();
+        $.toast("发生异常");
+    });
 });
 
 /**
  * 获取网页的签名
  * @param url
- * @param jsApiList
+ * @param callback 配置签名等信息
  */
-function getSignature(url,jsApiList) {
-    $.get("http://www.alisure.xyz/ddh/predeal/signature", {url:url},
+function getSignature(url, callback) {
+    $.get(SignatureUrl, {url:url},
         function (data) {
-            if (data.status == 1) {
+            if (data.statusCode == 3000) {
                 var object = data.object;
-                config(object.appId, object.timestamp, object.nonceStr, object.signature, jsApiList);
+
+                /*成功后执行回调*/
+                callback(object.appId, object.timestamp, object.nonceStr, object.signature);
             } else {
 
+                /* 没有获取签名，发生异常 */
+                console.log(ErrorInfo.SignatureError);
             }
         }
     );
-
-    ready();
-    error();
-    check(jsApiList);
-
 }
 
 /**
@@ -44,7 +86,7 @@ function getSignature(url,jsApiList) {
 function config(appId,timestamp, nonceStr, signature, jsApiList) {
     /*通过config接口注入权限验证配置*/
     wx.config({
-        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: appId, // 必填，公众号的唯一标识
         timestamp: timestamp, // 必填，生成签名的时间戳
         nonceStr: nonceStr, // 必填，生成签名的随机串
@@ -75,8 +117,9 @@ function error(callback) {
 /**
  * 检查是否支持指定的API
  * @param jsApiList
+ * @param failCallBack
  */
-function check(jsApiList) {
+function check(jsApiList,failCallBack) {
     /*判断当前客户端版本是否支持指定JS接口*/
     wx.checkJsApi({
         jsApiList: jsApiList,
@@ -84,9 +127,7 @@ function check(jsApiList) {
             // 以键值对的形式返回，可用的api值true，不可用为false
             // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
         },
-        fail: function (res) {
-
-        }
+        fail: failCallBack,
     });
 }
 
@@ -96,7 +137,7 @@ function check(jsApiList) {
  * @param callback
  */
 function downImage(mediaId,callback) {
-    $.get("http://www.alisure.xyz/ddh/predeal/image", {mediaId:mediaId}, callback);
+    $.get(DownImageUrl, {mediaId:mediaId}, callback);
 }
 
 /**
@@ -104,7 +145,6 @@ function downImage(mediaId,callback) {
  */
 function getRoot() {
     var href = location.href;
-    var project = "ddh";
     href = href.split(project);
     if(href.length >= 2){
         return href[0] + project + "/";
@@ -112,4 +152,3 @@ function getRoot() {
         return location.host + "/";
     }
 }
-

@@ -11,6 +11,7 @@ $(function () {
     var type_id = 0;
     var sort_id = 1;
     var loading = true;  //状态标记
+    var over = false;  // 当前类型没有任务了
 
     /*初始化排序*/
     initSort();
@@ -23,16 +24,21 @@ $(function () {
 
     /*初始化排序*/
     function initSort() {
+        /* 点击排序 */
         $("#indexSort div").click(function () {
             var sort_id_now = $(this).attr("data-id");
             if(sort_id_now == sort_id) return;
             sort_id = sort_id_now;
-            page = 1;
             $(this).addClass("current").siblings().removeClass("current");
+            page = 1;
+            over = false;
             initTaskGetTaskByPage();
         });
+
+        /* 点击刷新 */
         $("#indexSortRight .page-refresh").click(function () {
             page = 1;
+            over = false;
             initTaskGetTaskByPage();
         });
     }
@@ -40,39 +46,47 @@ $(function () {
     /*初始化类型*/
     function initTaskType(callback_initTaskList, callback_typeClick){
         /*获取类型数据*/
-        var types = [
-            {typeId:1,typeImage:"../img/index/task-type-1.png",typeName:"学习"},
-            {typeId:2,typeImage:"../img/index/task-type-2.png",typeName:"娱乐"},
-            {typeId:3,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
-            {typeId:4,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
-            {typeId:5,typeImage:"../img/index/task-type-5.png",typeName:"其他"},
-            {typeId:6,typeImage:"../img/index/task-type-2.png",typeName:"学习"},
-            {typeId:7,typeImage:"../img/index/task-type-1.png",typeName:"娱乐"},
-            {typeId:8,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
-            {typeId:9,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
-            {typeId:10,typeImage:"../img/index/task-type-5.png",typeName:"其他"}
-        ];
+        $.get(ServerUrl + "task/category", function (data) {
+            if(data.statusCode == 3000){
+                /*var types = [
+                    {typeId:1,typeImage:"../img/index/task-type-1.png",typeName:"学习"},
+                    {typeId:2,typeImage:"../img/index/task-type-2.png",typeName:"娱乐"},
+                    {typeId:3,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
+                    {typeId:4,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
+                    {typeId:5,typeImage:"../img/index/task-type-5.png",typeName:"其他"},
+                    {typeId:6,typeImage:"../img/index/task-type-2.png",typeName:"学习"},
+                    {typeId:7,typeImage:"../img/index/task-type-1.png",typeName:"娱乐"},
+                    {typeId:8,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
+                    {typeId:9,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
+                    {typeId:10,typeImage:"../img/index/task-type-5.png",typeName:"其他"}
+                ];*/
+                var types = data.myCategories;
 
-        /*初始化类型*/
-        var $sorHtml = $("#indexTaskTypeData");
-        var $desHtml = $("#indexTaskTypeDataWrapper").empty();
-        for (var i in types){
-            $sorHtml.children("div").attr("data-id", types[i].typeId);
-            $sorHtml.find("img").attr("src", types[i].typeImage);
-            $sorHtml.find("p").text(types[i].typeName);
-            $desHtml.append($sorHtml.html());
-        }
-        $desHtml.children().eq(0).addClass("current");
-        type_id = types[0].typeId;
+                /*初始化类型*/
+                var $sorHtml = $("#indexTaskTypeData");
+                var $desHtml = $("#indexTaskTypeDataWrapper").empty();
+                for (var i in types){
+                    $sorHtml.children("div").attr("data-id", types[i].id);
+                    $sorHtml.find("img").attr("src", "../img/index/task-type-3.png"/*types[i].typeImage*/);
+                    $sorHtml.find("p").text(types[i].catgory);
+                    $desHtml.append($sorHtml.html());
+                }
+                $desHtml.children().eq(0).addClass("current");
+                type_id = types[0].id;
 
-        /*初始化类型之后，执行回调*/
-        callback_initTaskList();
-        /*设置类型点击事件*/
-        callback_typeClick();
+                /*初始化类型之后，执行回调*/
+                callback_initTaskList();
+                /*设置类型点击事件*/
+                callback_typeClick();
+            }else{
+                $.toast("数据获取错误");
+            }
+        });
     }
 
     /*设置点击事件*/
     function initTypeClick() {
+        /* 点击类型 */
         $("#indexTaskTypeDataWrapper").children("div").on("click", function () {
             var id = $(this).attr("data-id");
             if(id == type_id) return;
@@ -80,6 +94,7 @@ $(function () {
             $(this).addClass("current").siblings().removeClass("current");
             /*刷新*/
             page = 1;
+            over = false;
             initTaskGetTaskByPage();
         });
     }
@@ -90,9 +105,12 @@ $(function () {
         initTaskGetTaskByPage();
 
         $("#tab1").infinite().on("infinite", function() {
-            if(loading) return;
-            page += 1;
-            initTaskGetTaskByPage();
+            /*如果当前类型没有结束，则继续*/
+            if(!over){
+                if(loading) return;
+                page += 1;
+                initTaskGetTaskByPage();
+            }
         });
 
     }
@@ -109,167 +127,43 @@ $(function () {
         });
     }
 
-
+    /* 获取数据并显示 */
     function getTaskByPage(page, size, type_id, sort_id, callback) {
-
-        setTimeout(function () {
-            /*联网获取数据*/
-            var datas = [
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_12.png",
-                    user_money:"65",
-                    user_name:"会",
-                    task_type:"生活",
-                    task_title:"取快递gg取快递gg取快递gg取快递gg取快递gg取快递gg",
-                    task_publish_time:"2017-04-16 12:20",
-                    task_describe:"中午25点后在西东门口，编号616，联系电话：110",
-                    task_place:"西大楼zvs fgzg sdv fwf",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_11.png",
-                    user_money:"634",
-                    user_name:"会跑",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 15:20",
-                    task_describe:"中午25点后在西东门口，中通镖局，联系电话：110",
-                    task_place:"西大楼",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_1.png",
-                    user_money:"65",
-                    user_name:"会跑的",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 18:20",
-                    task_describe:"中午25点后在西东门口，中午25点后在西东门口，" +
-                    "中午25点后在西东门口，中午25点后在西东门口，中通镖局，编号616",
-                    task_place:"西大楼vs我国",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_2.png",
-                    user_money:"65",
-                    user_name:"会跑的鱼",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 11:20",
-                    task_describe:"中通镖局，编号616，联系电话：110",
-                    task_place:"西大楼申达股份",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_3.png",
-                    user_money:"65",
-                    user_name:"会跑的",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 18:20",
-                    task_describe:"中午25点后在西东门口，中午25点后在西东门口，" +
-                    "中午25点后在西东门口，中午25点后在西东门口，中通镖局，编号616",
-                    task_place:"西大楼vs我国",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_4.png",
-                    user_money:"65",
-                    user_name:"会跑的",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 18:20",
-                    task_describe:"中午25点后在西东门口，中午25点后在西东门口，" +
-                    "中午25点后在西东门口，中午25点后在西东门口，中通镖局，编号616",
-                    task_place:"西大楼vs我国",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_5.png",
-                    user_money:"65",
-                    user_name:"会跑的鱼",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 11:20",
-                    task_describe:"中通镖局，编号616，联系电话：110",
-                    task_place:"西大楼申达股份",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_6.png",
-                    user_money:"65",
-                    user_name:"会跑的鱼",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 11:20",
-                    task_describe:"中通镖局，编号616，联系电话：110",
-                    task_place:"西大楼申达股份",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_7.png",
-                    user_money:"65",
-                    user_name:"会跑的",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 18:20",
-                    task_describe:"中午25点后在西东门口，中午25点后在西东门口，" +
-                    "中午25点后在西东门口，中午25点后在西东门口，中通镖局，编号616",
-                    task_place:"西大楼vs我国",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_8.png",
-                    user_money:"65",
-                    user_name:"会跑的鱼",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 11:20",
-                    task_describe:"中通镖局，编号616，联系电话：110",
-                    task_place:"西大楼申达股份",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_9.png",
-                    user_money:"65",
-                    user_name:"会跑的",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 18:20",
-                    task_describe:"中午25点后在西东门口，中午25点后在西东门口，" +
-                    "中午25点后在西东门口，中午25点后在西东门口，中通镖局，编号616",
-                    task_place:"西大楼vs我国",
-                },
-                {
-                    user_image:"../../resources/image/userHead/user_head_img_10.png",
-                    user_money:"65",
-                    user_name:"会跑的鱼",
-                    task_type:"生活",
-                    task_title:"取快递",
-                    task_publish_time:"2017-04-16 11:20",
-                    task_describe:"中通镖局，编号616，联系电话：110",
-                    task_place:"西大楼申达股份",
-                },
-            ];
-            var types = [
-                {typeId:1,typeImage:"../img/index/task-type-1.png",typeName:"学习"},
-                {typeId:2,typeImage:"../img/index/task-type-2.png",typeName:"娱乐"},
-                {typeId:3,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
-                {typeId:4,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
-                {typeId:5,typeImage:"../img/index/task-type-5.png",typeName:"其他"},
-                {typeId:6,typeImage:"../img/index/task-type-2.png",typeName:"学习"},
-                {typeId:7,typeImage:"../img/index/task-type-1.png",typeName:"娱乐"},
-                {typeId:8,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
-                {typeId:9,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
-                {typeId:10,typeImage:"../img/index/task-type-5.png",typeName:"其他"}
-            ];
-
-            var $goods = $("#task-list");
-            /*刷新*/
-            if(page == 1)$goods.empty();
-
-            for (var i = 0; i < datas.length; i++) {
-                /*需要将数据传给build()*/
-                datas[(i + type_id) % datas.length].task_type = types[type_id -1].typeName;
-                var item = build(datas[(i + type_id) % datas.length]);
-                $goods.append(item);
-            }
-
-            /*设置点击事件*/
-            clickEvent();
-
+        if(over){
             callback();
-        }, 1000);
+        }
+        
+        /*联网获取数据*/
+        $.get( ServerUrl + "task/taskhall", {
+            page: page,
+            pageSize: size,
+            /*type: type_id,*/
+            sortType: sort_id
+        }, function (data) {
+            if(data.statusCode == 3000){
+                var datas = data.myTaskList;
+                
+                var $goods = $("#task-list");
+                /*刷新*/
+                if(page == 1)$goods.empty();
+
+                for (var i = 0; i < datas.length; i++) {
+                    /*需要将数据传给build()*/
+                    var item = build(datas[i]);
+                    $goods.append(item);
+                }
+
+                over = false;
+                /*设置点击事件*/
+                clickEvent();
+
+            }else/* if(data.statusCode == 3002)*/{
+                /* 显示没有任务了 */
+                $.toast(data.message);
+                over = true;
+            }
+            callback();
+        });
     }
 
     /*在这里组装item*/
@@ -277,15 +171,31 @@ $(function () {
     function build(data) {
         /*对data进行处理*/
         var $html = $("#taskData");
-        $html.find(".image img").attr("src",data.user_image);
-        $html.find(".money span").text(data.user_money);
-        $html.find(".name").text(data.user_name);
-        $html.find(".type").text(data.task_type);
-        $html.find(".title").text(data.task_title.length > 10 ? data.task_title.substr(0, 10) + "..." : data.task_title);
-        $html.find(".time-content").text(data.task_publish_time);
-        $html.find(".describe p").text(data.task_describe);
-        $html.find(".place span").text(data.task_place);
+        $html.find(".image img").attr("src",data.pub_icon);
+        $html.find(".money span").text(data.goldCoins);
+        $html.find(".name").text(data.pub_nickname);
+        $html.find(".type").text(data.type);
+        $html.find(".title").text(data.title.length > 10 ? data.title.substr(0, 10) + "..." : data.title);
+        $html.find(".time-content").text(parseTime(data.pubDate));
+        $html.find(".describe p").text(data.content);
+        $html.find(".place span").text(data.place);
         return $html.html();
+    }
+
+    function parseTime(time) {
+        var date = new Date(time);
+
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var strHours = date.getHours();
+        var strMinutes = date.getMinutes();
+
+        if (month >= 1 && month <= 9) month = "0" + month;
+        if (strDate >= 0 && strDate <= 9) strDate = "0" + strDate;
+        if (strHours >= 0 && strHours <= 9) strHours = "0" + strHours;
+        if (strMinutes >= 0 && strMinutes <= 9) strMinutes = "0" + strMinutes;
+
+        return date.getFullYear() + "-" + month + "-" + strDate + " " + strHours + ":" + strMinutes;
     }
 
     /*设置点击事件*/

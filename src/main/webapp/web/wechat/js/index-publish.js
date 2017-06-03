@@ -22,18 +22,13 @@ $(function () {
         task_money_number:50,
 
         /*联系方式预选*/
-        task_link_id:234,
+        task_link_id:1,
         task_link_max_length:11
     };
     var link_params = [
-        { link_id:123, link_text:"微信号", link_input_type:"text"},
-        { link_id:12, link_text:"QQ号", link_input_type:"number"},
-        { link_id:234, link_text:"手机号", link_input_type:"number"}
-    ];
-    var type_params = [
-        {type_id:11, type_text:"学习"},
-        {type_id:132, type_text:"娱乐"},
-        {type_id:121, type_text:"跑腿"}
+        { link_id:1, link_text:"微信号", link_input_type:"text"},
+        { link_id:2, link_text:"QQ号", link_input_type:"number"},
+        { link_id:3, link_text:"手机号", link_input_type:"number"}
     ];
 
     init_form();
@@ -197,42 +192,43 @@ $(function () {
             });
             /*获取并组装表单项*/
             var datas = {
-                task_name: $("#task-name").val(),
-                task_describe: $("#task-describe").val(),
-                task_secret: $("#task-secret").val(),
-                task_time_begin: $("#task-time-begin").val(),
-                task_time_end: $("#task-time-end").val(),
-                task_type: $("#task-type").val(),
-                task_place: $("#task-place").val(),
-                task_money: $("#task-money").val(),
-                task_other_money: $("#task-other-money").val(),
-                task_link_select: $("#task-link-select").val(),
-                task_link_input: $("#task-link-input").val(),
-                task_images: task_images
-            }
+                title: $("#task-name").val(),
+                content: $("#task-describe").val(),
+                words: $("#task-secret").val(),
+                pubDate: $("#task-time-begin").val(),
+                endDate: $("#task-time-end").val(),
+                catId: $("#task-type").val(),
+                place: $("#task-place").val(),
+                coins: $("#task-money").val(),
+                reward: $("#task-other-money").val(),
+                task_images: task_images,
+                weixin: "",
+                qq: "",
+                telephone: ""
+            };
 
             /*检查表单项*/
-            if(datas.task_name.length == 0){
+            if(datas.title.length == 0){
                 $.alert("任务名称不能为空");
                 $("#task-name").focus();
                 return;
             }
-            if(datas.task_name.length > task_params.task_name_length) {
+            if(datas.title.length > task_params.task_name_length) {
                 $.alert("任务名称的长度不能超过" + task_params.task_name_length + "个字");
                 $("#task-name").focus();
                 return;
             }
-            if(datas.task_describe.length == 0){
+            if(datas.content.length == 0){
                 $.alert("任务描述不能为空");
                 $("#task-describe").focus();
                 return;
             }
-            if(datas.task_describe.length > task_params.task_describe_length) {
+            if(datas.content.length > task_params.task_describe_length) {
                 $.alert("任务描述的长度不能超过" + task_params.task_describe_length + "个字");
                 $("#task-describe").focus();
                 return;
             }
-            if(datas.task_secret.length > task_params.task_secret_length) {
+            if(datas.words.length > task_params.task_secret_length) {
                 $.alert("私密信息的长度不能超过" + task_params.task_secret_length + "个字");
                 $("#task-secret").focus();
                 return;
@@ -242,25 +238,39 @@ $(function () {
                 $("#task-time-end").focus();
                 return;
             }
-            if(datas.task_money > task_params.task_money_number){
+            if(datas.coins > task_params.task_money_number){
                 $.alert("总金币只有" + task_params.task_money_number + ",请重新输入");
                 $("#task-describe").focus();
                 return;
             }
-            if(datas.task_link_input.length == 0){
+
+            /* 由于前后端接口没有统一，所以需要在提交数据时进行转换 */
+            var task_link_select = $("#task-link-select").val();
+            var task_link_input =  $("#task-link-input").val();
+            if(task_link_input.length == 0){
                 $.alert("联系方式不能为空");
                 $("#task-link-input").focus();
                 return;
+            }else{
+                /* 联系方式是正常的，可以转换 */
+                if(task_link_select == 1){
+                    datas.weixin = task_link_input;
+                }else if(task_link_select == 2){
+                    datas.qq = task_link_input;
+                }else if(task_link_select == 3){
+                    datas.telephone = task_link_input;
+                }
             }
+
 
             /*检查是否有金币或酬劳，没问题（有金币或酬劳/用户确认没有金币或酬劳）后上传数据到服务器*/
             var is_money_ok = true;
-            if((datas.task_money.length == 0 || datas.task_money <= 0 ) && datas.task_other_money.length == 0){
+            if((datas.coins.length == 0 || datas.coins <= 0 ) && datas.reward.length == 0){
                 is_money_ok = false;
                 $.confirm("确定发布任务不给金币或酬劳吗？", function() {
                     is_money_ok = true;
                 }, function() {
-                    if(datas.task_money.length == 0 || datas.task_money == 0){
+                    if(datas.coins.length == 0 || datas.coins == 0){
                         $("#task-money").focus();
                     }
                 });
@@ -291,16 +301,27 @@ $(function () {
         /*上传数据*/
         var result_id = 132;
 
-        $.hideLoading();
-        $.toast("任务上传成功");
+        console.log(datas.valueOf());
+
+        $.post(ServerUrl + "task/publish", datas, function (data) {
+            $.hideLoading();
+            if(data.statusCode == 3000){
+                $.toast("任务上传成功");
+
+                /*跳转*/
+                //location.href = "task.html?taskId=" + result_id;
+                location.reload();
+            }else{
+                $.toast("任务上传失败");
+            }
+        });
+
         /*反馈*/
         /*$.alert(datas.task_name + "/" + datas.task_describe  + "/" + datas.task_secret + "/" + datas.task_images + "/" +
          datas.task_time_begin + "/" + datas.task_time_end + "/" + datas.task_type + "/" +
          datas.task_place + "/" + datas.task_money + "/" + datas.task_other_money + "/" +
          datas.task_link_select + "/" + datas.task_link_input);*/
 
-        /*跳转*/
-        location.href = "task.html?taskId=" + result_id;
     }
     /*
      * 图片上传思路：
@@ -423,16 +444,25 @@ $(function () {
 
     /*设置类型*/
     function initType() {
-        /*设置联系方式下拉列表*/
-        for (var index in type_params){
-            if(index == 0){
-                /*设置默认值*/
-                $("#task-type").append(
-                    "<option value='" + type_params[index].type_id + "' selected='selected'>" + type_params[index].type_text + "</option>");
-            }else {
-                $("#task-type").append("<option value='" + type_params[index].type_id + "'>" + type_params[index].type_text + "</option>");
+        /*获取类型数据*/
+        $.get(ServerUrl + "task/category", function (data) {
+            if(data.statusCode == 3000){
+                var type_params = data.myCategories;
+                /*设置联系方式下拉列表*/
+                for (var index in type_params){
+                    if(index == 0){
+                        /*设置默认值*/
+                        $("#task-type").append(
+                            "<option value='" + type_params[index].id + "' selected='selected'>" + type_params[index].catgory + "</option>");
+                    }else {
+                        $("#task-type").append("<option value='" + type_params[index].id + "'>" + type_params[index].catgory + "</option>");
+                    }
+                }
+            }else{
+                $.toast("数据获取错误");
             }
-        }
+        });
+
     }
 
     /*设置联系方式*/
