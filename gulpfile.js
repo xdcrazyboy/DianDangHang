@@ -1,7 +1,7 @@
 /**
  * Created by ALISURE on 2017/5/21.
  */
-'use strict'
+'use strict';
 
 var config = require("./gulpfile.config.js");
 var gulp = require("gulp"),
@@ -54,9 +54,20 @@ gulp.task('rev',['mini-js-and-md5'], function () {
         .pipe(rev_collector()).pipe(gulp.dest(config.dist.wechat.html));
 });
 
-/*监听文件改变*/
-gulp.task("watch", function () {
-    gulp.watch(config.src.web, ['rev']);
+/* 在开发环境下，移动js css，即未经过压缩和重命名。 */
+gulp.task('move-js-css', ["html"], function () {
+    gulp.src([config.src.wechat.css]).pipe(gulp.dest(config.dist.wechat.css));
+    gulp.src([config.src.wechat.js]).pipe(gulp.dest(config.dist.wechat.js));
 });
 
-gulp.task("default", ["rev", "watch", "move-resources"]);
+/*监听文件改变*/
+gulp.task("watch", function () {
+    gulp.watch(config.src.web, ['move-js-css']);
+});
+
+/* 开发时的默认任务 */
+gulp.task("default", ["move-js-css", "watch", "move-resources"]);
+
+
+/* 上线的时候运行此gulp */
+gulp.task("product", ["rev", "move-resources"]);
