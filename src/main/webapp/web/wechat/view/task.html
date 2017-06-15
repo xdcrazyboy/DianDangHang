@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <div class="publish-wrapper">
+    <div id="publish-wrapper" class="publish-wrapper" style="display: none">
         <!-- 任务名称 -->
         <div class="weui-cells">
             <div class="weui-cell">
@@ -149,7 +149,11 @@
 
         <!--接手按钮-->
         <div class="weui-btn-area">
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="accept-task">接手</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="accept-task" style="display: none">接手</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="modify-task" style="display: none">修改</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="execute-task" style="display: none">进行中</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="completing-task" style="display: none">确认完成</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="completed-task" style="display: none">已完成</a>
         </div>
 
         <!--空白-->

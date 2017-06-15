@@ -8,10 +8,6 @@
 
     <!-- for goods item css -->
     <link rel="stylesheet" href="../css/task-item-style.css" />
-    <link rel="stylesheet" href="../css/loading-style.css" />
-
-    <!-- for load more -->
-    <link rel="stylesheet" href="../../common/css/pullToRefresh.css" />
 
 </head>
 <body>
@@ -21,20 +17,28 @@
 </div>
 
 
-<div id="wrapper">
-    <ul></ul>
+<div id="wrapper" style="background-color: #ffffff">
+    <ul>
+
+    </ul>
+    <div id="task-load-more" class="weui-loadmore" style="display: none">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+    <div id="search-empty" style="display: none;width: 100%;
+        text-align: center; margin-top: 200px;font-size: 1.2em;color: #999999;">
+        没有搜索结果，<span id="continue-search" style="color: #09BB07">继续搜索</span>
+    </div>
 </div>
 
 
-<!-- for jquery -->
-<script src="../../common/js/jquery-2.1.4.js"></script>
 
-<!-- for load more -->
-<script src="../../common/js/iscroll.js"></script>
-<script src="../../common/js/pullToRefresh.js"></script>
+<!-- common js -->
+@@include("include/common-js.html", {"info": "this is info."})
+<!-- common js -->
 
 <!-- for implement refresh goods -->
-<script src="../js/task-list-with-refresh.js"></script>
+<script src="../js/search-result.js"></script>
 
 </body>
 </html>

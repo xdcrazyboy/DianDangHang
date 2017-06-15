@@ -5,7 +5,7 @@ $(function () {
 
     var page = 1;
     var page_size = 12;
-    var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
+    var ServerUrl = "http://115.159.153.114/timeseller_v0.2/";
     /* 暂时这样写 */
     var searchText = decodeURI(location.search).split("search=");
     searchText = searchText[1];
@@ -48,6 +48,11 @@ $(function () {
                 if(page == 1)$goods.empty();
 
                 var datas = data.myTaskList;
+
+                if(datas.length == 0){
+                    alert("xxxx");
+                }
+
                 for (var i = 0; i < datas.length; i++) {
                     /*需要将数据传给build()*/
                     var item = build(datas[i]);

@@ -4,7 +4,8 @@
 
 /* 暂时定义成全局变量 */
 var project = "timeseller_v0.2";
-var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
+//var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
+var ServerUrl = "http://115.159.153.114/timeseller_v0.2/";
 var SignatureUrl = ServerUrl + "image/signature";
 var DownImageUrl = ServerUrl + "image/downImage";
 
@@ -151,4 +152,19 @@ function getRoot() {
     }else{
         return location.host + "/";
     }
+}
+
+function getSearchValue(search, key) {
+    if(search && key){
+        search = search.charAt(0) == "?" ? search.substring(1) : search;
+        var values = search.split("&");
+        var i = 0, len = values.length;
+        for(i; i < len; i++){
+            var value = values[i].split("=");
+            if(value[0] === key){
+                return value[1];
+            }
+        }
+    }
+    return "";
 }

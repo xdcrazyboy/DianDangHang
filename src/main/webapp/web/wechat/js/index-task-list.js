@@ -142,7 +142,7 @@ $(function () {
         }, function (data) {
             if(data.statusCode == 3000){
                 var datas = data.myTaskList;
-                
+
                 var $goods = $("#task-list");
                 /*刷新*/
                 if(page == 1)$goods.empty();
@@ -173,13 +173,21 @@ $(function () {
         var $html = $("#taskData");
         $html.find(".image img").attr("src",data.pub_icon);
         $html.find(".money span").text(data.goldCoins);
-        $html.find(".name").text(data.pub_nickname);
+        $html.find(".name").text(subString(data.pub_nickname, 4, "..."));
         $html.find(".type").text(data.type);
-        $html.find(".title").text(data.title.length > 10 ? data.title.substr(0, 10) + "..." : data.title);
+        $html.find(".title").text(subString(data.title, 10, "..."));
         $html.find(".time-content").text(parseTime(data.pubDate));
         $html.find(".describe p").text(data.content);
-        $html.find(".place span").text(data.place);
+        $html.find(".place span").text(subString(data.place, 20, "..."));
+        $html.find(".right-goods").attr("data-id", data.id);
+        $html.find(".left-user").attr("data-user", data.id);
         return $html.html();
+    }
+
+    /* 截短字符串 */
+    function subString(str, i, end) {
+        if(!str) return "";
+        return str.length > i ? str.substr(0, i) + end : str;
     }
 
     function parseTime(time) {
@@ -209,7 +217,7 @@ $(function () {
         /*点击头像*/
         $("#taskWrapper .goods-wrapper .content .left-user .image").off("click").on("click", function () {
             var user = $(this).parent().attr("data-user");
-            alert("点击用户：" + user);
+            location.href = "user-show.html?id=" + user;
         });
     }
 });

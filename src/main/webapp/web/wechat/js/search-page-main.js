@@ -37,7 +37,7 @@ $(function () {
         prompts_common:["取快递", "取快递啊取快递", "取快递哈哈", "取快value递", "取快额去泰国递", "取快递", "取快递", "取快递", "取快递"]
     };
 
-    var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
+    var ServerUrl = "http://115.159.153.114/timeseller_v0.2/";
 
     /* 默认不显示历史搜索 */
     $("#historySearch").hide();
