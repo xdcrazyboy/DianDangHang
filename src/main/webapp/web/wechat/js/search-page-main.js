@@ -1,6 +1,7 @@
 /**
  * Created by ALISURE on 2017/5/22.
  */
+/* 搜索框 */
 $(function () {
     /*获取焦点*/
     $(document).ready(function () {
@@ -32,19 +33,29 @@ $(function () {
     });
 });
 
+/* 搜索的提示 */
 $(function () {
+
     var datas = {
-        prompts_common:["取快递", "取快递啊取快递", "取快递哈哈", "取快value递", "取快额去泰国递", "取快递", "取快递", "取快递", "取快递"]
+
     };
 
-    var ServerUrl = "http://115.159.153.114/timeseller_v0.2/";
-
-    /* 默认不显示历史搜索 */
-    $("#historySearch").hide();
-    $("#historySearchContent").hide();
-
     /*初始化*/
-    initPromptCommon(datas.prompts_common);
+    init();
+
+    /* 常用搜索 */
+    $.get(ServerUrl + "record/popularHistory",function (data) {
+        if(data.statusCode == 1000){
+            initPromptCommon(data.mySearchRecordsList);
+            /* 显示常用搜索 */
+            $("#commonSearch").show();
+            $("#commonSearchContent").show();
+        }else{
+            /*没有常用搜索*/
+        }
+    });
+
+    /* 历史搜索 */
     $.get(ServerUrl + "record/searchHistory",function (data) {
         if(data.statusCode == 1000){
             initPromptHistory(data.mySearchRecordsList);
@@ -57,22 +68,37 @@ $(function () {
     });
 
     /*初始化*/
+    function init() {
+        /* 默认不显示历史搜索 */
+        $("#historySearch").hide();
+        $("#historySearchContent").hide();
+        /* 默认不显示常用搜索 */
+        $("#commonSearch").hide();
+        $("#commonSearchContent").hide();
+    }
+
     function initPromptCommon(prompts) {
         var $prompt = $("#search-prompt-common");
         for(var prompt in prompts){
             $prompt.append('<div class="item" data-search="' + prompts[prompt] + '">' + prompts[prompt] + '</div>');
         }
+        /*点击常用搜索的内容*/
+        $("#search-prompt-common .item").click(function () {
+            var search = $(this).attr("data-search");
+            location.href="searchResult.html?search=" + search;
+        });
     }
+
     function initPromptHistory(prompts) {
         var $prompt = $("#search-prompt-history");
         for(var prompt in prompts){
             $prompt.append('<div class="item" data-search="' + prompts[prompt] + '">' + prompts[prompt] + '</div>');
         }
-    }
 
-    /*点击提示的内容*/
-    $("#search-prompt .item").click(function () {
-        var search = $(this).attr("data-search");
-        location.href="searchResult.html?search=" + search;
-    });
+        /*点击历史搜索的内容*/
+        $("#search-prompt-history .item").click(function () {
+            var search = $(this).attr("data-search");
+            location.href="searchResult.html?search=" + search;
+        });
+    }
 });

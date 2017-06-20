@@ -34,16 +34,20 @@
                 <div id="search-prompt-history" class="content"></div>
             </div>
         </div>
-        <div class="weui-cells__title">常用搜索</div>
-        <div class="weui-cells">
+        <div class="weui-cells__title"id="commonSearch">常用搜索</div>
+        <div class="weui-cells"id="commonSearchContent">
             <div class="weui-cell">
                 <div id="search-prompt-common" class="content"></div>
             </div>
         </div>
     </div>
 
+
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
+
     <!-- ALISURE -->
-    <script src="../../common/js/jquery-2.1.4.js"></script>
     <script src="../js/search-page-main.js"></script>
     <!-- ALISURE -->
 </body>

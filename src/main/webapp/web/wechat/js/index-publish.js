@@ -30,10 +30,29 @@ $(function () {
         { link_id:2, link_text:"QQ号", link_input_type:"number"},
         { link_id:3, link_text:"手机号", link_input_type:"number"}
     ];
+    var task_infos = {
+        /*提示信息*/
+        ack_submit: "确定发布任务吗？"
+    };
+    var type_params = null;
 
+
+    /*初始化表单*/
     init_form();
+
+    var isModify = false;
+    var taskId = getSearchValue(location.search, "id");
+    if(location.href.split("modifyTask").length > 1 && taskId) { /* 修改状态 */
+        isModify = true;
+        task_infos.ack_submit = "确定修改任务吗？";
+        set_data();
+    }
+
+    /* keyup事件 */
     check_form();
+    /* change/blur事件 */
     save_form();
+    /* 提交事件 */
     submit_form();
 
     /*初始化表单*/
@@ -90,7 +109,81 @@ $(function () {
         $("#task-money").attr("placeholder","总金币数量为: " + task_params.task_money_number);
 
         /*设置联系方式*/
-        initLink();
+        initLink(task_params.task_link_id, "");
+    }
+
+    /*修改任务*/
+    function set_data() {
+        /* 获取数据 */
+        $.get(ServerUrl + "task/task/" + taskId, function (data) {
+            if(data.statusCode == 3100 && data.myTask){
+                show_data(data.myTask);
+            }else{
+                $.toast("不能修改","text");
+                history.go(-1);
+            }
+        });
+
+        /* 设置数据 */
+        function show_data(datas) {
+            /*设置任务名称*/
+            $("#task-name").val(datas.title);
+            /*设置任务描述*/
+            $("#task-describe").val(datas.content);
+            /*设置私密信息*/
+            $("#task-secret").val(datas.secret_message);
+            /*设置时间*/
+            $("#task-time-begin").datetimePicker({
+                rotateEffect:true,
+                min:task_params.task_time_min_time,
+                max:task_params.task_time_max_time,
+                value:datas.pubDate,
+                onClose:function () {
+                    var time = $("#task-time-begin").val();
+                    var now_time = getTimeAddHour();
+                    if(now_time > time){
+                        $.alert("开始时间大于当前时间，如果存在错误请修改");
+                    }
+                }
+            });
+            $("#task-time-end").datetimePicker({
+                rotateEffect:true,
+                min:task_params.task_time_min_time,
+                max:task_params.task_time_max_time,
+                value:datas.endDate,
+                onClose:function () {
+                    var time = $("#task-time-end").val();
+                    var now_time = getTimeAddHour();
+                    if(now_time > time){
+                        $("#task-time-end").val(getTimeAddHour(2));
+                        $.alert("结束时间小于当前时间，存在错误请修改");
+                    }
+                }
+            });
+            /*设置金币*/
+            $("#task-money").val(datas.goldCoins);
+            /*设置地点*/
+            $("#task-place").val(datas.place);
+            /*设置酬金*/
+            $("#task-other-money").val(datas.reward);
+
+            /*设置图片*/
+            // dealImage();
+
+            /*设置类型*/
+            if(type_params){
+                setType(type_params, datas.type);
+            }
+
+            /*设置联系方式*/
+            if(datas.weixin){
+                initLink(1, datas.weixin);
+            }else if(datas.qq){
+                initLink(2, datas.qq);
+            }else if(datas.telephone){
+                initLink(3, datas.telephone);
+            }
+        }
     }
 
     /*处理表单，keyup事件*/
@@ -174,10 +267,9 @@ $(function () {
 
     /*临时保存数据, change/blur事件*/
     function save_form() {
-
         /*响应选择联系方式，同时保存值*/
         $("#task-link-select").change(function () {
-            setLinkMethod($(this).val());
+            setLinkMethod($(this).val(), "");
         });
     }
 
@@ -277,12 +369,28 @@ $(function () {
             }
             if(is_money_ok){
                 /*上传服务器*/
-                uploadData(datas);
+                $.confirm(task_infos.ack_submit, function () {
+                    uploadData(datas);
+                });
             }
 
         });
     }
 
+
+    /*-------------------------------------------------------*/
+    /*---------------------- 提交表单 -----------------------*/
+    /*
+     * 数据上传思路：
+     * 1.先上传图片
+     * 2.再上传数据
+     *
+     * 图片上传思路：
+     * 1.用户选择图片,获取localIds;
+     * 2.根据localIds上传图片至微信的服务器,返回mediaId;
+     * 3.前端根据mediaId请求自己的服务器去微信的服务器下载图片,返回资源地址;
+     * 4.前端根据资源地址获取图片;
+     */
 
     /*上传数据到服务器*/
     function uploadData(datas) {
@@ -291,45 +399,42 @@ $(function () {
          * 成功后，再提交表单。
          **/
         $.showLoading("任务上传中");
-        /*for循环*/
-        uploadImageByFor(datas,uploadOtherData);
-        /*串行：数组pop*/
-        //uploadImageBySync(datas,uploadOtherData);
+        if(isModify){
+            uploadImageByFor(datas, uploadOtherDataForModify);
+        }else{
+            uploadImageByFor(datas, uploadOtherData);
+        }
     }
+
     /*上传其他数据的回调函数*/
     function uploadOtherData(datas) {
-        /*上传数据*/
-        var result_id = 132;
-
         console.log(datas.valueOf());
-
         $.post(ServerUrl + "task/publish", datas, function (data) {
             $.hideLoading();
             if(data.statusCode == 3000){
                 $.toast("任务上传成功");
-
-                /*跳转*/
-                //location.href = "task.html?taskId=" + result_id;
                 location.reload();
             }else{
                 $.toast("任务上传失败");
             }
         });
-
-        /*反馈*/
-        /*$.alert(datas.task_name + "/" + datas.task_describe  + "/" + datas.task_secret + "/" + datas.task_images + "/" +
-         datas.task_time_begin + "/" + datas.task_time_end + "/" + datas.task_type + "/" +
-         datas.task_place + "/" + datas.task_money + "/" + datas.task_other_money + "/" +
-         datas.task_link_select + "/" + datas.task_link_input);*/
-
     }
-    /*
-     * 图片上传思路：
-     * 1.用户选择图片,获取localIds;
-     * 2.根据localIds上传图片至微信的服务器,返回mediaId;
-     * 3.前端根据mediaId请求自己的服务器去微信的服务器下载图片,返回资源地址;
-     * 4.前端根据资源地址获取图片;
-     */
+
+    /*修改时，上传图片外的数据*/
+    function uploadOtherDataForModify(datas) {
+        console.log(datas.valueOf());
+        datas.id = taskId;
+        $.post(ServerUrl + "task/edit", datas, function (data) {
+            $.hideLoading();
+            if(data.statusCode == 3000){
+                $.toast("任务修改成功");
+                history.go(-1);
+            }else{
+                $.toast("任务修改失败:" + data.statusCode);
+            }
+        });
+    }
+
     /*上传图片：并行上传*/
     function uploadImageByFor(datas,callback) {
         var image_urls = [];
@@ -423,83 +528,70 @@ $(function () {
         });
     }
 
-    /*获取增加hour小时后的时间当前时间*/
-    function getTimeAddHour(hour) {
-        if(hour == undefined) hour = 0;
-        var timestamp=new Date().getTime();
-        var date = new Date(timestamp + hour * 60 * 60 * 1000);
+    /*---------------------- 提交表单 -----------------------*/
+    /*-------------------------------------------------------*/
 
-        var month = date.getMonth() + 1;
-        var strDate = date.getDate();
-        var strHours = date.getHours();
-        var strMinutes = date.getMinutes();
-
-        if (month >= 1 && month <= 9) month = "0" + month;
-        if (strDate >= 0 && strDate <= 9) strDate = "0" + strDate;
-        if (strHours >= 0 && strHours <= 9) strHours = "0" + strHours;
-        if (strMinutes >= 0 && strMinutes <= 9) strMinutes = "0" + strMinutes;
-
-        return date.getFullYear() + "-" + month + "-" + strDate + " " + strHours + ":" + strMinutes;
-    }
 
     /*设置类型*/
     function initType() {
         /*获取类型数据*/
         $.get(ServerUrl + "task/category", function (data) {
             if(data.statusCode == 3000){
-                var type_params = data.myCategories;
-                /*设置联系方式下拉列表*/
-                for (var index in type_params){
-                    if(index == 0){
-                        /*设置默认值*/
-                        $("#task-type").append(
-                            "<option value='" + type_params[index].id + "' selected='selected'>" + type_params[index].catgory + "</option>");
-                    }else {
-                        $("#task-type").append("<option value='" + type_params[index].id + "'>" + type_params[index].catgory + "</option>");
-                    }
-                }
+                type_params = data.myCategories;
+                setType(type_params, type_params[0].catgory);
             }else{
                 $.toast("数据获取错误");
             }
         });
-
     }
-
-    /*设置联系方式*/
-    function initLink() {
-        /*设置联系方式下拉列表*/
-        for (var index in link_params){
-            if(link_params[index].link_id == task_params.task_link_id){
-                /*设置默认值*/
-                $("#task-link-select").append(
-                    "<option value='" + link_params[index].link_id + "' selected='selected'>" + link_params[index].link_text + "</option>");
+    /*设置类型*/
+    function setType(type_params, default_value) {
+        var $task_type = $("#task-type").empty();
+        for (var index in type_params){
+            if(type_params[index].catgory == default_value){/*设置默认值*/
+                $task_type.append("<option value='" + type_params[index].id + "' selected='selected'>" + type_params[index].catgory + "</option>");
             }else {
-                $("#task-link-select").append(
-                    "<option value='" + link_params[index].link_id + "'>" + link_params[index].link_text + "</option>");
+                $task_type.append("<option value='" + type_params[index].id + "'>" + type_params[index].catgory + "</option>");
             }
         }
-
-        /*设置联系方式*/
-        setLinkMethod(task_params.task_link_id);
     }
 
-    /*初始化联系方式/响应选择联系方式*/
-    function setLinkMethod(link_id) {
+
+    /*设置联系方式*/
+    function initLink(link_id, value) {
+        /*设置联系方式下拉列表*/
+        set_link(link_id);
+        /*设置联系方式*/
+        setLinkMethod(link_id, value);
+    }
+    /*设置联系方式下拉列表:link_id为默认值*/
+    function set_link(link_id) {
+        var $link = $("#task-link-select").empty();
+        for (var index in link_params){
+            if(link_params[index].link_id == link_id){/*设置默认值*/
+                $link.append("<option value='" + link_params[index].link_id + "' selected='selected'>" + link_params[index].link_text + "</option>");
+            }else {
+                $link.append("<option value='" + link_params[index].link_id + "'>" + link_params[index].link_text + "</option>");
+            }
+        }
+    }
+    /*初始化联系方式/响应选择联系方式：类型为link_id,值为value*/
+    function setLinkMethod(link_id, value) {
         /*获取要设置的列表的索引*/
         for (var index in link_params){
-            if(link_params[index].link_id == link_id){
-                /*设置*/
+            if(link_params[index].link_id == link_id){ /*设置*/
                 $("#task-link-method").text(link_params[index].link_text);
-                $("#task-link-input").attr("type", link_params[index].link_input_type);
-                $("#task-link-input").attr("placeholder","请填写" + link_params[index].link_text);
-                $("#task-link-input").val("");
+                $("#task-link-input").attr("type", link_params[index].link_input_type)
+                    .attr("placeholder","请填写" + link_params[index].link_text).val(value);
                 break;
             }
         }
     }
 
+
     /*图片处理*/
     function dealImage() {
+
         /*初始化*/
         $("#uploaderFiles-max-number").text(task_params.task_image_max_length);
         $("#uploaderFiles-number").text(0);
@@ -556,20 +648,22 @@ $(function () {
             });
         });
 
+
+        /*绑定图片点击事件*/
+        function imageClickEvent() {
+            /*显示某一张图片*/
+            $("#uploaderFiles li").off("click").on("click", function () {
+                var img = $(this).css("background-image");
+                var $span = $("#uploaderFiles-gallery span");
+                $span.css("background-image",img).hide();
+                $span.parent().fadeIn();
+                $span.delay(300);
+                $span.fadeIn("slow");
+                /*用于删除*/
+                $span.attr("data-for-delete", $(this).attr("data-for-delete"));
+            });
+        }
+
     }
 
-    /*绑定图片点击事件*/
-    function imageClickEvent() {
-        /*显示某一张图片*/
-        $("#uploaderFiles li").off("click").on("click", function () {
-            var img = $(this).css("background-image");
-            var $span = $("#uploaderFiles-gallery span");
-            $span.css("background-image",img).hide();
-            $span.parent().fadeIn();
-            $span.delay(300);
-            $span.fadeIn("slow");
-            /*用于删除*/
-            $span.attr("data-for-delete", $(this).attr("data-for-delete"));
-        });
-    }
 });

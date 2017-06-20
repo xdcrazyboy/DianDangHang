@@ -87,7 +87,7 @@ function getSignature(url, callback) {
 function config(appId,timestamp, nonceStr, signature, jsApiList) {
     /*通过config接口注入权限验证配置*/
     wx.config({
-        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: appId, // 必填，公众号的唯一标识
         timestamp: timestamp, // 必填，生成签名的时间戳
         nonceStr: nonceStr, // 必填，生成签名的随机串
@@ -132,6 +132,7 @@ function check(jsApiList,failCallBack) {
     });
 }
 
+
 /**
  * 通知服务器去下载图片
  * @param mediaId
@@ -141,9 +142,8 @@ function downImage(mediaId,callback) {
     $.get(DownImageUrl, {mediaId:mediaId}, callback);
 }
 
-/**
- * 获取URL 根地址
- */
+
+/* 获取URL 根地址 */
 function getRoot() {
     var href = location.href;
     href = href.split(project);
@@ -154,6 +154,8 @@ function getRoot() {
     }
 }
 
+
+/* url search */
 function getSearchValue(search, key) {
     if(search && key){
         search = search.charAt(0) == "?" ? search.substring(1) : search;
@@ -167,4 +169,31 @@ function getSearchValue(search, key) {
         }
     }
     return "";
+}
+
+
+/* 截短字符串 */
+function subString(str, i, end) {
+    if(!str) return "";
+    return str.length > i ? str.substr(0, i) + end : str;
+}
+
+
+/*获取增加hour小时后的时间当前时间*/
+function getTimeAddHour(hour) {
+    if(hour == undefined) hour = 0;
+    var timestamp=new Date().getTime();
+    var date = new Date(timestamp + hour * 60 * 60 * 1000);
+
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    var strHours = date.getHours();
+    var strMinutes = date.getMinutes();
+
+    if (month >= 1 && month <= 9) month = "0" + month;
+    if (strDate >= 0 && strDate <= 9) strDate = "0" + strDate;
+    if (strHours >= 0 && strHours <= 9) strHours = "0" + strHours;
+    if (strMinutes >= 0 && strMinutes <= 9) strMinutes = "0" + strMinutes;
+
+    return date.getFullYear() + "-" + month + "-" + strDate + " " + strHours + ":" + strMinutes;
 }

@@ -48,26 +48,13 @@ $(function () {
         /*获取类型数据*/
         $.get(ServerUrl + "task/category", function (data) {
             if(data.statusCode == 3000){
-                /*var types = [
-                    {typeId:1,typeImage:"../img/index/task-type-1.png",typeName:"学习"},
-                    {typeId:2,typeImage:"../img/index/task-type-2.png",typeName:"娱乐"},
-                    {typeId:3,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
-                    {typeId:4,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
-                    {typeId:5,typeImage:"../img/index/task-type-5.png",typeName:"其他"},
-                    {typeId:6,typeImage:"../img/index/task-type-2.png",typeName:"学习"},
-                    {typeId:7,typeImage:"../img/index/task-type-1.png",typeName:"娱乐"},
-                    {typeId:8,typeImage:"../img/index/task-type-3.png",typeName:"应用"},
-                    {typeId:9,typeImage:"../img/index/task-type-4.png",typeName:"生活"},
-                    {typeId:10,typeImage:"../img/index/task-type-5.png",typeName:"其他"}
-                ];*/
                 var types = data.myCategories;
-
                 /*初始化类型*/
                 var $sorHtml = $("#indexTaskTypeData");
                 var $desHtml = $("#indexTaskTypeDataWrapper").empty();
                 for (var i in types){
                     $sorHtml.children("div").attr("data-id", types[i].id);
-                    $sorHtml.find("img").attr("src", "../img/index/task-type-3.png"/*types[i].typeImage*/);
+                    $sorHtml.find("img").attr("src", "../img/index/task-type-" + (parseInt(i) + 1) + ".png"/*types[i].typeImage*/);
                     $sorHtml.find("p").text(types[i].catgory);
                     $desHtml.append($sorHtml.html());
                 }
@@ -137,7 +124,7 @@ $(function () {
         $.get( ServerUrl + "task/taskhall", {
             page: page,
             pageSize: size,
-            /*type: type_id,*/
+            type: type_id,
             sortType: sort_id
         }, function (data) {
             if(data.statusCode == 3000){
@@ -159,7 +146,8 @@ $(function () {
 
             }else/* if(data.statusCode == 3002)*/{
                 /* 显示没有任务了 */
-                $.toast(data.message);
+                /* data.message */
+                $.toast("没有更多任务了", "text");
                 over = true;
             }
             callback();
@@ -180,14 +168,8 @@ $(function () {
         $html.find(".describe p").text(data.content);
         $html.find(".place span").text(subString(data.place, 20, "..."));
         $html.find(".right-goods").attr("data-id", data.id);
-        $html.find(".left-user").attr("data-user", data.id);
+        $html.find(".left-user").attr("data-user", data.userid);
         return $html.html();
-    }
-
-    /* 截短字符串 */
-    function subString(str, i, end) {
-        if(!str) return "";
-        return str.length > i ? str.substr(0, i) + end : str;
     }
 
     function parseTime(time) {
