@@ -1,20 +1,19 @@
-
 <div class="weui-tab">
     <div class="personal-main-top">
         <img class="personal-main-top-blur" src="../img/personCenter/person-img.jpg">
         <!--个人中心-个人资料-->
         <div class="personal-main-top-body">
             <div class="personal-main-top-user">
-                <div class="personal-main-top-user-img">
-                    <a href="user-show.html"><img src="../img/personCenter/person-img.jpg"></a>
+                <div class="personal-main-top-user-img" data-id="1">
+                    <img src="../img/personCenter/person-img.jpg">
                 </div>
                 <div class="personal-main-top-username">
                     <p name="username" id="username">会飞的鱼</p>&nbsp;
                     <img src="../img/personCenter/gender-girl.png">
                 </div>
-                <p name="username" id="username">西安电子科技大学</p>
+                <p name="userschool" id="user_school" data-id="1">西安电子科技大学</p>
             </div>
-            <div class="personal-main-top-money">
+            <div class="personal-main-top-money" data-id="1">
                 <p>账户值：</p>
                 <p id="user_golds">200</p>
                 <img src="../img/personCenter/icon_gold.png">
@@ -34,89 +33,45 @@
     </div>
 
     <div class="personal-main-bottom">
+
+        <!-- 我的任务 START -->
         <div id="my-task-page" class="personal-task personal-task--active">
-            <div class="personal-task-item">
-                <div class="personal-task-item-left">
-                    <img src="../img/personCenter/完成.png">
-                    <p name="my-task-status">已完成</p>
-                </div>
-                <div onclick="javascript:location.href= 'task.html?id=1' " class="personal-task-item-body">
-                    <p name="title">【生活】取快递</p>
-                    <p name="content">中午十二五亮点起那个爱我id还低洼好idsAudi啥U都是啥U速度阿斗【生活】取快递</p>
-                </div>
-                <div onclick="javascript:alert( '这里应该有选择删除');" class="personal-task-item-right">
-                    <img src="../img/personCenter/three-points.png">
+            <!-- HTML 我的任务模板 -->
+            <div id="userTaskData" style="display: none">
+                @@include("index-user-task-item.html")
+            </div>
+            <!-- HTML 我的任务模板 -->
+            <div id="userTaskWrapper" class="left-slide-list" style="background-color: #ffffff">
+                <ul id="user-task-list">
+
+                </ul>
+                <div id="user-task-load-more" class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
                 </div>
             </div>
-            <div class="personal-task-item">
-                <div class="personal-task-item-left">
-                    <img src="../img/personCenter/进行中.png">
-                    <p name="my-task-status" p>进行中</p>
-                </div>
-                <div onclick="javascript:alert('进入我的任务详情');" class="personal-task-item-body">
-                    <p name="title">【生活】取快递</p>
-                    <p name="content">中午十二五亮点起那个爱我id还低洼好idsAudi啥U都是啥U速度阿斗【生活】取快递</p>
-                </div>
-                <div class="personal-task-item-right">
-                    <img src="../img/personCenter/three-points.png">
-                </div>
+
+        </div>
+        <!-- 我的任务 END -->
+
+        <!-- 我的发布 START -->
+        <div id="my-publish-page" class="personal-publish">
+            <!-- HTML 我的发布模板 -->
+            <div id="userPublishData" style="display: none">
+                @@include("index-user-publish-item.html")
             </div>
-            <div class="personal-task-item">
-                <div class="personal-task-item-left">
-                    <img src="../img/personCenter/进行中.png">
-                    <p name="my-task-status">进行中</p>
-                </div>
-                <div onclick="javascript:alert('进入我的任务详情');" class="personal-task-item-body">
-                    <p name="title">【生活】取快递</p>
-                    <p name="content">中午十二五亮点起那个爱我id还低洼好idsAudi啥U都是啥U速度阿斗【生活】取快递</p>
-                </div>
-                <div class="personal-task-item-right">
-                    <img src="../img/personCenter/three-points.png">
+            <!-- HTML 我的发布模板 -->
+            <div id="userPublishWrapper" class="left-slide-list" style="background-color: #ffffff">
+                <ul id="user-publish-list">
+
+                </ul>
+                <div id="user-publish-load-more" class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
                 </div>
             </div>
         </div>
-        <!--这个要写js改隐藏-->
-        <div id="my-publish-page" class="personal-task">
-            <div class="personal-task-item">
-                <div class="personal-task-item-left">
-                    <img src="../img/personCenter/进行中.png">
-                    <p name="my-publish-status">进行中</p>
-                </div>
-                <div onclick="javascript:alert('进入我的发布详情');" class="personal-task-item-body">
-                    <p name="title">【学习】辅导高数</p>
-                    <p name="content">中午十二五亮点起那个爱我id还低洼好idsAudi啥U都是啥U速度阿斗【学习】辅导高数</p>
-                </div>
-                <div onclick="javascript:alert( '这里应该有选择删除');" class="personal-task-item-right">
-                    <img src="../img/personCenter/three-points.png">
-                </div>
-            </div>
-            <div class="personal-task-item">
-                <div class="personal-task-item-left">
-                    <img src="../img/personCenter/完成.png">
-                    <p name="my-publish-status">已完成</p>
-                </div>
-                <div onclick="javascript:alert('进入我的发布详情');" class="personal-task-item-body">
-                    <p name="title">【学习】辅导高数</p>
-                    <p name="content">中午十二五亮点起那个爱我id还低洼好idsAudi啥U都是啥U速度阿斗【学习】辅导高数</p>
-                </div>
-                <div class="personal-task-item-right">
-                    <img src="../img/personCenter/three-points.png">
-                </div>
-            </div>
-            <div class="personal-task-item">
-                <div class="personal-task-item-left">
-                    <img src="../img/personCenter/完成.png">
-                    <p name="my-publish-status">已完成</p>
-                </div>
-                <div onclick="javascript:('进入我的发布详情');" class="personal-task-item-body">
-                    <p name="title">【学习】辅导高数</p>
-                    <p name="content">中午十二五亮点起那个爱我id还低洼好idsAudi啥U都是啥U速度阿斗【学习】辅导高数</p>
-                </div>
-                <div class="personal-task-item-right">
-                    <img src="../img/personCenter/three-points.png">
-                </div>
-            </div>
-        </div>
+        <!-- 我的发布 END -->
     </div>
 
 </div>

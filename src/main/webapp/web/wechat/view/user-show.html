@@ -22,17 +22,17 @@
             <div class="user-bg user-bg-blur"></div>
             <div class="weui-cell" id="headPortrait">
                 <div class="weui-cell__hd">
-                    <img class="headimg" src="../img/personCenter/person-img.jpg">
+                    <img class="headimg" src="">
                 </div>
                 <div class="weui-cell__bd">
                 </div>
-                <div class="weui-cell__ft">会飞的鱼</div>
+                <div class="weui-cell__ft" id="user-name">会飞的鱼</div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
                     <p>性别</p>
                 </div>
-                <div class="weui-cell__ft" id="user-gender">女</div>
+                <div class="weui-cell__ft" id="user-gender" value="0">女</div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
@@ -44,7 +44,7 @@
                 <div class="weui-cell__bd">
                     <p>学校</p>
                 </div>
-                <div class="weui-cell__ft" id="user-school">西安电子科技大学北校区</div>
+                <div class="weui-cell__ft" id="user-school"></div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
@@ -57,7 +57,7 @@
         <div class="user-card-show" id="user-card-show">
             <img src="../img/personCenter/person-card.jpg">
         </div>
-        <div><a href="user-edit.html" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
+        <div class="user-edit-btn" style="display:none;"><a href="user-edit.html" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
     </div>
     <script src="../../common/js/jquery-2.1.4.js"></script>
     <script src="../../common/js/fastclick.js"></script>
@@ -67,6 +67,7 @@
         });
     </script>
     <script src="../../common/js/jquery-weui.js"></script>
+    <script src="../js/user-info.js"></script>
 
 </body>
 

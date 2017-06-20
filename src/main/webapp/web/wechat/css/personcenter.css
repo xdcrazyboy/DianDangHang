@@ -112,6 +112,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     color: #cde;
+    font-family: sans-serif;
 }
 
 .personal-main-bottom .personal-task {
@@ -124,45 +125,145 @@ body {
     display: block;
 }
 
-.personal-task-item {
+
+/*.personal-item-content {
     display: flex;
     height: 100px;
     margin: 5px 5px;
     color: #535353;
     background-color: #fff;
     border-bottom: 2px solid #eee;
+}*/
+
+.user-goods-wrapper .personal-item-content {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px 0;
+    border-bottom: 2px solid #eee;
+    border-radius: 0px;
+    overflow: hidden;
 }
 
-.personal-task-item-left {
+.user-goods-wrapper .personal-item-content-left {
+    flex: 0 0;
+    padding: 10px;
+}
+
+.user-goods-wrapper .personal-item-content-body {
+    flex: 1 1;
+    padding: 10px 5px;
+}
+
+.user-goods-wrapper .personal-item-content-left .status-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+}
+
+.user-goods-wrapper .personal-item-content-left .status-name {
     text-align: center;
+    color: #84ff09;
 }
 
-.personal-task-item-left img {
-    width: 40px;
-    height: 40px;
-    margin-top: 10px;
+.user-goods-wrapper .personal-item-content-body .top {
+    overflow: hidden;
 }
 
-.personal-task-item-body p[name="title"] {
+.user-goods-wrapper .personal-item-content-body .bottom {
+    overflow: hidden;
+}
+
+.user-goods-wrapper .personal-item-content-body .type {
+    border: 1px solid #e5e5e5;
+    padding: 2px 6px 1px;
+    background: #e5e5e5;
+    color: #3fc78d;
+    border-radius: 5px;
+    font-size: 12px;
+    float: left;
+}
+
+.user-goods-wrapper .personal-item-content-body .title {
+    margin-left: 10px;
     font-size: 18px;
     color: #000000;
+    line-height: 21px;
+    padding-top: 1px;
+    max-height: 21px;
+    float: left;
     overflow: hidden;
 }
 
-.personal-task-item-body {
-    font-size: 16px;
-    padding: 10px;
+.user-goods-wrapper .personal-item-content-body .time {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #999999;
+}
+
+.user-goods-wrapper .personal-item-content-body .describe {
+    margin: 0px 0 5px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.user-goods-wrapper .personal-item-content-body .describe p {
+    max-height: 44px;
+    text-overflow: ellipsis;
     overflow: hidden;
-    flex: 1;
-    margin-bottom: 10px;
 }
 
-.personal-task-item-right {
-    padding-top: 28px;
-    vertical-align: center;
+.user-goods-wrapper .personal-item-content-body .place {
+    float: left;
+    margin-top: 2px;
+    font-size: 14px;
+    color: #999999;
+    line-height: 24px;
+    padding: 1px 0;
 }
 
-.personal-task-item-right img {
-    width: 45px;
-    height: 45px;
+.user-goods-wrapper .personal-item-content-body .operation {
+    float: right;
+    border: 1px solid #e5e5e5;
+    color: #000000;
+    margin-top: 2px;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 1px 8px;
+    background: #33cc00;
+    border-radius: 5px;
+}
+
+
+/*左滑删除菜单*/
+
+.left-slide-list {
+    overflow: hidden;
+}
+
+.left-slide-li {
+    overflow: hidden;
+    width: 100%;
+}
+
+.left-slide-item {
+    display: block;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.personal-item-content {
+    width: 100%;
+}
+
+.left-slide-operation {
+    float: right;
+    width: 15%;
+    text-align: center;
+    background: #E2421B;
+    color: #fff;
+}
+
+.slide-left {
+    transform: translateX(-15%);
+    -webkit-transform: translateX(-15%);
 }

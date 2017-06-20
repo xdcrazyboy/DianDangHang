@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>选择学校</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "时间典当行"})
+    <!-- common head and css -->
+
+    <style>
+        .weui-label {
+            width: 70px;
+        }
+        
+        .picker-items-col.col-district {
+            flex: 5;
+            max-width: 11rem;
+        }
+    </style>
+</head>
+
+<body ontouchstart>
+
+
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="name" class="weui-label">学校</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="user-school" type="text" value="陕西省 西安 西安电子科技大学">
+            </div>
+        </div>
+    </div>
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
+
+    <!-- zhao jinbo -->
+    <script src="../js/school-picker.js"></script>
+    <script>
+        $("#user-school").cityPicker({
+            title: "选择学校",
+            onChange: function(picker, values, displayValues) {
+                console.log(values, displayValues);
+                $(this).attr("value", displayValues);
+
+            }
+        });
+    </script>
+    <!-- zhao jinbo -->
+
+</body>
+
+</html>

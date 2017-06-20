@@ -27,7 +27,7 @@
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__hd">
-                    <label class="weui-label">用户名</label>
+                    <label class="weui-label" for="user-name-edit">用户名</label>
                 </div>
                 <div class="weui-cell__bd">
                     <input class="weui-input" type="text" id="user-name-edit" value="" placeholder="请输入用户名">
@@ -35,7 +35,7 @@
             </div>
             <div class="weui-cell ">
                 <div class="weui-cell__bd ">
-                    <p>性别</p>
+                    <label class="weui-label" for="user-gender">性别</label>
                 </div>
                 <div class="weui-cell__ft gender-edit " id="user-gender">
                     <input type="radio" id="gender-man-radio" name="radio-1-set" class="regular-radio" checked /><label for="gender-man-radio"></label>男
@@ -44,19 +44,19 @@
             </div>
             <div class="weui-cell weui-cell_select weui-cell_select-after">
                 <div class="weui-cell__hd">
-                    <label class="weui-label">地区</label>
+                    <label class="weui-label" for="user-address-edit">地区</label>
                 </div>
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select2" id="user-address-edit">
-                        <option value="1">中国</option>
-                        <option value="2">美国</option>
-                        <option value="3">英国</option>
+                        <option value="1">陕西</option>
+                        <option value="2">山西</option>
+                        <option value="3">山东</option>
                     </select>
                 </div>
             </div>
             <div class="weui-cell weui-cell_select weui-cell_select-after">
                 <div class="weui-cell__hd">
-                    <label class="weui-label">学校</label>
+                    <label class="weui-label" for="user-school-edit">学校</label>
                 </div>
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select2" id="user-school-edit">
@@ -68,10 +68,10 @@
             </div>
             <div class="weui-cell weui-cell_vcode">
                 <div class="weui-cell__hd">
-                    <label class="weui-label">手机号</label>
+                    <label class="weui-label" for="user-tel-edit">手机号</label>
                 </div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="tel" value="" placeholder="请输入手机号">
+                    <input class="weui-input" type="tel" value="" id="user-tel-edit" placeholder="请输入手机号">
                 </div>
                 <div class="weui-cell__ft">
                     <button class="weui-vcode-btn">获取验证码</button>
@@ -85,7 +85,7 @@
             </div>
             <div class="weui-uploader__bd centerdiv">
                 <div class="weui-uploader__input-box">
-                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    <input id="uploader-user-card" class="weui-uploader__input" type="file" accept="image/*" multiple="">
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
     </script>
     <script src="../../common/js/jquery-weui.min.js"></script>
     <script type="text/javascript" src="../../common/js/city-picker.js" charset="utf-8"></script>
-
+    <script src="../js/user-info.js"></script>
 </body>
 
 </html>
