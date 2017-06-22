@@ -182,20 +182,20 @@ $(function () {
     }
     /* 确认任务完成 */
     function service_ack(id) {
-        $.toast("还没有接口", "text");
-        return;
-        $.get(ServerUrl + "task/takeOver/" + id, function (data) {
-            if(data.statusCode == 3000){ /* 接手成功 */
-                $.toast("接手成功", "text");
+        $.get(ServerUrl + "task/taskStatus/" + id, {
+            means: 0
+        }, function (data) {
+            if(data.statusCode == 3000){ /* 成功 */
+                $.toast("确认成功", "text");
                 location.reload(); /* 重新加载页面 */
-            }else if(data.statusCode == 3007){ /* 接手失败 */
-                $.toast("接手失败", "text");
-            }else if(data.statusCode == 3019){ /* 任务不存在 */
+            }else if(data.statusCode == 3001){ /* 失败 */
+                $.toast("确认失败", "text");
+            }else if(data.statusCode == 3003){ /* 任务不存在 */
                 $.toast("任务不存在", "text");
                 history.back(); /* 返回上一页 */
-            }else if(data.statusCode == 3008){ /* 任务已被接手 */
-                $.toast("任务已被接手", "text");
-                location.back(); /* 重新加载页面 */
+            }else if(data.statusCode == 3004){ /* 参数为空 */
+                $.toast("确认失败", "text");
+                location.back(); /* 返回上一页 */
             }else{
                 location.back();
             }

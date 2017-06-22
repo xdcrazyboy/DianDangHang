@@ -50,7 +50,7 @@ $(function () {
     /* ajax 异常*/
     $(document).ajaxError(function(){
         $.hideLoading();
-        $.toast("发生异常");
+        $.toast("发生异常", "text");
     });
 });
 

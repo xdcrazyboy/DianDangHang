@@ -54,7 +54,8 @@ $(function () {
                 var $desHtml = $("#indexTaskTypeDataWrapper").empty();
                 for (var i in types){
                     $sorHtml.children("div").attr("data-id", types[i].id);
-                    $sorHtml.find("img").attr("src", "../img/index/task-type-" + (parseInt(i) + 1) + ".png"/*types[i].typeImage*/);
+                    //$sorHtml.find("img").attr("src", "../img/index/task-type-" + (parseInt(i) + 1) + ".png");
+                    $sorHtml.find("img").attr("src", types[i].catgory_icon);
                     $sorHtml.find("p").text(types[i].catgory);
                     $desHtml.append($sorHtml.html());
                 }
