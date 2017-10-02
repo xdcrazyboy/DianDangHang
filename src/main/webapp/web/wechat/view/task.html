@@ -3,7 +3,19 @@
 <head>
 
     <!-- common head and css -->
-    @@include("include/common-head.html", {"title": "任务详情"})
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="这是一个神奇的网站">
+<title>任务详情</title>
+
+<!-- common -->
+<link rel="stylesheet" href="../../common/css/reset.css" />
+<link rel="stylesheet" href="../../common/css/weui.css" />
+<link rel="stylesheet" href="../../common/css/jquery-weui.css" />
+<!-- common -->
+
     <!-- common head and css -->
 
     <!-- ALISURE -->
@@ -12,33 +24,37 @@
 </head>
 <body>
 
+    <!--接手者信息-->
+    <div id="rec-info" class="rec-info" style="display: none">
+        <div class="left">已接单</div>
+        <div class="center">
+            <div class="head"><img src=""></div>
+            <div class="nickname">接单人：<span></span></div>
+            <div class="link"></div>
+        </div>
+        <div class="right">
+            <div>接单时间</div>
+            <div>09-09 09:09</div>
+        </div>
+    </div>
+
     <!--详情展示-->
     <div id="publish-wrapper" class="publish-wrapper" style="display: none">
         <!-- 任务名称 -->
         <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd"><p>任务名称</p></div>
-                <div id="task-name-detail" class="weui-cell__ft"></div>
-            </div>
-        </div>
-
-        <!--任务文本-->
-        <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd"><p>任务描述</p></div>
-            </div>
-            <div class="weui-cell">
-                <div class="publish-task-describe" id="task-describe-detail"></div>
-            </div>
-        </div>
-
-        <!--私密信息-->
-        <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd"><p>私密信息（只有当接手任务后才可见）</p></div>
-            </div>
-            <div class="weui-cell">
-                <div class="publish-task-describe" id="task-secret-detail"></div>
+            <div class="content">
+                <div class="left-user">
+                    <div id="pub-icon" class="image"><img src=""></div>
+                    <div id="pub-goldCoins" class="money"><span></span><img src="../img/task-item/money.png"></div>
+                    <div id="pub-nickname" class="name"></div>
+                </div>
+                <div class="right-task">
+                    <div class="top">
+                        <div id="task-name-detail" class="title"></div>
+                        <div id="task-type-detail" class="type"></div>
+                    </div>
+                    <div id="task-describe-detail" class="describe"><p></p></div>
+                </div>
             </div>
         </div>
 
@@ -82,16 +98,6 @@
                 </div>
                 <div class="weui-cell__ft" id="task-time-end-detail"></div>
             </div>
-            <!--类型-->
-            <div class="weui-cell">
-                <div class="weui-cell__hd">
-                    <img src="../img/publish/type.png" alt="" style="width:20px;margin-right:5px;display:block">
-                </div>
-                <div class="weui-cell__bd">
-                    <p>类型</p>
-                </div>
-                <div class="weui-cell__ft" id="task-type-detail"></div>
-            </div>
             <!--地点-->
             <div class="weui-cell">
                 <div class="weui-cell__hd">
@@ -112,10 +118,6 @@
                 </div>
                 <div class="weui-cell__ft" id="task-money-detail">0</div>
             </div>
-        </div>
-
-        <!--填写区域二-->
-        <div class="weui-cells">
             <!--酬劳-->
             <div class="weui-cell">
                 <div class="weui-cell__hd">
@@ -148,13 +150,23 @@
             </div>
         </div>
 
+        <!--私密信息-->
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <img src="../img/publish/secret-info.png" alt="" style="width:20px;margin-right:5px;display:block">
+                </div>
+                <div class="weui-cell__bd secret-info"><p>悄悄话</p></div>
+            </div>
+            <div class="weui-cell">
+                <div class="publish-task-describe" id="task-secret-detail"></div>
+            </div>
+        </div>
+
         <!--接手按钮-->
         <div class="weui-btn-area">
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="accept-task" style="display: none">接手</a>
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="modify-task" style="display: none">修改</a>
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="execute-task" style="display: none">进行中</a>
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="completing-task" style="display: none">确认完成</a>
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="completed-task" style="display: none">已完成，返回上一页</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="operation1">接手</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="operation2" style="display: none">取消</a>
         </div>
 
         <!--空白-->
@@ -162,8 +174,29 @@
     </div>
     <!--详情展示-->
 
+    <!--评论和投诉信息-->
+    <div id="comment">
+
+    </div>
+
     <!-- common js -->
-    @@include("include/common-js.html", {"info": "this is info."})
+    
+<script src="../../common/js/jquery-2.1.4.js"></script>
+<script src="../../common/js/jquery-weui.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!-- for ios bug -->
+<script src="../../common/js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script src="../js/pre-deal.js"></script>
+
+<!-- task.html for image swiper -->
+<script src="../../common/js/swiper.min.js"></script>
+
     <!-- common js -->
 
     <!-- ALISURE -->

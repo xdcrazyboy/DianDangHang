@@ -4,7 +4,7 @@
 </head>
 <body>
 
-    <p><a href="web/wechat/view/index.html">典当行</a></p>
+    <p><a href="web/wechat/view/index.html">index</a></p>
 
 </body>
 </html>

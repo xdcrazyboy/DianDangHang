@@ -6,16 +6,14 @@ import com.alisure.weixin.check.JSSDKSignUtil;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by ALISURE on 2017/4/28.
- */
+import java.net.URL;
 
 @Component("getWeiXinInf")
 public class GetWeiXinInf {
 
     /*定时表达式*/
     /*每个小时的**：10：10更新*/
-    private static final String Cron = "10 10 * * * ?";
+    private static final String Cron = "20 10 * * * ?";
 
     /*key*/
     private static final String AccessToken = "accessToken";
@@ -24,7 +22,8 @@ public class GetWeiXinInf {
     private static final String file = "task.properties";
 
     private String getFile(){
-        return getClass().getResource(file).getPath();
+        URL url = getClass().getResource(file);
+        return url.getPath();
     }
 
     /**
@@ -50,8 +49,8 @@ public class GetWeiXinInf {
             return CoreProperties.getPropByFileAndProp2(getFile(), AccessToken);
         } catch (Exception e) {
             e.printStackTrace();
-            return "";
         }
+        return "";
     }
 
     /**

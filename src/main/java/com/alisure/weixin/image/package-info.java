@@ -9,10 +9,10 @@ package com.alisure.weixin.image;
             ImageUtil.getWeiXinImage()
 
     二、此包的引用：
-        1.import com.alisure.tool.core.CoreAlisure
+        1.import com.CoreAlisure
             需要重构的操作
-        2.import com.alisure.tool.core.CoreImage
+        2.import com.CoreImage
             我写的图片相关类
-        3.import com.alisure.tool.core.CoreNetwork
+        3.import com.CoreNetwork
             我写的联网服务类
  */

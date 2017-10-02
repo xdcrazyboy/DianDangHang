@@ -2,7 +2,7 @@ package com.alisure.tool.core;
 
 public class CoreReflect {
 	/**
-	 * »ñµÃÖ´ÐÐ¸Ã·½·¨µÄ·½·¨Ãû
+	 * ï¿½ï¿½ï¿½Ö´ï¿½Ð¸Ã·ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	public static String[] getExceptionPlace(){
@@ -13,7 +13,7 @@ public class CoreReflect {
 	}
 
 	/**
-	 * »ñµÃÖ´ÐÐ¸Ã·½·¨µÄÀàÃû
+	 * ï¿½ï¿½ï¿½Ö´ï¿½Ð¸Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	public static String getClassName(){
@@ -21,7 +21,7 @@ public class CoreReflect {
 	}
 	
 	/**
-	 * »ñµÃÖ´ÐÐ¸Ã·½·¨µÄ·½·¨Ãû
+	 * ï¿½ï¿½ï¿½Ö´ï¿½Ð¸Ã·ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	public static String getMethodName(){
@@ -29,7 +29,7 @@ public class CoreReflect {
 	}
 	
 	/**
-	 * »ñµÃÖ´ÐÐ¸Ã·½·¨µÄÐÐºÅ
+	 * ï¿½ï¿½ï¿½Ö´ï¿½Ð¸Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðºï¿½
 	 * @return
 	 */
 	public static int getLineNumber(){

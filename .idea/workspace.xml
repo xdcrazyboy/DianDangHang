@@ -1,22 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5046486-a0a7-4939-80e1-bf7ca72eb1da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/left-shift-menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/school-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/user-info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user-publish-item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user-task-item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/school-picker.html" />
+    <list default="true" id="c5046486-a0a7-4939-80e1-bf7ca72eb1da" name="Default" comment="修改任务类型图标">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/fonts/DroidSans-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/fonts/DroidSans.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/collapse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/expand.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/explorer_icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/favicon-16x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/favicon-32x32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/logo_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/pet_store_api.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/throbber.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/images/wordnik_api.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/common/no_data.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/task_place.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/head.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/money-fenge.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/money.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/other-money.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/place.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/secret-info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/task-top-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/time.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/task-item/money.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/controller/CommentController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/controller/HandleToken2Controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/controller/TaskController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoComment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoMoneyChange.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/service/CommonService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/service/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/swagger/SwaggerConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateContent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/error/error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/css/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/css/typography.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/geo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/ko-kr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/translator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lang/zh-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/backbone-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/es5-shim.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/handlebars-4.0.5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/highlight.9.1.0.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/highlight.9.1.0.pack_extended.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/jquery-1.8.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/jquery.ba-bbq.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/jquery.slideto.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/jquery.wiggle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/js-yaml.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/jsoneditor.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/lodash.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/marked.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/object-assign-pollyfill.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/sanitize-html.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/lib/swagger-oauth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/o2c.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/swagger-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/swagger/swagger-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/js/money.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/js/search-page.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/js/task-main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/common-error-info.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/view/personCenter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/view/publish.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/controller/TestController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/entity/Signature.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/entity/Status.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreAlisure.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreFile.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreImage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreNumber.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CorePrint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreSystemProperty.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreTime.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/tool/core/CoreTimekeepingException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/weixin/check/JSSDKSignUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/weixin/image/ImageUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/alisure/weixin/task/task.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/result/Result.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/result/ResultObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/resources/image/userHead/user_head_img_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/publish/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/publish/money.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/publish/other-money.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/publish/place.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/publish/time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/task-item/money.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/ui/u8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/search-page-main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/search-result.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-list-with-refresh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/searchResult.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/DianDangHang_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/DianDangHang_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/personal-center.js" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/personal-center.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DianDangHang.iml" afterPath="$PROJECT_DIR$/DianDangHang.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.config.js" afterPath="$PROJECT_DIR$/gulpfile.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/controller/HandleTokenController.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/controller/HandleTokenController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreNetwork.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreProperties.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreProperties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreReflect.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreReflect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreString.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreString.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreTimekeeping.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreTimekeeping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/SignUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/SignUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/package-info.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/image/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/image/package-info.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/GetWeiXinInf.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/GetWeiXinInf.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/package-info.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/spring-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/spring-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/controller/PreDealController.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/controller/ImageController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/jquery-weui.css" afterPath="$PROJECT_DIR$/src/web/common/css/jquery-weui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/jquery-weui.min.css" afterPath="$PROJECT_DIR$/src/web/common/css/jquery-weui.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/pullToRefresh.css" afterPath="$PROJECT_DIR$/src/web/common/css/pullToRefresh.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/reset.css" afterPath="$PROJECT_DIR$/src/web/common/css/reset.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/swiper.css" afterPath="$PROJECT_DIR$/src/web/common/css/swiper.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/swiper.min.css" afterPath="$PROJECT_DIR$/src/web/common/css/swiper.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/weui.css" afterPath="$PROJECT_DIR$/src/web/common/css/weui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/css/weui.min.css" afterPath="$PROJECT_DIR$/src/web/common/css/weui.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/city-picker.js" afterPath="$PROJECT_DIR$/src/web/common/js/city-picker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/city-picker.min.js" afterPath="$PROJECT_DIR$/src/web/common/js/city-picker.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/fastclick.js" afterPath="$PROJECT_DIR$/src/web/common/js/fastclick.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/iscroll.js" afterPath="$PROJECT_DIR$/src/web/common/js/iscroll.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/jquery-2.1.4.js" afterPath="$PROJECT_DIR$/src/web/common/js/jquery-2.1.4.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/jquery-weui.min.js" afterPath="$PROJECT_DIR$/src/web/common/js/jquery-weui.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/jweixin-1.2.0.js" afterPath="$PROJECT_DIR$/src/web/common/js/jweixin-1.2.0.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/less.min-2.5.3.js" afterPath="$PROJECT_DIR$/src/web/common/js/less.min-2.5.3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/pullToRefresh.js" afterPath="$PROJECT_DIR$/src/web/common/js/pullToRefresh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/js/swiper.min.js" afterPath="$PROJECT_DIR$/src/web/common/js/swiper.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/less/color-less.css" afterPath="$PROJECT_DIR$/src/web/common/less/color-less.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/common/less/color-less.less" afterPath="$PROJECT_DIR$/src/web/common/less/color-less.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/index-main.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/index-main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/index-publish.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/publish.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/loading-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/loading-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/money-item-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/money-item-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/personcenter.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/search-input-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/search-input-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/search-page-prompt-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/search-page-prompt-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/search-page-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/search-page-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-item-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/task-item-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-main.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/task-main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/user-info.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/user-info.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/_首页灰.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/_首页灰.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/icon_金币.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/icon_金币.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/timg.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/timg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/关闭.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/关闭.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/其他 (1).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/其他 (1).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/典当行.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/典当行.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/刷新.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/刷新.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/加载.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/加载.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/加载.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/加载.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/叉白.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/叉白.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/发布灰.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/发布灰.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/发布绿.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/发布绿.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/取消.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/取消.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/地点 (1).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/地点 (1).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/地点.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/地点.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/女.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/女.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/娱乐 (1).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/娱乐 (1).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/娱乐.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/娱乐.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/学习.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/学习.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/完成 (1).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/完成 (1).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/完成.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/wancheng.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/对号.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/对号.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/应用.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/应用.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/掌柜.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/掌柜.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/日历.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/日历.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/时间2-1.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/时间2-1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/时间3-1.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/时间3-1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/时间3.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/时间3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/时间4.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/时间4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/时间5.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/时间5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/更多白.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/更多白.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/生活.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/生活.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/用户 灰).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/用户 灰).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/用户 白.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/用户 白.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/用户 绿).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/用户 绿).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/男.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/男.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/相机.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/相机.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/等待.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/等待.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/类型.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/类型.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/编辑.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/编辑.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/联系方式 (2).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/联系方式 (2).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/解答酬金.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/解答酬金.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/账单 (1).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/账单 (1).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/账单.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/账单.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/进行中.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/jinxingzhong.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/金币 (1).png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/金币 (1).png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/金币.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/金币.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/首页绿.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/首页绿.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/icon_nav_article.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/icon_nav_article.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/icon_nav_button.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_button.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/icon_nav_cell.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/icon_nav_cell.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/refresh.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/refresh.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/task-type-1.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/task-type-1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/task-type-2.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/task-type-2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/task-type-3.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/task-type-3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/task-type-4.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/task-type-4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/index/task-type-5.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/task-type-5.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/background.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/background.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/gender-boy.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/gender-boy.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/gender-girl.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/gender-girl.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/icon_gold.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/icon_gold.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/index-green.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/index-green.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/index-grey.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/index-grey.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/person-card.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/person-card.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/person-img.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/person-img.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/three-points.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/three-points.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/完成.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/完成.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/personCenter/进行中.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/imges/进行中.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/publish/type.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/publish/type.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_footer.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_footer.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_footer_link.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_footer_link.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_intro.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_intro.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_actionSheet.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_actionSheet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_article.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_article.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_button.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/icon_nav_button.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_cell.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_cell.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_dialog.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_dialog.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_feedback.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_feedback.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_flow.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_flow.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_form.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_form.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_icons.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_icons.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_layout.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_layout.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_msg.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_msg.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_nav.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_nav.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_panel.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_panel.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_progress.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_progress.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_search.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_search.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_search_bar.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_search_bar.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_special.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_special.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_tab.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_tab.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_toast.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_toast.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_z-index.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_z-index.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_nav_zindex.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_nav_zindex.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/icon_tabbar.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/icon_tabbar.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/logo.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/pic_160.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/pic_160.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/pic_article.png" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/pic_article.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/img/weui/vcode.jpg" afterPath="$PROJECT_DIR$/src/web/wechat/img/weui/vcode.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-publish.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/publish.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-search.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/index-search.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-task-list.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/index-task-list.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/left-shift-menu.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/left-shift-menu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/money-list-with-refresh.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/money-list-with-refresh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/personal-center.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/personal-center.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/pre-deal.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/pre-deal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/school-picker.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/school-picker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/user-info.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/user-info.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/Money.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/money.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/city-picker.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/city-picker.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-head.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/common-head.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-js.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/common-js.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-task-item.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/common-task-item.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-menu.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-menu.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-publish.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-publish.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-search.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-search.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-task.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-task.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user-publish-item.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-user-publish-item.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user-task-item.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-user-task-item.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-user.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/modifyTask.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/modifyTask.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/school-picker.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/school-picker.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/searchPage.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/searchPage.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/task.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/task.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/user-edit.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/user-show.html" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,75 +342,60 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="timeseller_v0.2@115.159.153.114" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/web/wechat/view/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package-info" />
-        <option value="Class" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>QQ</find>
-      <find>86</find>
-      <find>weui-cell__hd</find>
-      <find>请输入文本</find>
-      <find>带说明</find>
-      <find>日期</find>
-      <find>微信</find>
-      <find>手机</find>
-      <find>确定</find>
-      <find>美国</find>
-      <find>带说明的列表项</find>
-      <find>map</find>
-      <find>Gallery</find>
-      <find>task_parms</find>
+      <find>project</find>
+      <find>index-bottom-margin</find>
+      <find>#task-load-more</find>
+      <find>continue-search</find>
+      <find>getSearchResult</find>
       <find>data</find>
-      <find>unde</find>
-      <find>pullUpLable</find>
-      <find>empty</find>
-      <find>uglify</find>
-      <find>over</find>
-      <find>loading</find>
-      <find>link_params</find>
-      <find>cate</find>
-      <find>#publish-wrapper</find>
-      <find>task</find>
-      <find>id=&quot;</find>
-      <find>#</find>
-      <find>edit</find>
-      <find>publish</find>
+      <find>goods</find>
+      <find>updateCoinsByTask</find>
+      <find>task_link_max_length</find>
+      <find>ack_submit</find>
+      <find>set_status_info</find>
+      <find>init_status_and_operation</find>
+      <find>school</find>
+      <find>getTaskByPage</find>
     </findStrings>
     <replaceStrings>
-      <replace>task_params</replace>
+      <replace>tasks</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -106,57 +405,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/view/personalCenter.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/js/index-search.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/view/searchPage.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/css/goods-item-style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/js/task-list-with-refresh.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/css/loading-style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/view/searchResult.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/weui/view/loading.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/view/loading.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/view/task.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/css/task-item-style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/view/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/js/index-task-list.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web2/wechat/css/index-main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/Money.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/config.json" />
-        <option value="$PROJECT_DIR$/dist/web/wechat/view/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/AreaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/AreaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/SchoolService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/SearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/dao/TaskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/TaskController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/dao/CommentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/Template.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoSchool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoCategory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/web/wechat/js/money.js" />
+        <option value="$PROJECT_DIR$/src/web/wechat/js/pre-deal.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/dao/SearchDao.java" />
+        <option value="$PROJECT_DIR$/src/web/wechat/js/search-page.js" />
+        <option value="$PROJECT_DIR$/src/web/wechat/js/task-main.js" />
+        <option value="$PROJECT_DIR$/src/web/wechat/js/publish.js" />
+        <option value="$PROJECT_DIR$/src/web/wechat/css/money-item-style.css" />
+        <option value="$PROJECT_DIR$/src/web/wechat/js/index-task-list.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreAlisure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreSystemProperty.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/spring-servlet.xml" />
         <option value="$PROJECT_DIR$/gulpfile.config.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-search.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-publish.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-footer.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-head.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-head.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-js.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-task.html" />
-        <option value="$PROJECT_DIR$/说明.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/css/user-info.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-list-with-refresh.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/searchResult.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-task-item.html" />
-        <option value="$PROJECT_DIR$/alisure.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/searchPage.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/search-page-main.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/search-result.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-task-list.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/task.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-main.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/modifyTask.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/pre-deal.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-publish.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/GetWeiXinInf.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/image/ImageUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/auth/Auth.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/menu/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/WenXinController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/SignUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/FinalString.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/Interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/SchoolController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/CommonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoMoneyChange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/HandleToken2Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/AllURL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template2.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" />
       </list>
     </option>
   </component>
@@ -245,8 +544,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="416" />
-    <option name="width" value="1511" />
+    <option name="x" value="534" />
+    <option name="width" value="1393" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -267,9 +566,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,36 +592,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DianDangHang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DianDangHang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -345,14 +611,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -388,105 +646,80 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DianDangHang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DianDangHang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DianDangHang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DianDangHang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="alisure" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="js-jscs-nodeInterpreter" value="D:\Node\Install\node.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="D:/Node/Install/node" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="js-jscs-nodeInterpreter" value="D:\Node\Install\node.exe" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/典当行/06-20/wechat-zhao-6-12" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\node_modules\gulp" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DDHServer" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\web\wechat\css" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\web\wechat\img\personCenter" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\web\wechat\js" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\web\wechat\view" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\web\wechat\view\include" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\image" />
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp" />
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\upload" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.alisure.result" />
-      <recent name="com.alisure.Interceptor" />
+      <recent name="com.alisure.weixin.template" />
       <recent name="com.alisure.controller" />
-      <recent name="com.alisure.check" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\src\main\webapp\web2\wechat\view" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\src\main\webapp\web\wechat\img\weui" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\src\main\webapp\web" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\src\main\webapp\web\wechat\view" />
-      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\src\main\webapp\web\wechat\demo" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\web\wechat\img\publish" />
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\web\wechat\js" />
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\web\wechat\img\index" />
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\web\wechat" />
+      <recent name="D:\IDEA\GongZhongHaoFile\DianDangHang\DianDangHang\src\main\webapp\WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Gulp.js.default">
+  <component name="RunManager" selected="Tomcat Server.Server">
+    <configuration default="false" name="JSSDKSignUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.alisure.weixin.check.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.alisure.weixin.check.JSSDKSignUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DianDangHang" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -498,60 +731,119 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="clean" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>clean</task>
-      </tasks>
-      <arguments />
+    <configuration default="false" name="test.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/src/web/wechat">
+      <method />
+    </configuration>
+    <configuration default="false" name="Template" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.alisure.weixin.menu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.alisure.weixin.template.Template" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DianDangHang" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="rev" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>rev</task>
-      </tasks>
-      <arguments />
+    <configuration default="false" name="CoreSystemProperty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.alisure.tool.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.alisure.tool.core.CoreSystemProperty" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DianDangHang" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="watch" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>watch</task>
-      </tasks>
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="product" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>product</task>
-      </tasks>
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ddh" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DianDangHang:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ddh" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_DianDangHang" />
+      </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1172" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -949,13 +1241,13 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/diandanghang/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration default="false" name="Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ddh" />
+      <option name="UPDATING_POLICY" value="update-resources" />
       <deployment>
         <artifact name="DianDangHang:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/diandanghang" />
+            <option name="CONTEXT_PATH" value="/ddh" />
           </settings>
         </artifact>
       </deployment>
@@ -969,7 +1261,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="8826" />
+        <option name="DEBUG_PORT" value="1172" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -1017,26 +1309,27 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
+        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="DianDangHang:war exploded" />
         </option>
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
-      <item index="2" class="java.lang.String" itemvalue="Gulp.js.clean" />
-      <item index="3" class="java.lang.String" itemvalue="Gulp.js.rev" />
-      <item index="4" class="java.lang.String" itemvalue="Gulp.js.watch" />
-      <item index="5" class="java.lang.String" itemvalue="Gulp.js.product" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Server" />
+      <item index="1" class="java.lang.String" itemvalue="Application.JSSDKSignUtil" />
+      <item index="2" class="java.lang.String" itemvalue="Gulp.js.default" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Template" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CoreSystemProperty" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.product" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CoreSystemProperty" />
         <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="2" class="java.lang.String" itemvalue="Gulp.js.watch" />
-        <item index="3" class="java.lang.String" itemvalue="Gulp.js.clean" />
-        <item index="4" class="java.lang.String" itemvalue="Gulp.js.rev" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Template" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.JSSDKSignUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -1044,160 +1337,112 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c5046486-a0a7-4939-80e1-bf7ca72eb1da" name="Default" comment="" />
-      <created>1493282710096</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1493282710096</updated>
-      <workItem from="1493282717721" duration="13468000" />
-      <workItem from="1493357311231" duration="31222000" />
-      <workItem from="1493554807536" duration="38000" />
-      <workItem from="1493622637725" duration="208000" />
-      <workItem from="1493632428224" duration="138000" />
-      <workItem from="1494072884626" duration="78378000" />
-      <workItem from="1494345924936" duration="1908000" />
-      <workItem from="1494348050162" duration="258000" />
-      <workItem from="1494403404676" duration="142000" />
-      <workItem from="1494695969758" duration="5314000" />
-      <workItem from="1494746542694" duration="1456000" />
-      <workItem from="1494751445723" duration="629000" />
-      <workItem from="1494945256075" duration="11650000" />
-      <workItem from="1495012291899" duration="10578000" />
-      <workItem from="1495031338352" duration="44000" />
-      <workItem from="1495371153600" duration="18824000" />
-      <workItem from="1495448963995" duration="1398000" />
-      <workItem from="1495451917653" duration="1765000" />
-      <workItem from="1495705722230" duration="2392000" />
-      <workItem from="1496486927601" duration="1964000" />
-      <workItem from="1496925936636" duration="3097000" />
-      <workItem from="1496990865825" duration="1392000" />
-      <workItem from="1497497635593" duration="13731000" />
-      <workItem from="1497944747669" duration="21223000" />
-    </task>
-    <task id="LOCAL-00001" summary="更新index.jsp">
-      <created>1495449495127</created>
+    <task id="LOCAL-00001" summary="修改任务类型图标">
+      <created>1498100020152</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1495449495127</updated>
+      <updated>1498100020152</updated>
     </task>
-    <task id="LOCAL-00002" summary="测试分支">
-      <created>1496487282414</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1496487282414</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5046486-a0a7-4939-80e1-bf7ca72eb1da" name="Default" comment="修改任务类型图标" />
+      <created>1498223745813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1498223745813</updated>
+      <workItem from="1498223759196" duration="2648000" />
+      <workItem from="1498387370814" duration="2903000" />
+      <workItem from="1500547336304" duration="2100000" />
+      <workItem from="1500550019837" duration="341000" />
+      <workItem from="1500550792965" duration="1429000" />
+      <workItem from="1500700009474" duration="357000" />
+      <workItem from="1504527116983" duration="1292000" />
+      <workItem from="1504922812751" duration="823000" />
+      <workItem from="1504923675551" duration="5221000" />
+      <workItem from="1505053963749" duration="5124000" />
+      <workItem from="1506743817643" duration="84549000" />
     </task>
-    <task id="LOCAL-00003" summary="连接服务器">
-      <created>1496490229807</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1496490229807</updated>
-    </task>
-    <task id="LOCAL-00004" summary="修改代码">
-      <created>1497519114044</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1497519114044</updated>
-    </task>
-    <task id="LOCAL-00005" summary="除了图片基本完成">
-      <created>1497965107857</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1497965107857</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221217000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="107177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="416" y="0" width="1511" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="534" y="0" width="1393" height="1047" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22268042" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27461708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26681128" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21691974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17524645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2595838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15443593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4015748" sideWeight="0.30278885" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4011027" sideWeight="0.69721115" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23924051" sideWeight="0.32692307" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34658664" sideWeight="0.6730769" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22054794" sideWeight="0.3031609" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33041576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264642" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22334754" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27461708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33041576" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19956616" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21905805" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13340564" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15509762" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19936034" sideWeight="0.3253796" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2153518" sideWeight="0.6746204" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22510232" sideWeight="0.50437635" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2595838" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15443593" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23924051" sideWeight="0.32692307" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264642" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27238807" sideWeight="0.6730769" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22054794" sideWeight="0.3031609" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1207,17 +1452,9 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新index.jsp" />
-    <MESSAGE value="测试分支" />
-    <MESSAGE value="连接服务器" />
-    <MESSAGE value="修改代码" />
-    <MESSAGE value="除了图片基本完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="除了图片基本完成" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1226,517 +1463,527 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/css/loading-style.css">
+    <entry file="file://$PROJECT_DIR$/src/web/wechat/view/money.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-list-with-refresh.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="250">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#855#1671#0" expanded="false" />
-            <element signature="e#1772#2357#0" expanded="false" />
-            <element signature="e#2400#2860#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.config.js">
+    <entry file="file://$PROJECT_DIR$/src/web/wechat/js/index-task-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="244">
+          <caret line="220" column="16" lean-forward="true" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
+          <folding>
+            <element signature="e#425#988#0" expanded="false" />
+            <element signature="e#1070#1967#0" expanded="false" />
+            <element signature="e#2147#3125#0" expanded="false" />
+            <element signature="e#2227#3117#0" expanded="false" />
+            <element signature="e#3171#3579#0" expanded="false" />
+            <element signature="e#3625#3925#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/img/imges/加载.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
+    <entry file="file://$PROJECT_DIR$/src/web/wechat/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alisure.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="-75">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/wechat/UserController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
+    <entry file="dbDummy://dbtable:/efd33d8/9af15402-bc69-4c43-b08d-77035798c8d9/timeseller_v0&amp;dot;2.t_task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="57" column="38" lean-forward="true" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="165" column="23" lean-forward="true" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
           <folding>
-            <element signature="e#0#8565#0" expanded="true" />
+            <element signature="method#downImage#0;class#CoreImage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/wechat/WeixinController.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreAlisure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-249">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1589#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/wechat/SearchRecordsController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/search-page-main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#68#911#0" expanded="false" />
-            <element signature="e#960#968#0" expanded="false" />
-            <element signature="e#1073#1331#0" expanded="false" />
-            <element signature="e#1411#1672#0" expanded="false" />
-            <element signature="e#1708#1919#0" expanded="false" />
-            <element signature="e#1960#2393#0" expanded="false" />
-            <element signature="e#2435#2871#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/searchPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/wechat/TestController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/wechat/TaskController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="65" column="44" lean-forward="true" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/timeseller/service/TaskService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="114" column="54" lean-forward="true" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/timeseller/service/CategoryService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/timeseller/entity/Category.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="300">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-task-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-          <folding>
-            <element signature="e#437#1000#0" expanded="false" />
-            <element signature="e#504#812#0" expanded="false" />
-            <element signature="e#896#992#0" expanded="false" />
-            <element signature="e#2162#2570#0" expanded="false" />
-            <element signature="e#2616#2916#0" expanded="false" />
-            <element signature="e#2955#3246#0" expanded="false" />
-            <element signature="e#3333#4337#0" expanded="false" />
-            <element signature="e#4438#5157#0" expanded="false" />
-            <element signature="e#5188#5773#0" expanded="false" />
-            <element signature="e#5816#6306#0" expanded="false" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/entertainment.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/search-result.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-          <folding>
-            <element signature="e#357#466#0" expanded="false" />
-            <element signature="e#505#778#0" expanded="false" />
-            <element signature="e#1687#1906#0" expanded="false" />
-            <element signature="e#2754#3236#0" expanded="false" />
-            <element signature="e#3297#3328#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/searchResult.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/timeseller/controller/TestController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="25">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/css/index-publish.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/image/userHead/user_head_img_9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="150">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/common/js/jquery-weui.min.js">
+    <entry file="file://$PROJECT_DIR$/gulpfile.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="10" column="21933" lean-forward="true" selection-start-line="10" selection-start-column="21933" selection-end-line="10" selection-end-column="21933" />
+        <state relative-caret-position="100">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/pre-deal.js">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="199" column="0" lean-forward="true" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#check#0" expanded="false" />
-            <element signature="n#!!doc;n#downImage#0" expanded="false" />
-            <element signature="n#!!block;n#downImage#0" expanded="false" />
-            <element signature="n#!!block;n#getRoot#0" expanded="false" />
-            <element signature="n#!!block;n#getSearchValue#0" expanded="false" />
-            <element signature="n#!!block;n#subString#0" expanded="false" />
-            <element signature="n#!!block;n#getTimeAddHour#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="e#83#282#0" expanded="false" />
-            <element signature="e#317#597#0" expanded="false" />
-            <element signature="e#1696#2278#0" expanded="false" />
-            <element signature="e#2332#3306#0" expanded="false" />
-            <element signature="e#4787#5131#0" expanded="false" />
-            <element signature="e#5179#5616#0" expanded="false" />
-            <element signature="e#5665#6350#0" expanded="false" />
-            <element signature="e#6397#7133#0" expanded="false" />
-            <element signature="e#6514#7125#0" expanded="false" />
-            <element signature="e#7203#7852#0" expanded="false" />
-            <marker date="1497957434830" expanded="true" signature="4904:4925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/timeseller/controller/TaskController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="292" column="5" lean-forward="true" selection-start-line="292" selection-start-column="5" selection-end-line="292" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-publish.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/config/spring-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="175">
+          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreSystemProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="127" column="41" lean-forward="true" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/modifyTask.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/GetWeiXinInf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="95" column="44" lean-forward="true" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/task/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/JSSDKSignUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/image/ImageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="method#getWeiXinImage#0;class#ImageUtil#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/auth/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding>
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/menu/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/WenXinController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.4.RELEASE/spring-webmvc-4.1.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="470" column="0" lean-forward="false" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.4.RELEASE/spring-web-4.1.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/check/SignUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/HandleTokenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoSearchRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMyTasks#0;class#UserDao#0" expanded="false" />
+            <element signature="method#getMyPublish#0;class#UserDao#0" expanded="false" />
+            <element signature="method#editUserInfo#0;class#UserDao#0" expanded="false" />
+            <element signature="docComment;method#getUserInfo#0;class#UserDao#0" expanded="false" />
+            <element signature="method#getUserInfo#0;class#UserDao#0" expanded="false" />
+            <element signature="docComment;method#getUserInfo#1;class#UserDao#0" expanded="false" />
+            <element signature="method#getUserInfo#1;class#UserDao#0" expanded="false" />
+            <element signature="docComment;method#updateUserCoins#0;class#UserDao#0" expanded="false" />
+            <element signature="method#updateUserCoins#0;class#UserDao#0" expanded="false" />
+            <element signature="docComment;method#getUserCoins#0;class#UserDao#0" expanded="false" />
+            <element signature="method#getUserCoins#0;class#UserDao#0" expanded="false" />
+            <element signature="docComment;method#recordCoins#0;class#UserDao#0" expanded="false" />
+            <element signature="method#recordCoins#0;class#UserDao#0" expanded="false" />
+            <element signature="method#recordCoins#1;class#UserDao#0" expanded="false" />
+            <element signature="method#getMoneyRecord#0;class#UserDao#0" expanded="false" />
+            <marker date="1506925216814" expanded="true" signature="567:636" ph="select * fro... Task" />
+            <marker date="1506925216814" expanded="true" signature="856:925" ph="select * fro... Task" />
+            <marker date="1506925216814" expanded="true" signature="1197:1276" ph="update user " />
+            <marker date="1506925216814" expanded="true" signature="1515:1550" ph="select * fro... user" />
+            <marker date="1506925216814" expanded="true" signature="1757:1788" ph="select * fro... user" />
+            <marker date="1506925216814" expanded="true" signature="2316:2358" ph="update user " />
+            <marker date="1506925216814" expanded="true" signature="2873:2912" ph="select goldC... user" />
+            <marker date="1506925216814" expanded="true" signature="3329:3418" ph="insert into transaction... " />
+            <marker date="1506925216814" expanded="true" signature="3656:3739" ph="insert into transaction... " />
+            <marker date="1506925216814" expanded="true" signature="3953:3995" ph="select * fro... transaction" />
+            <marker date="1506925216814" expanded="true" signature="3953:4018" ph="select * fro... transaction" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#3681#3682#0" expanded="false" />
+            <element signature="e#3776#3777#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding>
+            <element signature="e#976#989#0" expanded="false" />
+            <element signature="method#getHallTask#0;class#TaskController#0" expanded="false" />
+            <element signature="e#2266#2279#0" expanded="false" />
+            <element signature="method#getTaskInfo#0;class#TaskController#0" expanded="false" />
+            <element signature="e#2634#2647#0" expanded="false" />
+            <element signature="method#updateTaskStatus#0;class#TaskController#0" expanded="false" />
+            <element signature="e#3157#3170#0" expanded="false" />
+            <element signature="method#publishTask#0;class#TaskController#0" expanded="false" />
+            <element signature="e#5511#5524#0" expanded="false" />
+            <element signature="method#takeOver#0;class#TaskController#0" expanded="false" />
+            <element signature="e#5909#5922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/FinalString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/service/CommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="41" column="67" lean-forward="false" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/SchoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoMoneyChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#InfoMoneyChange#0;class#InfoMoneyChange#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="method#getMyTasks#0;class#UserService#0" expanded="false" />
+            <element signature="method#getMyPublish#0;class#UserService#0" expanded="false" />
+            <element signature="method#editUserInfo#0;class#UserService#0" expanded="false" />
+            <element signature="docComment;method#updateCoinsByOther#0;class#UserService#0" expanded="false" />
+            <element signature="method#updateCoinsByOther#0;class#UserService#0" expanded="false" />
+            <element signature="docComment;method#updateCoinsByTask#0;class#UserService#0" expanded="false" />
+            <element signature="method#updateCoinsByTask#0;class#UserService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/Signature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <element signature="method#Signature#0;class#Signature#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#497#498#0" expanded="false" />
+            <element signature="e#1151#1152#0" expanded="false" />
+            <element signature="e#1180#1181#0" expanded="false" />
+            <element signature="e#1311#1312#0" expanded="false" />
+            <element signature="e#1338#1339#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/Interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/HandleToken2Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/AllURL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/index-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/include/common-task-item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/city-picker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/left-shift-menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/school-picker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/school-picker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="method#configServer#0;class#AllURL#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/user-info.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.5.0/jackson-databind-2.5.0.jar!/com/fasterxml/jackson/databind/util/JSONPObject.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/personal-center.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-publish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#1320#3242#0" expanded="false" />
-            <element signature="e#2082#2517#0" expanded="false" />
-            <element signature="e#2563#3059#0" expanded="false" />
-            <element signature="e#3281#5671#0" expanded="false" />
-            <element signature="e#3367#3579#0" expanded="false" />
-            <element signature="e#3932#4412#0" expanded="false" />
-            <element signature="e#4462#5006#0" expanded="false" />
-            <element signature="e#5720#8630#0" expanded="false" />
-            <element signature="e#6330#6587#0" expanded="false" />
-            <element signature="e#6656#7117#0" expanded="false" />
-            <element signature="e#7184#7633#0" expanded="false" />
-            <element signature="e#7759#8134#0" expanded="false" />
-            <element signature="e#8223#8621#0" expanded="false" />
-            <element signature="e#8687#8831#0" expanded="false" />
-            <element signature="e#8873#12690#0" expanded="false" />
-            <element signature="e#9838#9955#0" expanded="false" />
-            <element signature="e#10022#10180#0" expanded="false" />
-            <element signature="e#10222#10343#0" expanded="false" />
-            <element signature="e#10416#10582#0" expanded="false" />
-            <element signature="e#10651#10813#0" expanded="false" />
-            <element signature="e#10885#11016#0" expanded="false" />
-            <element signature="e#11076#11237#0" expanded="false" />
-            <element signature="e#11456#11579#0" expanded="false" />
-            <element signature="e#11583#11948#0" expanded="false" />
-            <element signature="e#12137#12480#0" expanded="false" />
-            <element signature="e#12821#13039#0" expanded="false" />
-            <element signature="e#13089#13357#0" expanded="false" />
-            <element signature="e#13415#13748#0" expanded="false" />
-            <element signature="e#13816#14189#0" expanded="false" />
-            <element signature="e#14255#16354#0" expanded="false" />
-            <element signature="e#16431#17956#0" expanded="false" />
-            <element signature="e#18121#18440#0" expanded="false" />
-            <element signature="e#18503#18990#0" expanded="false" />
-            <element signature="e#19046#19161#0" expanded="false" />
-            <element signature="e#19224#19711#0" expanded="false" />
-            <element signature="e#19799#20231#0" expanded="false" />
-            <element signature="e#20272#23191#0" expanded="false" />
-            <element signature="e#20490#20538#0" expanded="false" />
-            <element signature="e#20612#21195#0" expanded="false" />
-            <element signature="e#21259#22601#0" expanded="false" />
-            <element signature="e#22662#23184#0" expanded="false" />
-            <marker date="1497963975876" expanded="true" signature="22095:22135" ph="..." />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/parser/JSONParser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="195" column="36" lean-forward="true" selection-start-line="195" selection-start-column="36" selection-end-line="195" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/css/user-info.css">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="250">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-main.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-item-style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1632">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="200">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/wechat/view/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+        <state relative-caret-position="136">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#sendTemplate#0;class#Template#0" expanded="false" />
+            <element signature="method#dealData#0;class#Template#0" expanded="false" />
+            <element signature="e#1839#1861#0" expanded="true" />
+            <element signature="e#6111#6112#0" expanded="true" />
+            <element signature="e#6147#6148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/dao/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="method#publishTask#0;class#TaskDao#0" expanded="false" />
+            <element signature="method#getHallTask#0;class#TaskDao#0" expanded="false" />
+            <element signature="method#setPubSituation#0;class#TaskDao#0" expanded="false" />
+            <element signature="method#setRecSituation#0;class#TaskDao#0" expanded="false" />
+            <marker date="1506925216283" expanded="true" signature="458:676" ph="insert into task... " />
+            <marker date="1506925216283" expanded="true" signature="1108:1158" ph="select id fr... task" />
+            <marker date="1506925216283" expanded="true" signature="1583:1727" ph="select t.*, task" />
+            <marker date="1506925216283" expanded="true" signature="1917:2078" ph="select t.*, task" />
+            <marker date="1506925216283" expanded="true" signature="2313:2395" ph="select t.*, task" />
+            <marker date="1506925216283" expanded="true" signature="2820:2851" ph="update t_tas... " />
+            <marker date="1506925216283" expanded="true" signature="2820:2852" ph="update t_tas... " />
+            <marker date="1506925216283" expanded="true" signature="2820:2882" ph="update task " />
+            <marker date="1506925216283" expanded="true" signature="3295:3358" ph="update task " />
+            <marker date="1506925216283" expanded="true" signature="3561:3634" ph="update task " />
+            <marker date="1506925216283" expanded="true" signature="3816:3840" ph="select * fro... Category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#InfoTask#1;class#InfoTask#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -15,6 +15,6 @@ package com.alisure.weixin.check;
             JSSDKSignUtil.getSignature()
 
     二、此包的引用：
-        1.com.alisure.tool.core.CoreNetwork：
+        1.com.CoreNetwork：
             我写的联网服务类
  */

@@ -17,7 +17,6 @@ var gulp = require("gulp"),
 /*移动其他资源*/
 gulp.task('move-resources', function () {
     gulp.src([config.src.common]).pipe(gulp.dest(config.dist.common));
-    gulp.src([config.src.resources]).pipe(gulp.dest(config.dist.resources));
     gulp.src([config.src.wechat.img]).pipe(gulp.dest(config.dist.wechat.img));
 });
 

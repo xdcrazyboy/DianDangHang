@@ -8,18 +8,18 @@ import java.util.TreeMap;
 
 /**
  * 
- * ÓÃÓÚ¼ÆÊ±
+ * ï¿½ï¿½ï¿½Ú¼ï¿½Ê±
  * 
- * È±µã£ºÊ±¼ä»¨Ïú´ó£¬ÐèÒª´¦Àí
+ * È±ï¿½ã£ºÊ±ï¿½ä»¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
  * 
- * Ê¾ÀýÒ»£º
+ * Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
  * 		int key = CoreTimekeeping.start();
- * 		ÐèÒª¼ÆÊ±µÄ´úÂë
+ * 		ï¿½ï¿½Òªï¿½ï¿½Ê±ï¿½Ä´ï¿½ï¿½ï¿½
  * 		CoreTimekeeping.endAndPrintln(key);
  * 
- * Ê¾Àý¶þ£º
+ * Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 		String keyString = CoreTimekeeping.start("string");
- * 		ÐèÒª¼ÆÊ±µÄ´úÂë
+ * 		ï¿½ï¿½Òªï¿½ï¿½Ê±ï¿½Ä´ï¿½ï¿½ï¿½
  * 		CoreTimekeeping.endAndPrintln(keyString);
  * 
  * @author ALISURE
@@ -33,7 +33,7 @@ public class CoreTimekeeping {
 	
 	private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	/**
-	 * »ñÈ¡Êä³öÖÐµÄÊä³öÊ±¼ä
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 * @return
 	 */
 	private static String getTime(){
@@ -41,7 +41,7 @@ public class CoreTimekeeping {
 	}
 	
 	/**
-	 * »ñÈ¡ÏÂÒ»¸öKey
+	 * ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½ï¿½Key
 	 * @return
 	 */
 	private static int nextInteger(){
@@ -51,7 +51,7 @@ public class CoreTimekeeping {
 	}
 	
 	/**
-	 * ¿ªÊ¼¼ÆÊ±£¬·µ»Ø»ñÈ¡¼ÆÊ±½á¹ûµÄID
+	 * ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½È¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ID
 	 * @return int
 	 */
 	public static int start(){
@@ -61,16 +61,16 @@ public class CoreTimekeeping {
 	}
 	
 	/**
-	 * ¿ªÊ¼¼ÆÊ±£¬·µ»Ø»ñÈ¡¼ÆÊ±½á¹ûµÄValue,²¢Êä³ö¿ªÊ¼¼ÆÊ±ÐÅÏ¢
+	 * ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½È¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Value,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½Ï¢
 	 * @return String
 	 */
 	public static int startAndPrint(){
-		System.out.println(getTime() + " : ¿ªÊ¼¼ÆÊ±");
+		System.out.println(getTime() + " : ï¿½ï¿½Ê¼ï¿½ï¿½Ê±");
 		return start();
 	}
 	
 	/**
-	 * ¿ªÊ¼¼ÆÊ±£¬·µ»Ø»ñÈ¡¼ÆÊ±½á¹ûµÄValue
+	 * ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½È¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Value
 	 * @return String
 	 */
 	public static String start(String value){
@@ -79,11 +79,11 @@ public class CoreTimekeeping {
 	}
 	
 	/**
-	 * ¿ªÊ¼¼ÆÊ±£¬·µ»Ø»ñÈ¡¼ÆÊ±½á¹ûµÄValue,²¢Êä³ö¿ªÊ¼¼ÆÊ±ÐÅÏ¢
+	 * ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½È¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Value,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½Ï¢
 	 * @return String
 	 */
 	public static String startAndPrint(String value){
-		System.out.println(getTime() + " : " + value + " ¿ªÊ¼¼ÆÊ±");
+		System.out.println(getTime() + " : " + value + " ï¿½ï¿½Ê¼ï¿½ï¿½Ê±");
 		return start(value);
 	}
 	
@@ -103,7 +103,7 @@ public class CoreTimekeeping {
 	}
 	
 	/**
-	 * ·µ»Ø¼ÆËãµÄÊ±¼ä²î,¸ñÊ½: 1371143,µ¥Î»: ms
+	 * ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½,ï¿½ï¿½Ê½: 1371143,ï¿½ï¿½Î»: ms
 	 * @param int
 	 * @return long
 	 */
@@ -111,7 +111,7 @@ public class CoreTimekeeping {
 		return System.currentTimeMillis() - remove(key);
 	}
 	/**
-	 * ·µ»Ø¼ÆËãµÄÊ±¼ä²î,¸ñÊ½: 1371143,µ¥Î»: ms
+	 * ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½,ï¿½ï¿½Ê½: 1371143,ï¿½ï¿½Î»: ms
 	 * @param String
 	 * @return long
 	 * @throws CoreTimekeepingException 
@@ -121,7 +121,7 @@ public class CoreTimekeeping {
 	}
 	
 	/**
-	 * Êä³ö¼ÆËãµÄÊ±¼ä²î,¸ñÊ½£ºyyyy-MM-dd HH:mm:ss : 123 ms
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½,ï¿½ï¿½Ê½ï¿½ï¿½yyyy-MM-dd HH:mm:ss : 123 ms
 	 * @param int
 	 */
 	public static void endAndPrintln(int key) throws CoreTimekeepingException {
@@ -130,11 +130,11 @@ public class CoreTimekeeping {
 	
 	/**
 	 * @throws  
-	 * Êä³ö¼ÆËãµÄÊ±¼ä²î,¸ñÊ½£ºyyyy-MM-dd HH:mm:ss : Ö´ÐÐ value ¹²ÓÃ   123 ms
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½,ï¿½ï¿½Ê½ï¿½ï¿½yyyy-MM-dd HH:mm:ss : Ö´ï¿½ï¿½ value ï¿½ï¿½ï¿½ï¿½   123 ms
 	 * @param String
 	 * @throws  
 	 */
 	public static void endAndPrintln(String key) throws CoreTimekeepingException {
-		System.out.println(getTime() + " : Ö´ÐÐ " + key + " ¹²ÓÃ  " + end(key) + " ms");
+		System.out.println(getTime() + " : Ö´ï¿½ï¿½ " + key + " ï¿½ï¿½ï¿½ï¿½  " + end(key) + " ms");
 	}
 }

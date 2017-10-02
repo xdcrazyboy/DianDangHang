@@ -2,7 +2,7 @@ package com.alisure.tool.core;
 
 /**
  * 
- * ÓÃÓÚ¹ØÓÚ×Ö·û´®µÄ²Ù×÷
+ * ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
  * 
  * @author ALISURE
  * @version 1507
@@ -11,7 +11,7 @@ package com.alisure.tool.core;
 public class CoreString {
 	
 	/**
-	 * ¹¤¾ßº¯Êý£¬ÅÐ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½
 	 * @param input
 	 * @return
 	 */
@@ -19,7 +19,7 @@ public class CoreString {
 		return (input == null || "".equals(input))?true:false;
 	}
 	/**
-	 * ¹¤¾ßº¯Êý£¬ÅÐ¶ÏJSONÊÇ·ñÎª¿Õ
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½JSONï¿½Ç·ï¿½Îªï¿½ï¿½
 	 * @param input
 	 * @return
 	 */
@@ -27,7 +27,7 @@ public class CoreString {
 		return (!input.startsWith("{")||!input.endsWith("}"))?true:false;
 	}
 	/**
-	 * ¹¤¾ßº¯Êý£¬½«null×ª»»³É""
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½null×ªï¿½ï¿½ï¿½ï¿½""
 	 * @param input
 	 * @return
 	 */
@@ -35,7 +35,7 @@ public class CoreString {
 		return input == null ? "" : input ;
 	}
 	/**
-	 * ¹¤¾ßº¯Êý,´¦Àí×Ö·û´®ÖÐµÄ¿ÕÖµ,ÈôµÚÒ»¸ö²ÎÊýÎª¿Õ,Ìæ»»ÎªµÚ¶þ¸ö²ÎÊý
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ÐµÄ¿ï¿½Öµ,ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½,ï¿½æ»»Îªï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param v
 	 * @param toV
 	 * @return
@@ -44,7 +44,7 @@ public class CoreString {
 		return (v == null || "".equals(v)) ? toV :v ;
 	}
 	/**
-	 * ¹¤¾ßº¯Êý,ºº×Ö×ªÂë:ISO8859_1 to utf-8
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½:ISO8859_1 to utf-8
 	 * @param strvalue
 	 * @return
 	 */
@@ -52,7 +52,7 @@ public class CoreString {
 		return strvalue == null ? "" : new String(strvalue.getBytes("ISO8859_1"), "utf-8").trim();
 	}
 	/**
-	 * ¹¤¾ßº¯Êý,È¥µôÇ°ºó¿Õ¸ñ
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,È¥ï¿½ï¿½Ç°ï¿½ï¿½Õ¸ï¿½
 	 * @param str
 	 * @return
 	 */
@@ -60,7 +60,7 @@ public class CoreString {
 		return str.trim();
 	}
 	/**
-	 * ¹¤¾ßº¯Êý,¹ýÂËÎ£ÏÕ×Ö·û
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½Ö·ï¿½
 	 * &  -->  &amp;
 	 * <  -->  &lt;
 	 * >  -->  &gt;
@@ -79,7 +79,7 @@ public class CoreString {
 	}
 	
 	/**
-	 * ¹¤¾ßº¯Êý,¹ýÂËÎ£ÏÕ×Ö·û
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½Ö·ï¿½
 	 * &  -->  &alisure1;
 	 * <  -->  &alisure2;
 	 * >  -->  &alisure3;
@@ -98,7 +98,7 @@ public class CoreString {
 	}
 	
 	/**
-	 * ¹¤¾ßº¯Êý,×ª»»Î£ÏÕ×Ö·û
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,×ªï¿½ï¿½Î£ï¿½ï¿½ï¿½Ö·ï¿½
 	 * &amp; -->  &
 	 * &lt;  -->  <
 	 * &gt;  -->  >
@@ -111,7 +111,7 @@ public class CoreString {
 	}
 	
 	/**
-	 * ¹¤¾ßº¯Êý,×ª»»Î£ÏÕ×Ö·û
+	 * ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½,×ªï¿½ï¿½Î£ï¿½ï¿½ï¿½Ö·ï¿½
 	 * &alisure1;  -->  &
 	 * &alisure2;  -->  <
 	 * &alisure3;  -->  >
@@ -130,7 +130,7 @@ public class CoreString {
 	}
 	
 	/**
-	 * ½«Î£ÏÕ×Ö·û¹ýÂËÎª¿Õ
+	 * ï¿½ï¿½Î£ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½
 	 * @param str
 	 * @return
 	 */
@@ -142,7 +142,7 @@ public class CoreString {
 	}
 	
 	/**
-	 * ×ª»»×Ö·û´®Îªint£¬Òì³£·µ»Ø0
+	 * ×ªï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Îªintï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½0
 	 * @param str
 	 * @return int
 	 */

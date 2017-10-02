@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "时间典当行"})
+    <!-- common head and css -->
+    <!-- ALISURE -->
+    <link rel="stylesheet" href="../css/index-main.css" />
+    <link rel="stylesheet" href="../css/task-item-style.css" />
+    <!-- ALISURE -->
+
+</head>
+
+<body>
+
+    <div class="index-body">
+        <!-- ALISURE 2017-05-21 搜索框-->
+        @@include("include/index-search.html", {"info": "this is info."})
+        <!-- ALISURE 2017-05-21 搜索框-->
+
+        <!-- ALISURE 2017-05-21 任务类型、任务排序、任务列表-->
+        @@include("include/index-task.html", {"info": "this is info."})
+        <!-- ALISURE 2017-05-21 任务类型、任务排序、任务列表-->
+    </div>
+
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
+
+    <!-- ALISURE -->
+    <script src="../js/index-search.js"></script>
+    <script src="../js/index-task-list.js"></script>
+    <!-- ALISURE -->
+
+</body>
+
+</html>

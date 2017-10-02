@@ -11,7 +11,19 @@
 ">
 
     <!-- common head and css -->
-    @@include("include/common-head.html", {"title": "时间典当行"})
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="这是一个神奇的网站">
+<title>时间典当行</title>
+
+<!-- common -->
+<link rel="stylesheet" href="../../common/css/reset.css" />
+<link rel="stylesheet" href="../../common/css/weui.css" />
+<link rel="stylesheet" href="../../common/css/jquery-weui.css" />
+<!-- common -->
+
     <!-- common head and css -->
 
     <style>
@@ -38,7 +50,23 @@
         </div>
     </div>
     <!-- common js -->
-    @@include("include/common-js.html", {"info": "this is info."})
+    
+<script src="../../common/js/jquery-2.1.4.js"></script>
+<script src="../../common/js/jquery-weui.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!-- for ios bug -->
+<script src="../../common/js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script src="../js/pre-deal.js"></script>
+
+<!-- task.html for image swiper -->
+<script src="../../common/js/swiper.min.js"></script>
+
     <!-- common js -->
 
     <!-- zhao jinbo -->
