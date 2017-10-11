@@ -1,6 +1,7 @@
 package com.alisure.weixin.check;
 
 import com.alisure.tool.core.CoreNetwork;
+import com.alisure.weixin.AllURL;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 
@@ -13,22 +14,15 @@ import java.security.NoSuchAlgorithmException;
  */
 public class JSSDKSignUtil {
 
-    private static String AccessTokenUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx933eaa3a5b99cc72&secret=1b0f22fa60eb781fd3fa39a86373b5b6";
-    private static String TicketUrl = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=";
-
-    public static String Noncestr = "fawfoiwvngcydjxsemsoi";
-    public static String Timestamp = "1414636257";
-    public static String AppId = "wx933eaa3a5b99cc72";
-
     /**
-     * è·å¾—ç­¾å
+     * »ñµÃÇ©Ãû
      * @param jsapi_ticket
      * @param url
      * @return
      */
     public static String getSignature(String jsapi_ticket, String url) {
-        String content = "jsapi_ticket=" + jsapi_ticket + "&noncestr=" + Noncestr
-                + "&timestamp=" + Timestamp + "&url=" + url;
+        String content = "jsapi_ticket=" + jsapi_ticket + "&noncestr=" + AllURL.Noncestr
+                + "&timestamp=" + AllURL.Timestamp + "&url=" + url;
 
         MessageDigest md;
         String tmpStr = "";
@@ -44,7 +38,7 @@ public class JSSDKSignUtil {
     }
 
     /**
-     * å°†å­—èŠ‚æ•°ç»„è½¬æ¢ä¸ºåå…­è¿›åˆ¶å­—ç¬¦ä¸²
+     * ½«×Ö½ÚÊı×é×ª»»ÎªÊ®Áù½øÖÆ×Ö·û´®
      *
      * @param byteArray
      * @return
@@ -58,7 +52,7 @@ public class JSSDKSignUtil {
     }
 
     /**
-     * å°†å­—èŠ‚è½¬æ¢ä¸ºåå…­è¿›åˆ¶å­—ç¬¦ä¸²
+     * ½«×Ö½Ú×ª»»ÎªÊ®Áù½øÖÆ×Ö·û´®
      * @param mByte
      * @return
      */
@@ -73,21 +67,21 @@ public class JSSDKSignUtil {
 
 
     /**
-     * è·å–access_token
+     * »ñÈ¡access_token
      * @return
      */
     public static String getAccessToken(){
-        String accessToken = getStringByUrl(AccessTokenUrl, "access_token");
+        String accessToken = getStringByUrl(AllURL.URLAccessToken, "access_token");
         System.out.println("accessToken:\n" + accessToken);
         return accessToken;
     }
 
     /**
-     * è·å–ticket
+     * »ñÈ¡ticket
      * @return
      */
     public static String getTicket(String accessToken){
-        String ticket = getStringByUrl(TicketUrl + accessToken, "ticket");
+        String ticket = getStringByUrl(AllURL.URLTicket.replace(AllURL.AccessToken, accessToken), "ticket");
         System.out.println("ticket:\n" + ticket);
         return ticket;
     }

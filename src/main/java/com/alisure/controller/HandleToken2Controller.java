@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * å¾®ä¿¡éªŒè¯æœåŠ¡å™¨çš„çœŸå®æ€§
+ * Î¢ĞÅÑéÖ¤·şÎñÆ÷µÄÕæÊµĞÔ
  */
 @Controller
 public class HandleToken2Controller {
@@ -24,7 +24,7 @@ public class HandleToken2Controller {
 
     @RequestMapping(value = "/weixin", method = RequestMethod.GET)
     @ResponseBody
-    @ApiOperation(value="å¤„ç†Token",httpMethod="GET")
+    @ApiOperation(value="´¦ÀíToken",httpMethod="GET")
     public void handleToken(HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
         try{

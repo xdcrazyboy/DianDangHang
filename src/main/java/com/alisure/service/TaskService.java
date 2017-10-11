@@ -46,7 +46,7 @@ public class TaskService {
         if (CoreString.isNull(school)) return null;
         List<InfoTask> infoTasks = taskDao.getHallTask(page, pageSize,status,type,sortType,school);
         for(InfoTask infoTask: infoTasks){
-            infoTask.setPub(userDao.getUserInfo(infoTask.getPubId()) );
+            infoTask.setPub(commonDao.getUser(infoTask.getPubId()) );
         }
         return infoTasks;
     }
@@ -61,8 +61,8 @@ public class TaskService {
         if (tid <= 0) return null;
 
         InfoTask infoTask = taskDao.getTask(tid);
-        InfoUser pub = infoTask.getPubId() > 0 ? userDao.getUserInfo(infoTask.getPubId()) : null;
-        InfoUser rec = infoTask.getRecId() > 0 ? userDao.getUserInfo(infoTask.getRecId()) : null;
+        InfoUser pub = infoTask.getPubId() > 0 ? commonDao.getUser(infoTask.getPubId()) : null;
+        InfoUser rec = infoTask.getRecId() > 0 ? commonDao.getUser(infoTask.getRecId()) : null;
         infoTask.setPub(pub);
         infoTask.setRec(rec);
 
@@ -200,9 +200,10 @@ public class TaskService {
         }
         // 保存任务
         int tid = taskDao.publishTask(infoTask);
+        infoTask.setTid(tid);
         infoTask.setPub(commonDao.getUser(infoTask.getPubId()));
         // 处理金币消耗
-        boolean resultCoins = userDao.updateUserCoins(infoTask.getPubId(), tid, 0 - infoTask.getCoins(), InfoMoneyChange.ChangeReason.Reason_Publish_Task);
+        boolean resultCoins = userDao.updateUserCoins(infoTask.getPubId(), infoTask.getTid(), 0 - infoTask.getCoins(), InfoMoneyChange.ChangeReason.Reason_Publish_Task);
         if(resultCoins) {
             // 发送发布成功的消息
             Template.pubTaskOK(openId, infoTask);
@@ -220,6 +221,7 @@ public class TaskService {
     public boolean takeOver(int tid, int userId) {
         // 检查
         InfoTask infoTask = taskDao.getTask(tid);
+        infoTask.setRecId(userId);
         if(infoTask == null || infoTask.getPubId() == userId) return false;  // 自己接手
         if(infoTask.getPubStateId() == 2 || infoTask.getRecStateId() == 2) return false;  // 已经被接手
 
@@ -233,7 +235,7 @@ public class TaskService {
             // 给发布者发送模板信息
             Template.recTaskOK_pub(commonDao.getUserOpenid(infoTask.getPubId()), infoTask);
             // 给接手者发送模板信息
-            Template.recTaskOK_rec(commonDao.getUserOpenid(userId), infoTask);
+            Template.recTaskOK_rec(commonDao.getUserOpenid(infoTask.getRecId()), infoTask);
             return true;
         }
         return false;

@@ -65,8 +65,12 @@
             <bean class="com.alisure.Interceptor.LoginInterceptor">
                 <property name="excludedUrls">
                     <list>
-                        <value>/swagger/**/*</value>
-                        <value>/api-docs/**/*</value>
+                        <value>menu/auth</value>
+                        <value>image</value>
+                        <value>swagger</value>
+                        <value>web/wechat/img</value>
+                        <value>web/wechat/css</value>
+                        <value>api-docs</value>
                     </list>
                 </property>
             </bean>

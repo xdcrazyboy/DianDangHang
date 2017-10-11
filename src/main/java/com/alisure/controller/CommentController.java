@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * 1ã€è¯„ä»·
- * 2ã€è·å–è¯„ä»·(ä¹Ÿæœ‰å¯èƒ½æœ‰ä¸¤ä¸ªè¯„ä»·)
- * 3ã€æŠ•è¯‰
+ * 1¡¢ÆÀ¼Û
+ * 2¡¢»ñÈ¡ÆÀ¼Û(Ò²ÓĞ¿ÉÄÜÓĞÁ½¸öÆÀ¼Û)
+ * 3¡¢Í¶Ëß
  */
 @Controller
 @RequestMapping("/comment")

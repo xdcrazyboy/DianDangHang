@@ -1,6 +1,7 @@
 package com.alisure.weixin.template;
 
 import com.alisure.entity.InfoTask;
+import com.alisure.tool.common.CommonLog;
 import com.alisure.tool.core.CoreNetwork2;
 import com.alisure.weixin.AllURL;
 import com.alisure.weixin.task.GetWeiXinInf;
@@ -40,6 +41,7 @@ public class Template {
         }catch (Exception e){
             e.printStackTrace();
         }
+        CommonLog.writeAlisureLog(AllURL.PathLog, "模板消息发送失败:" + body);
         return false;
     }
 
@@ -101,7 +103,7 @@ public class Template {
     public static boolean cancelTaskOK_pub(String toUser, InfoTask task){
         TemplateContent templateContent = new TemplateContent(TemplateID_CancelTask_pub, toUser,
                 AllURL.Template_Task_URL.replace(AllURL.TID, String.valueOf(task.getTid())));
-        templateContent.setData(dealData(task, "取消成功", true));
+        templateContent.setData(dealData(task, "取消成功", false));
         String body = JSONObject.fromObject(templateContent).toString();
         return sendTemplate(body);
     }

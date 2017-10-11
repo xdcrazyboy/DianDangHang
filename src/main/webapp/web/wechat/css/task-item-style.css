@@ -36,7 +36,7 @@
 .goods-wrapper .left-user .money {
     text-align: right;
     margin: 2px 0;
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
 
 .goods-wrapper .left-user .money img {
@@ -45,12 +45,12 @@
     float: right;
     margin-left: 3px;
     margin-right: 17px;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
 .goods-wrapper .left-user .name {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1.0em;
 }
 
 .goods-wrapper .right-goods .top {
@@ -62,7 +62,7 @@
 }
 
 .goods-wrapper .right-goods .title {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #000000;
     line-height: 22px;
     padding-top: 1px;
@@ -74,38 +74,38 @@
 .goods-wrapper .right-goods .type {
     margin-right: 5px;
     color: #29db8d;
-    font-size: 0.5em;
+    font-size: 0.8em;
     padding: 2px 6px 1px;
     float: right;
 }
 
 .goods-wrapper .right-goods .describe {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 1.0em;
     color: #000000;
 }
 
 .goods-wrapper .right-goods .describe p {
-    height: 37px;
-    max-height: 37px;
-    min-height: 37px;
+    height: 40px;
+    max-height: 40px;
+    min-height: 40px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
 .goods-wrapper .right-goods .place {
     margin-left: 5px;
-    font-size: 0.6em;
+    font-size: 0.9em;
     color: #999999;
     line-height: 24px;
     padding: 0 0 0 13px;
-    background: url("../img/index/task_place.png") no-repeat left 6px;
+    background: url("../img/index/task_place.png") no-repeat left 4px;
     background-size: 10px 13px;
 }
 .goods-wrapper .right-goods .time {
     float: left;
     margin: 5px 0;
-    font-size: 0.5em;
+    font-size: 0.8em;
     color: #999999;
 }
 
@@ -113,7 +113,7 @@
     float: right;
     border: 1px solid #e5e5e5;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 0.9em;
     padding: 1px 12px;
     background: #29db8d;
     border-radius: 5px;

@@ -28,6 +28,8 @@ $(function () {
 
     /* 获取任务ID */
     var taskId = getSearchValue(location.search, "id");
+    /*是否来自模板*/
+    var fromTemplate = getSearchValue(location.search, "from") == "" ? false: true;
 
     /* 执行入口 */
     getData(function (datas) {
@@ -73,8 +75,9 @@ $(function () {
                     return;
                 }
             }
-            $.alert("任务不存在");
-            history.back();
+            $.alert("任务不存在", function () {
+                closeWindowOrBack(fromTemplate);
+            });
         });
     }
 
@@ -82,7 +85,7 @@ $(function () {
     function init_data(datas, type) {
         $("#publish-wrapper").show();
 
-        $("#pub-icon img").attr("src",datas.pub.icon);
+        $("#pub-icon img").attr("src",datas.pub.headimgurl);
         $("#pub-goldCoins span").text(datas.pub.goldCoins);
         $("#pub-nickname").text(subString(datas.pub.nickname, 5, "..."));
 
@@ -130,6 +133,7 @@ $(function () {
             set_status_info("进行中", "接手时间", task.recTime.substr(5, 11));
             $("#operation1").text("正在进行中，不能取消").click(function () {
                 $.alert("正在进行中，您可以联系接手者，随时掌握动态");
+                closeWindowOrBack(fromTemplate);
             });
         }else if(status.statusCode == status.rec_execute){ /* 进行中：用户是接手者 */
             set_status_info("进行中", "接手时间", task.recTime.substr(5, 11));
@@ -151,36 +155,36 @@ $(function () {
         }else if(status.statusCode == status.rec_completed){ /* 已经完成：用户是接手者 */
             set_status_info("等待确认", "完成时间", task.recCompleteTime.substr(5, 11));
             $("#operation1").text("已经完成，等待发布者确认").click(function () {
-                $.confirm("返回上一页？", function () {
-                    history.back();
+                $.confirm( fromTemplate ? "关闭页面？": "返回上一页？", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             });
         }else if(status.statusCode == status.pub_cancel){ /* 已经取消：用户是发布者 */
             set_status_info("已取消", "取消时间", task.pubCancelTime.substr(5, 11));
             $("#operation1").text("已经取消").click(function () {
-                $.confirm("返回上一页？", function () {
-                    history.back();
+                $.confirm(fromTemplate ? "关闭页面？" : "返回上一页？", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             });
         }else if(status.statusCode == status.rec_cancel){ /* 已经取消：用户是接手者 */
             set_status_info("已取消", "取消时间", task.recCancelTime.substr(5, 11));
             $("#operation1").text("已经取消").click(function () {
-                $.confirm("返回上一页？", function () {
-                    history.back();
+                $.confirm(fromTemplate ? "关闭页面？" : "返回上一页？", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             });
         }else if(status.statusCode == status.pub_end){ /* 已经结束：用户是发布者 */
             set_status_info("已结束", "结束时间", task.pubCompleteTime.substr(5, 11));
             $("#operation1").text("任务已结束").click(function () {
-                $.confirm("返回上一页？", function () {
-                    history.back();
+                $.confirm(fromTemplate ? "关闭页面？" : "返回上一页？", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             });
         }else if(status.statusCode == status.rec_end){ /* 已经结束：用户是接手者 */
             set_status_info("已结束", "结束时间", task.pubCompleteTime.substr(5, 11));
             $("#operation1").text("任务已结束").click(function () {
-                $.confirm("返回上一页？", function () {
-                    history.back();
+                $.confirm(fromTemplate ? "关闭页面？" : "返回上一页？", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             });
         }
@@ -227,7 +231,7 @@ $(function () {
     /*显示接单者的信息*/
     function show_rec_info(rec_info) {
         $("#rec-info").show();
-        $("#rec-info .head img").attr("src", rec_info.icon);
+        $("#rec-info .head img").attr("src", rec_info.headimgurl);
         $("#rec-info .nickname span").text(rec_info.nickname);
         var link = "";
         if(rec_info.phone != null && rec_info.phone.length > 0){
@@ -240,7 +244,7 @@ $(function () {
         $("#rec-info .link").text(link.length > 0 ? link: "没有设置联系方式");
         /*设置头像可点击*/
         $("#rec-info .head img").click(function () {
-            location.href = "user-show.html?id=" + rec_info.id;
+            location.href = "user-show.html?id=" + rec_info.uid;
         });
     }
     function set_status_info(left_status, right_str, right_time) {
@@ -255,7 +259,7 @@ $(function () {
         $.post(ServerUrl + "task/takeOver/" + id, function (data) {
             if(data.status == Status.Status_OK){ /* 接手成功 */
                 $.alert("接手成功", function () {
-                    location.reload();
+                    location.reload(true);
                 });
             }else{
                 $.alert("接手失败", function () {
@@ -271,11 +275,11 @@ $(function () {
         }, function (data) {
             if(data.status == Status.Status_OK){ /* 成功 */
                 $.alert("确认成功", function () {
-                    location.reload();
+                    location.reload(true);
                 });
             }else{
-                $.alert("确认失败", function () {
-                    history.back();
+                $.alert(fromTemplate ? "确认失败，关闭页面" : "确认失败，返回上一页", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             }
         });
@@ -287,11 +291,11 @@ $(function () {
         }, function (data) {
             if(data.status == Status.Status_OK){ /* 成功 */
                 $.alert("取消成功", function () {
-                    location.reload();
+                    location.reload(true);
                 });
             }else{
-                $.alert("取消失败", function () {
-                    history.back();
+                $.confirm(fromTemplate ? "取消失败，关闭页面?" : "取消失败，返回上一页?", function () {
+                    closeWindowOrBack(fromTemplate);
                 });
             }
         });

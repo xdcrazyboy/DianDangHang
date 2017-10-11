@@ -86,12 +86,14 @@ public class InfoMoneyChange implements RowMapper<InfoMoneyChange>,Serializable 
         );
     }
 
-    /*é‡‘å¸å˜åŒ–çš„åŸå› */
+    /*½ğ±Ò±ä»¯µÄÔ­Òò*/
     public class ChangeReason {
-        public final static String Reason_Publish_Task = "å‘å¸ƒä¸€ä¸ªä»»åŠ¡";
-        public final static String Reason_End_Task = "å®Œæˆä¸€ä¸ªä»»åŠ¡";
-        public final static String Reason_Cancel_Task_Rec = "æ¥æ‰‹è€…å–æ¶ˆä¸€ä¸ªä»»åŠ¡";
-        public final static String Reason_Cancel_Task_Pub = "å‘å¸ƒè€…å–æ¶ˆä¸€ä¸ªä»»åŠ¡";
+        public final static String Reason_New_User = "¹Ø×¢ÁË¹«ÖÚºÅ";
+
+        public final static String Reason_Publish_Task = "·¢²¼Ò»¸öÈÎÎñ";
+        public final static String Reason_End_Task = "Íê³ÉÒ»¸öÈÎÎñ";
+        public final static String Reason_Cancel_Task_Rec = "½ÓÊÖÕßÈ¡ÏûÒ»¸öÈÎÎñ";
+        public final static String Reason_Cancel_Task_Pub = "·¢²¼ÕßÈ¡ÏûÒ»¸öÈÎÎñ";
     }
 
 }

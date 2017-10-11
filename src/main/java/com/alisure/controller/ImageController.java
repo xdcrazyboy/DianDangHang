@@ -3,6 +3,8 @@ package com.alisure.controller;
 import com.alisure.entity.Result;
 import com.alisure.entity.Signature;
 import com.alisure.entity.Status;
+import com.alisure.tool.common.CommonLog;
+import com.alisure.weixin.AllURL;
 import com.alisure.weixin.check.JSSDKSignUtil;
 import com.alisure.weixin.image.ImageUtil;
 import com.alisure.weixin.task.GetWeiXinInf;
@@ -23,7 +25,7 @@ import java.io.IOException;
 public class ImageController {
 
     /**
-     * è¯·æ±‚æœåŠ¡å™¨ä¸‹è½½ç”¨æˆ·ä¸Šä¼ çš„å›¾ç‰‡
+     * ÇëÇó·şÎñÆ÷ÏÂÔØÓÃ»§ÉÏ´«µÄÍ¼Æ¬
      * @param mediaId
      * @return
      * @throws IOException
@@ -39,14 +41,16 @@ public class ImageController {
         }
         ImageUtil imageUtil = new ImageUtil();
         if(imageUtil.getWeiXinImage(new GetWeiXinInf().getAccessToken(), mediaId)){
+            CommonLog.writeAlisureLog(AllURL.PathLog, "ÏÂÔØÍ¼Æ¬³É¹¦:" + mediaId);
             return new Result(Status.Status_OK, imageUtil.getImageName());
         }else{
+            CommonLog.writeAlisureLog(AllURL.PathLog, "ÏÂÔØÍ¼Æ¬Ê§°Ü:" + mediaId);
             return new Result(Status.Status_Error);
         }
     }
 
     /**
-     * è¯·æ±‚æŒ‡å®šurlçš„ç­¾å
+     * ÇëÇóÖ¸¶¨urlµÄÇ©Ãû
      * @param url
      * @return
      */

@@ -17,13 +17,13 @@ import java.net.URLDecoder;
 /**
  * Created by ALISURE on 2017/9/10.
  *
- * ä»»åŠ¡ç›¸å…³
- * 1ã€æ ¹æ®æ¡ä»¶è·å–å¤§å…çš„ä»»åŠ¡
- * 2ã€æ ¹æ®TaskIdè·å–å…·ä½“çš„ä»»åŠ¡ä¿¡æ¯
- * 3ã€ä¿®æ”¹ä»»åŠ¡çŠ¶æ€
- * 4ã€å‘å¸ƒä»»åŠ¡
- * 5ã€æ¥æ‰‹ä»»åŠ¡
- * 6ã€è·å–ç±»åˆ«
+ * ÈÎÎñÏà¹Ø
+ * 1¡¢¸ù¾İÌõ¼ş»ñÈ¡´óÌüµÄÈÎÎñ
+ * 2¡¢¸ù¾İTaskId»ñÈ¡¾ßÌåµÄÈÎÎñĞÅÏ¢
+ * 3¡¢ĞŞ¸ÄÈÎÎñ×´Ì¬
+ * 4¡¢·¢²¼ÈÎÎñ
+ * 5¡¢½ÓÊÖÈÎÎñ
+ * 6¡¢»ñÈ¡Àà±ğ
  */
 @Controller
 @RequestMapping("/task")
@@ -67,7 +67,7 @@ public class TaskController {
     @ApiOperation(value="update task status", httpMethod="GET", response = Result.class, nickname = "ALISURE")
     public Result updateTaskStatus(
             @ApiParam(name = "tid", value = "tid") @PathVariable int tid,
-            @ApiParam(name = "means: 0 è¡¨ç¤ºç¡®è®¤å®Œæˆï¼Œ1 è¡¨ç¤ºå–æ¶ˆ", value = "means") @RequestParam int means){
+            @ApiParam(name = "means: 0 ±íÊ¾È·ÈÏÍê³É£¬1 ±íÊ¾È¡Ïû", value = "means") @RequestParam int means){
         return new Result(taskService.updateTaskStatus(tid, means, commonService.getUserId(request)));
     }
 
@@ -105,7 +105,7 @@ public class TaskController {
         task.setQq(qq);
         task.setTelephone(telephone);
 
-        // è®¾ç½®ä¸€äº›å¿…è¦çš„å€¼
+        // ÉèÖÃÒ»Ğ©±ØÒªµÄÖµ
         task.setPubId(commonService.getUserId(request));
         task.setPubStateId(1);
         task.setRecStateId(1);

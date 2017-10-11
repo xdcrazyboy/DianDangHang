@@ -17,9 +17,10 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserDao userDao;
-
     @Autowired
-    SchoolDao schoolDao;
+    SchoolService schoolService;
+    @Autowired
+    CommonService commonService;
 
     public List<InfoTask> getMyTasks(int page, int pageSize, int userId) {
         if(page <= 0) page = 1;
@@ -33,9 +34,9 @@ public class UserService {
 
     public List<Object> getUserInfoSelf(Integer uid) {
         List<Object> result = new ArrayList<Object>();
-        InfoUser userInfo = userDao.getUserInfo(uid);
-        InfoSchool schoolInfo = schoolDao.getSchool(userInfo.getAreaId());
+        InfoUser userInfo = commonService.getUser(uid);
         result.add(userInfo);
+        InfoSchool schoolInfo = schoolService.getUserSchool(userInfo.getUid());
         result.add(schoolInfo);
         return result;
     }
@@ -49,7 +50,7 @@ public class UserService {
     }
 
     /**
-     * æ›´æ–°é‡‘å¸ï¼šå’Œä»»åŠ¡æ— å…³ï¼Œå¦‚å…³æ³¨å…¬ä¼—å·ã€ç”¨æˆ·èµ„æ–™å®Œå–„ç­‰å’Œä»»åŠ¡æ— å…³çš„è¡Œä¸º
+     * ¸üĞÂ½ğ±Ò£ººÍÈÎÎñÎŞ¹Ø£¬Èç¹Ø×¢¹«ÖÚºÅ¡¢ÓÃ»§×ÊÁÏÍêÉÆµÈºÍÈÎÎñÎŞ¹ØµÄĞĞÎª
      * @param uid
      * @param goldCoins
      * @param reason
@@ -63,10 +64,10 @@ public class UserService {
     }
 
     /**
-     * æ›´æ–°é‡‘å¸ï¼šå’Œä»»åŠ¡æœ‰å…³ï¼Œå¦‚å‘å¸ƒä»»åŠ¡ã€è¯„ä»·ã€ä»»åŠ¡å®Œæˆã€æ¥æ‰‹è€…è¢«æŠ•è¯‰ã€å‘å¸ƒè€…è¢«æŠ•è¯‰
+     * ¸üĞÂ½ğ±Ò£ººÍÈÎÎñÓĞ¹Ø£¬Èç·¢²¼ÈÎÎñ¡¢ÆÀ¼Û¡¢ÈÎÎñÍê³É¡¢½ÓÊÖÕß±»Í¶Ëß¡¢·¢²¼Õß±»Í¶Ëß
      * @param uid
      * @param tid
-     * @param goldCoins : ä¸ºæ­£è¡¨ç¤ºåŠ ç§¯åˆ†ï¼Œä¸ºè´Ÿè¡¨ç¤ºå‡ç§¯åˆ†
+     * @param goldCoins : ÎªÕı±íÊ¾¼Ó»ı·Ö£¬Îª¸º±íÊ¾¼õ»ı·Ö
      * @param reason
      * @return
      */

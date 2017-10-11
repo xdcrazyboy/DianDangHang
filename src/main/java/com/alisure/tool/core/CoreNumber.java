@@ -3,7 +3,7 @@ package com.alisure.tool.core;
 import java.util.Random;
 
 /**
- * ¹ØÓÚÊı×ÖµÄ²Ù×÷
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÄ²ï¿½ï¿½ï¿½
  * 
  * @author ALISURE
  * @version 1507
@@ -12,7 +12,7 @@ import java.util.Random;
 public class CoreNumber {
 	
 	/**
-	 * Éú³ÉÒ»¸öËæ»úÊı,0 <= x < max
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,0 <= x < max
 	 * @param max
 	 * @return
 	 */
@@ -21,7 +21,7 @@ public class CoreNumber {
 	}
 	
 	/**
-	 * Éú³ÉÒ»¸öËæ»úÊı,0 <= x < max
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,0 <= x < max
 	 * @param max
 	 * @param seed
 	 * @return
@@ -31,7 +31,7 @@ public class CoreNumber {
 	}
 	
 	/**
-	 * Éú³ÉÒ»¸öËæ»úÊı,left <= x < right
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,left <= x < right
 	 * @param left
 	 * @param right
 	 * @return
@@ -41,7 +41,7 @@ public class CoreNumber {
 	}
 	
 	/**
-	 * Éú³ÉÒ»¸öËæ»úÊı,left <= x < right
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,left <= x < right
 	 * @param left
 	 * @param right
 	 * @param seed

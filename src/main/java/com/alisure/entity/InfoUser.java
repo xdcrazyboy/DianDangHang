@@ -8,103 +8,86 @@ import java.sql.SQLException;
 
 public class InfoUser implements RowMapper<InfoUser>, Serializable {
 
-    private int id;
-    private String card;
-    private int goldCoins;
-    private String icon;
-    private String location;
-    private String nickname;
+    private int uid;
     private String openid;
+    private String headimgurl;
+    private String province;
+    private String nickname;
+    private String sex;
     private String phone;
     private String qq;
-    private String school;
-    private String sex;
     private String weixin;
-    private int areaId;
-    private String taskSchool;
-
-    public class Table{
-        public final static String tableName = "user";
-
-        public final static String id = "id";
-        public final static String card = "card";
-        public final static String goldCoins = "goldCoins";
-        public final static String icon = "icon";
-        public final static String location = "location";
-        public final static String nickname = "nickname";
-        public final static String openid = "openid";
-        public final static String phone = "phone";
-        public final static String qq = "qq";
-        public final static String school = "school";
-        public final static String sex = "sex";
-        public final static String weixin = "weixin";
-        public final static String taskSchool = "taskSchool";
-        public final static String areaId = "areaId";
-    }
+    private int goldCoins;
+    private String card;
+    private int schoolId;
+    private String city;
+    private String country;
+    private String time;
 
     public InfoUser() {
 
     }
 
-    public InfoUser(int id, String card, int goldCoins,
-                    String icon, String location, String nickname,
-                    String openid, String phone, String qq,
-                    String school, String sex, String weixin, String taskSchool,
-                    int areaId) {
-        this.id = id;
-        this.card = card;
-        this.goldCoins = goldCoins;
-        this.icon = icon;
-        this.location = location;
-        this.nickname = nickname;
+    public InfoUser(String openid, String headimgurl, String province, String nickname, String sex, String city, String country, String time) {
         this.openid = openid;
+        this.headimgurl = headimgurl;
+        this.province = province;
+        this.nickname = nickname;
+        this.sex = sex;
+        this.city = city;
+        this.country = country;
+        this.time = time;
+    }
+
+    public InfoUser(int uid, String openid, String headimgurl, String province, String nickname, String sex, String phone, String qq,
+                    String weixin, int goldCoins, String card, int schoolId, String city, String country, String time) {
+        this.uid = uid;
+        this.openid = openid;
+        this.headimgurl = headimgurl;
+        this.province = province;
+        this.nickname = nickname;
+        this.sex = sex;
         this.phone = phone;
         this.qq = qq;
-        this.school = school;
-        this.sex = sex;
         this.weixin = weixin;
-        this.areaId = areaId;
-        this.taskSchool = taskSchool;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCard() {
-        return card;
-    }
-
-    public void setCard(String card) {
-        this.card = card;
-    }
-
-    public int getGoldCoins() {
-        return goldCoins;
-    }
-
-    public void setGoldCoins(int goldCoins) {
         this.goldCoins = goldCoins;
+        this.card = card;
+        this.schoolId = schoolId;
+        this.city = city;
+        this.country = country;
+        this.time = time;
     }
 
-    public String getIcon() {
-        return icon;
+    public int getUid() {
+        return uid;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
-    public String getLocation() {
-        return location;
+    public String getOpenid() {
+        return openid;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setOpenid(String openid) {
+        this.openid = openid;
+    }
+
+    public String getHeadimgurl() {
+        return headimgurl;
+    }
+
+    public void setHeadimgurl(String headimgurl) {
+        this.headimgurl = headimgurl;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     public String getNickname() {
@@ -115,12 +98,12 @@ public class InfoUser implements RowMapper<InfoUser>, Serializable {
         this.nickname = nickname;
     }
 
-    public String getOpenid() {
-        return openid;
+    public String getSex() {
+        return sex;
     }
 
-    public void setOpenid(String openid) {
-        this.openid = openid;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public String getPhone() {
@@ -139,22 +122,6 @@ public class InfoUser implements RowMapper<InfoUser>, Serializable {
         this.qq = qq;
     }
 
-    public String getSchool() {
-        return school;
-    }
-
-    public void setSchool(String school) {
-        this.school = school;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
     public String getWeixin() {
         return weixin;
     }
@@ -163,28 +130,81 @@ public class InfoUser implements RowMapper<InfoUser>, Serializable {
         this.weixin = weixin;
     }
 
-    public int getAreaId() {
-        return areaId;
+    public int getGoldCoins() {
+        return goldCoins;
     }
 
-    public void setAreaId(int areaId) {
-        this.areaId = areaId;
+    public void setGoldCoins(int goldCoins) {
+        this.goldCoins = goldCoins;
     }
 
-    public String getTaskSchool() {
-        return taskSchool;
+    public String getCard() {
+        return card;
     }
 
-    public void setTaskSchool(String taskSchool) {
-        this.taskSchool = taskSchool;
+    public void setCard(String card) {
+        this.card = card;
+    }
+
+    public int getSchoolId() {
+        return schoolId;
+    }
+
+    public void setSchoolId(int schoolId) {
+        this.schoolId = schoolId;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public InfoUser mapRow(ResultSet resultSet, int i) throws SQLException {
         return new InfoUser(
-                resultSet.getInt(Table.id), resultSet.getString(Table.card), resultSet.getInt(Table.goldCoins),
-                resultSet.getString(Table.icon), resultSet.getString(Table.location), resultSet.getString(Table.nickname),
-                resultSet.getString(Table.openid), resultSet.getString(Table.phone), resultSet.getString(Table.qq),
-                resultSet.getString(Table.school), resultSet.getString(Table.sex), resultSet.getString(Table.weixin),
-                resultSet.getString(Table.taskSchool), resultSet.getInt(Table.areaId));
+                resultSet.getInt("uid"), resultSet.getString("openid"), resultSet.getString("headimgurl"),
+                resultSet.getString("province"), resultSet.getString("nickname"), resultSet.getString("sex"),
+                resultSet.getString("phone"), resultSet.getString("qq"), resultSet.getString("weixin"),
+                resultSet.getInt("goldCoins"), resultSet.getString("card"), resultSet.getInt("schoolId"),
+                resultSet.getString("city"), resultSet.getString("country"), resultSet.getString("time"));
+    }
+
+    @Override
+    public String toString() {
+        return "InfoUser{" +
+                "uid=" + uid +
+                ", openid='" + openid + '\'' +
+                ", headimgurl='" + headimgurl + '\'' +
+                ", province='" + province + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", sex='" + sex + '\'' +
+                ", phone='" + phone + '\'' +
+                ", qq='" + qq + '\'' +
+                ", weixin='" + weixin + '\'' +
+                ", goldCoins=" + goldCoins +
+                ", card='" + card + '\'' +
+                ", schoolId=" + schoolId +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", time='" + time + '\'' +
+                '}';
     }
 }

@@ -2,8 +2,8 @@ body{
     background-color: #f0f0f0;
 }
 .money-wrapper {
-    width: 95%;
-    margin: 0 2.5%;
+    width: 97.5%;
+    margin: 0 0 0 2.5%;
     border-top: 1px solid #dddddd;
 }
 .fenge + .money-wrapper{
@@ -13,7 +13,7 @@ body{
 .money-wrapper .content {
     display: flex;
     flex-wrap: nowrap;
-    padding: 10px 5px;
+    padding: 5px 5px;
 }
 
 .money-wrapper .content .left {
@@ -40,7 +40,7 @@ body{
     height: 50px;
     line-height: 50px;
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #333333;
 }
 .money-wrapper .content .goldCoins {
@@ -48,7 +48,7 @@ body{
     width: 45px;
     line-height: 50px;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 .money-wrapper .content .goldCoins.zheng{
     color: #65e3a6;

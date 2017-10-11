@@ -45,33 +45,23 @@ $(function () {
     function initSchool(callback_initTaskList, callback_typeClick){
         /*获取类型数据*/
         $.get(ServerUrl + "school/getSchool", function (data) {
-            if(data.status == Status.Status_OK){
+            if(data.status == Status.Status_NULL_Result || (data.status == Status.Status_OK && (!data.data.schoolName || data.data.schoolName.length <= 0))){
+                /*还没有选择学校*/
+                change_school_alert();
+            }else if(data.status == Status.Status_OK){
                 schoolName = data.data.schoolName;
-                if(schoolName == null || schoolName.length <= 0){
-                    /*还没有选择学校*/
-                    $.alert("为了提供适合您的任务，请选择您所在的学校！", function () {
-                        change_school();
-                    });
-                }else{
-                    /*初始化学校*/
-                    $("#school").text(schoolName);
-                    /*设置学校的点击事件*/
-                    $("#change-school").click(function () {
-                        change_school();
-                    });
-
-                    /*初始化学校之后，初始化类型*/
-                    initTaskType(callback_initTaskList, callback_typeClick);
-                }
+                /*初始化学校*/
+                $("#school").text(schoolName);
+                /*设置学校的点击事件*/
+                $("#change-school").click(function () {
+                    change_school();
+                });
+                /*初始化学校之后，初始化类型*/
+                initTaskType(callback_initTaskList, callback_typeClick);
             }else{
-                $.toast("数据获取错误");
+                $.toast("学校获取错误");
             }
         });
-    }
-
-    /*切换学校*/
-    function change_school() {
-        location.href = "selectSchool.html";
     }
 
     /*初始化类型*/
@@ -197,7 +187,7 @@ $(function () {
     function build(data) {
         /*对data进行处理*/
         var $html = $("#taskData");
-        $html.find(".image img").attr("src",data.pub.icon);
+        $html.find(".image img").attr("src",data.pub.headimgurl);
         $html.find(".money span").text(data.pub.goldCoins);
         $html.find(".name").text(subString(data.pub.nickname, 4, "..."));
         $html.find(".type").text(data.category.category);

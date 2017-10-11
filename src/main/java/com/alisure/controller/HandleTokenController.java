@@ -17,11 +17,11 @@ import java.io.PrintWriter;
 /**
  * Created by ALISURE on 2017/4/27.
  *
- * å¾®ä¿¡éªŒè¯æœåŠ¡å™¨çš„çœŸå®æ€§
+ * Î¢ĞÅÑéÖ¤·şÎñÆ÷µÄÕæÊµĞÔ
  */
 @Controller
 @RequestMapping("/token")
-@Api(value = "/token",description = "å¤„ç†Token")
+@Api(value = "/token",description = "´¦ÀíToken")
 public class HandleTokenController {
 
     @Autowired
@@ -29,19 +29,19 @@ public class HandleTokenController {
 
     @RequestMapping(value="/token",method = RequestMethod.GET)
     @ResponseBody
-    @ApiOperation(value="å¤„ç†Token",httpMethod="GET")
+    @ApiOperation(value="´¦ÀíToken",httpMethod="GET")
     public void handleToken(HttpServletResponse response) throws IOException {
-        // å¾®ä¿¡åŠ å¯†ç­¾å
+        // Î¢ĞÅ¼ÓÃÜÇ©Ãû
         String signature = request.getParameter("signature");
-        // æ—¶é—´æˆ®
+        // Ê±¼äÂ¾
         String timestamp = request.getParameter("timestamp");
-        // éšæœºæ•°
+        // Ëæ»úÊı
         String nonce = request.getParameter("nonce");
-        // éšæœºå­—ç¬¦ä¸²
+        // Ëæ»ú×Ö·û´®
         String echostr = request.getParameter("echostr");
 
         PrintWriter out = response.getWriter();
-        // é€šè¿‡æ£€éªŒ signature å¯¹è¯·æ±‚è¿›è¡Œæ ¡éªŒï¼Œè‹¥æ ¡éªŒæˆåŠŸåˆ™åŸæ ·è¿”å› echostrï¼Œè¡¨ç¤ºæ¥å…¥æˆåŠŸï¼Œå¦åˆ™æ¥å…¥å¤±è´¥
+        // Í¨¹ı¼ìÑé signature ¶ÔÇëÇó½øĞĞĞ£Ñé£¬ÈôĞ£Ñé³É¹¦ÔòÔ­Ñù·µ»Ø echostr£¬±íÊ¾½ÓÈë³É¹¦£¬·ñÔò½ÓÈëÊ§°Ü
         if(SignUtil.checkSignature(signature, timestamp, nonce)){
             out.print(echostr);
         }

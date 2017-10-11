@@ -6,11 +6,11 @@ import java.util.Map;
  * Created by ALISURE on 2017/10/2.
  */
 public class TemplateContent {
-    private String template_id;//æ¨¡æ¿æ¶ˆæ¯id
-    private String touser;//ç”¨æˆ·openid
-    private String url;//urlç½®ç©ºï¼Œåˆ™å‘é€æˆåŠŸåï¼Œç‚¹å‡»æ¨¡æ¿æ¶ˆæ¯ä¼šè¿›å…¥ä¸€ä¸ªç©ºç™½é¡µé¢ï¼Œæˆ–æ— æ³•ç‚¹å‡»
-    private String topcolor;//æ ‡é¢˜é¢œè‰²
-    private Map<String, TemplateData> data;//è¯¦ç»†å†…å®¹
+    private String template_id;//Ä£°åÏûÏ¢id
+    private String touser;//ÓÃ»§openid
+    private String url;//urlÖÃ¿Õ£¬Ôò·¢ËÍ³É¹¦ºó£¬µã»÷Ä£°åÏûÏ¢»á½øÈëÒ»¸ö¿Õ°×Ò³Ãæ£¬»òÎŞ·¨µã»÷
+    private String topcolor;//±êÌâÑÕÉ«
+    private Map<String, TemplateData> data;//ÏêÏ¸ÄÚÈİ
 
     public TemplateContent() {
 

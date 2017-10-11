@@ -7,41 +7,41 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * æ³¨æ„ï¼š
- *      æ¥æ‰‹è€…å’Œå‘å¸ƒè€…çš„ä¿¡æ¯ï¼Œä¸åœ¨è¿™é‡Œç»™å‡ºï¼Œéœ€è¦åœ¨å¤–é¢é€‚å½“çš„åœ°æ–¹ç»™å‡ºã€‚
+ * ×¢Òâ£º
+ *      ½ÓÊÖÕßºÍ·¢²¼ÕßµÄĞÅÏ¢£¬²»ÔÚÕâÀï¸ø³ö£¬ĞèÒªÔÚÍâÃæÊÊµ±µÄµØ·½¸ø³ö¡£
  */
 public class InfoTask implements RowMapper<InfoTask>,Serializable {
     private int tid;
-    private int coins;//é‡‘å¸æ•°
-    private String title;// ä»»åŠ¡åç§°
-    private String content;//ä»»åŠ¡å†…å®¹
-    private String pubTime;//å‘å¸ƒæ—¶é—´
-    private String startTime;//å¼€å§‹æ—¶é—´
-    private String endTime;//æˆªæ­¢æ—¶é—´
-    private String place;//ä»»åŠ¡åœ°ç‚¹
+    private int coins;//½ğ±ÒÊı
+    private String title;// ÈÎÎñÃû³Æ
+    private String content;//ÈÎÎñÄÚÈİ
+    private String pubTime;//·¢²¼Ê±¼ä
+    private String startTime;//¿ªÊ¼Ê±¼ä
+    private String endTime;//½ØÖ¹Ê±¼ä
+    private String place;//ÈÎÎñµØµã
     private String qq;
     private String weixin;
     private String telephone;
-    private String rewards;//é…¬åŠ³
-    private int catId; // ç±»åˆ«
-    private String words;//ç•™è¨€
-    private String images;//å›¾ç‰‡
-    private String school;//å­¦æ ¡
+    private String rewards;//³êÀÍ
+    private int catId; // Àà±ğ
+    private String words;//ÁôÑÔ
+    private String images;//Í¼Æ¬
+    private String school;//Ñ§Ğ£
 
-    private int recId;//æ¥æ‰‹è€…ID
-    private int recStateId;//æ¥æ‰‹çŠ¶æ€
-    private int pubId;//å‘å¸ƒè€…ID
-    private int pubStateId;//å‘å¸ƒçŠ¶æ€
-    private String recTime;//æ¥æ‰‹æ—¶é—´
-    private String recCompleteTime;//æ¥æ‰‹è€…å®Œæˆæ—¶é—´
-    private String pubCompleteTime;//å‘å¸ƒè€…å®Œæˆæ—¶é—´ï¼Œå³æ•´ä¸ªä»»åŠ¡çš„ç»“æŸæ—¶é—´
-    private String recCancelTime;//æ¥æ‰‹è€…å–æ¶ˆæ—¶é—´
-    private String pubCancelTime;//å‘å¸ƒè€…å–æ¶ˆæ—¶é—´
+    private int recId;//½ÓÊÖÕßID
+    private int recStateId;//½ÓÊÖ×´Ì¬
+    private int pubId;//·¢²¼ÕßID
+    private int pubStateId;//·¢²¼×´Ì¬
+    private String recTime;//½ÓÊÖÊ±¼ä
+    private String recCompleteTime;//½ÓÊÖÕßÍê³ÉÊ±¼ä
+    private String pubCompleteTime;//·¢²¼ÕßÍê³ÉÊ±¼ä£¬¼´Õû¸öÈÎÎñµÄ½áÊøÊ±¼ä
+    private String recCancelTime;//½ÓÊÖÕßÈ¡ÏûÊ±¼ä
+    private String pubCancelTime;//·¢²¼ÕßÈ¡ÏûÊ±¼ä
 
-    private InfoCategory category; //ç±»åˆ«
+    private InfoCategory category; //Àà±ğ
 
-    private InfoUser pub;//å‘å¸ƒè€…ä¿¡æ¯
-    private InfoUser rec;//æ¥æ‰‹è€…ä¿¡æ¯
+    private InfoUser pub;//·¢²¼ÕßĞÅÏ¢
+    private InfoUser rec;//½ÓÊÖÕßĞÅÏ¢
 
     public InfoTask() {
 

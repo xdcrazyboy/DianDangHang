@@ -25,7 +25,7 @@ $(function () {
         task_money_number:0,
 
         /*联系方式预选*/
-        task_link_id:1,
+        task_link_id:3,
         task_link_max_length:11,
 
         /*用户所在学校*/
@@ -468,6 +468,10 @@ $(function () {
             if(data.status == Status.Status_OK){
                 var userinfo = data.data[0];
                 var schoolInfo = data.data[1];
+                if(schoolInfo == null || !schoolInfo.schoolName){
+                    /*还没有选择学校*/
+                    change_school_alert();
+                }
                 /*设置学校*/
                 task_params.school = schoolInfo.schoolName;
                 /*设置金币*/

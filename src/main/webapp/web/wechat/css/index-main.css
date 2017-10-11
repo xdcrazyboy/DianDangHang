@@ -89,9 +89,9 @@
     float: left;
     line-height: 26px;
     margin: 9px 4px 5px;
-    font-size: 14px;
+    font-size: 0.9em;
     border-radius: 5px;
-    padding: 0px 5px;
+    padding: 2px 5px 0;
     background: #e5e5e5;
 }
 .index-main-sort .sort-content .sort-left>div:hover{

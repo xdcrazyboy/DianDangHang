@@ -1,9 +1,7 @@
 package com.alisure.tool.core;
 
 /**
- * 
- * 用于获得系统属性
- * 
+ *
  * @author ALISURE
  * @version 1507
  * 
@@ -122,37 +120,24 @@ public class CoreSystemProperty {
 	 */
 	public static final String User_Dir = "user.dir";
 	
-	
-	/**
-	 * 项目所在路径
-	 * @return
-	 */
+
 	public static String userDir(){
 		return System.getProperty(User_Dir);
 	}
-	
-	/**
-	 * 路径分隔符
-	 * @return
-	 */
+
 	public static String fileSeparator(){
 		return System.getProperty(File_Separator);
 	}
-	
-	/**
-	 * 换行符
-	 * @return
-	 */
+
 	public static String lineSeparator(){
 		return System.getProperty(Line_Separator);
 	}
-	
-	/**
-	 * 获取系统属性
-	 * @return
-	 */
+
 	public static String getSystemProperty(final String key){
 		return System.getProperty(key);
 	}
-	
+
+    public static void main(String[] args){
+        System.out.println(CoreSystemProperty.userDir());
+    }
 }

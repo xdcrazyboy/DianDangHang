@@ -11,14 +11,14 @@ import java.net.URL;
 @Component("getWeiXinInf")
 public class GetWeiXinInf {
 
-    /*å®šæ—¶è¡¨è¾¾å¼*/
-    /*æ¯ä¸ªå°æ—¶çš„**ï¼š10ï¼š10æ›´æ–°*/
+    /*¶¨Ê±±í´ïÊ½*/
+    /*Ã¿¸öĞ¡Ê±µÄ**£º10£º10¸üĞÂ*/
     private static final String Cron = "20 10 * * * ?";
 
     /*key*/
     private static final String AccessToken = "accessToken";
     private static final String Ticket = "ticket";
-    /*å±æ€§æ–‡ä»¶å*/
+    /*ÊôĞÔÎÄ¼şÃû*/
     private static final String file = "task.properties";
 
     private String getFile(){
@@ -27,7 +27,7 @@ public class GetWeiXinInf {
     }
 
     /**
-     * æ›´æ–° AccessToken
+     * ¸üĞÂ AccessToken
      */
     public boolean updateAccessToken(){
         try {
@@ -41,7 +41,7 @@ public class GetWeiXinInf {
     }
 
     /**
-     * è·å–é…ç½®æ–‡ä»¶ä¸­çš„ AccessToken
+     * »ñÈ¡ÅäÖÃÎÄ¼şÖĞµÄ AccessToken
      * @return
      */
     public String getAccessToken(){
@@ -54,7 +54,7 @@ public class GetWeiXinInf {
     }
 
     /**
-     * æ›´æ–° Ticket
+     * ¸üĞÂ Ticket
      * @return
      */
     public boolean updateTicket(){
@@ -71,7 +71,7 @@ public class GetWeiXinInf {
     }
 
     /**
-     * è·å–é…ç½®æ–‡ä»¶ä¸­çš„ Ticket
+     * »ñÈ¡ÅäÖÃÎÄ¼şÖĞµÄ Ticket
      * @return
      */
     public String getTicket(){

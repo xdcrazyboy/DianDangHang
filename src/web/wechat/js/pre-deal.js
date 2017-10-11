@@ -3,12 +3,10 @@
  */
 
 /* 暂时定义成全局变量 */
-// var project = "timeseller_v0.2";
-// var ServerUrl = "http://timeseller.fantasy512.cn/timeseller_v0.2/";
-// var ServerUrl = "http://115.159.153.114/timeseller_v0.2/";
 var project = "ddh";
 // var ServerUrl = "http://www.alisure.xyz/ddh/";
-var ServerUrl = "http://localhost:8080/ddh/";
+var ServerUrl = "http://timeseller.fantasy512.cn/ddh/";
+// var ServerUrl = "http://localhost:8081/ddh/";
 var SignatureUrl = ServerUrl + "image/signature";
 var DownImageUrl = ServerUrl + "image/downImage";
 
@@ -36,7 +34,7 @@ $(function () {
 
     /*配置微信*/
     var url = location.href;
-    var jsApiList = ["chooseImage","uploadImage","downloadImage"];
+    var jsApiList = ["chooseImage","uploadImage","downloadImage","closeWindow"];
 
     /* 获取签名 */
     getSignature(url, function (appId, timestamp, nonceStr, signature) {
@@ -77,11 +75,9 @@ function getSignature(url, callback) {
         function (data) {
             if (data.status == 1) {
                 var object = data.data;
-
                 /*成功后执行回调*/
                 callback(object.appId, object.timestamp, object.nonceStr, object.signature);
             } else {
-
                 /* 没有获取签名，发生异常 */
                 console.log(ErrorInfo.SignatureError);
             }
@@ -100,7 +96,7 @@ function getSignature(url, callback) {
 function config(appId,timestamp, nonceStr, signature, jsApiList) {
     /*通过config接口注入权限验证配置*/
     wx.config({
-        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: appId, // 必填，公众号的唯一标识
         timestamp: timestamp, // 必填，生成签名的时间戳
         nonceStr: nonceStr, // 必填，生成签名的随机串
@@ -156,6 +152,15 @@ function downImage(mediaId,callback) {
 }
 
 
+/*关闭当前页面或者返回*/
+function closeWindowOrBack(isClose) {
+    if(isClose){
+        wx.closeWindow();
+    }else{
+        history.back();
+    }
+}
+
 /* 获取URL 根地址 */
 function getRoot() {
     var href = location.href;
@@ -209,4 +214,14 @@ function getTimeAddHour(hour) {
     if (strMinutes >= 0 && strMinutes <= 9) strMinutes = "0" + strMinutes;
 
     return date.getFullYear() + "-" + month + "-" + strDate + " " + strHours + ":" + strMinutes;
+}
+
+/*切换学校*/
+function change_school_alert() {
+    $.alert("为了提供适合您的任务，请选择您所在的学校！", function () {
+        change_school();
+    });
+}
+function change_school() {
+    location.href = "selectSchool.html";
 }

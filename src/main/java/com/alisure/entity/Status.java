@@ -1,18 +1,18 @@
-package com.alisure.result;
+package com.alisure.entity;
 
 /**
- * Created by ALISURE on 2017/3/23.
+ * 返回的状态码
  */
 public class Status {
     public final static int Status_Error = 0;
     public final static int Status_OK = 1;
-    /** 缁撴灉涓虹┖ */
+    /** 结果为空 */
     public final static int Status_NULL_Result = 2;
-    /** 鍙傛暟閿欒 */
+    /** 参数错误 */
     public final static int Status_Parameter_Error = 3;
-    /* loginSession 鏃犳晥 */
+    /* loginSession 无效 */
     public final static int LoginException = 4;
-    /* 鍦板潃 鏃犳晥 */
+    /* 地址 无效 */
     public final static int Status_Path_Error = 5;
 
 

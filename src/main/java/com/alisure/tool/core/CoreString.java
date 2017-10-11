@@ -1,15 +1,17 @@
 package com.alisure.tool.core;
 
+import java.net.URLEncoder;
+
 /**
  * 
  * ���ڹ����ַ����Ĳ���
- * 
+ *
  * @author ALISURE
  * @version 1507
  *
  */
 public class CoreString {
-	
+
 	/**
 	 * ���ߺ������ж��ַ����Ƿ�Ϊ��
 	 * @param input
@@ -77,7 +79,7 @@ public class CoreString {
 				  .replaceAll("--", " ").replaceAll("/", " ")
 				  .replaceAll("%", " ");
 	}
-	
+
 	/**
 	 * ���ߺ���,����Σ���ַ�
 	 * &  -->  &alisure1;
@@ -96,7 +98,7 @@ public class CoreString {
 				  .replaceAll("--", "&alisure5;").replaceAll("/", "&alisure6;")
 				  .replaceAll("%", "&alisure7;");
 	}
-	
+
 	/**
 	 * ���ߺ���,ת��Σ���ַ�
 	 * &amp; -->  &
@@ -109,7 +111,7 @@ public class CoreString {
 		return str.replaceAll("&amp;", "&").replaceAll("&lt;", "<")
 				  .replaceAll("&gt;", ">");
 	}
-	
+
 	/**
 	 * ���ߺ���,ת��Σ���ַ�
 	 * &alisure1;  -->  &
@@ -128,7 +130,7 @@ public class CoreString {
 				  .replaceAll("&alisure5;", "--").replaceAll("&alisure6;", "/")
 				  .replaceAll("&alisure7;", "%");
 	}
-	
+
 	/**
 	 * ��Σ���ַ�����Ϊ��
 	 * @param str
@@ -140,7 +142,7 @@ public class CoreString {
 					.replaceAll("'", "").replaceAll("--", "")
 					.replaceAll("/", "").replaceAll("%", "");
 	}
-	
+
 	/**
 	 * ת���ַ���Ϊint���쳣����0
 	 * @param str
@@ -148,5 +150,14 @@ public class CoreString {
 	 */
 	public static int toInteger(String str) throws NumberFormatException {
 		return Integer.parseInt(str);
+	}
+
+	public static String URLEncoder_encode(String url, String encoding){
+		try {
+			return URLEncoder.encode(url, encoding);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

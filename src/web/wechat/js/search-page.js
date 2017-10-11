@@ -200,7 +200,7 @@ $(function () {
     function build(data) {
         /*对data进行处理*/
         var $html = $("#data");
-        $html.find(".image img").attr("src",data.pub.icon);
+        $html.find(".image img").attr("src",data.pub.headimgurl);
         $html.find(".money span").text(data.pub.goldCoins);
         $html.find(".name").text(subString(data.pub.nickname, 4, "..."));
         $html.find(".type").text(data.category.category);
