@@ -5,3 +5,4 @@ node_modules
 rev
 target
 src/main/webapp/web
+src/main/webapp/WEB-INF/config/jdbc.properties
