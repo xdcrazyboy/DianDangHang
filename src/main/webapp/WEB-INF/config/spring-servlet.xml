@@ -13,15 +13,79 @@
        http://www.springframework.org/schema/task
        http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 
+    <!--处理注解-->
     <mvc:annotation-driven />
-    <context:component-scan base-package="com.alisure.controller"/>
-    <context:component-scan base-package="com.alisure.weixin.task" />
+    <!--处理注解-->
 
+    <!--扫包-->
+    <context:component-scan base-package="com.alisure.controller"/>
+    <context:component-scan base-package="com.alisure.dao"/>
+    <context:component-scan base-package="com.alisure.entity"/>
+    <context:component-scan base-package="com.alisure.service"/>
+    <!--扫包-->
+
+    <!--数据库相关配置-->
+    <!--<context:property-placeholder location="WEB-INF/config/jdbc.properties" />-->
+    <bean id="dataSource" name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass"  value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://115.159.153.114:3306/timeseller_v0.2?useUnicode=true&amp;characterEncoding=utf-8" />
+        <property name="user" value="root" />
+        <property name="password" value="timeseller" />
+        <!--
+            <property name="driverClass" value="${jdbc.driver}" />
+            <property name="jdbcUrl" value="${jdbc.url}" />
+            <property name="user" value="${jdbc.username}" />
+            <property name="password" value="${jdbc.password}" />
+        -->
+        <property name="checkoutTimeout" value="30000" />
+        <property name="idleConnectionTestPeriod" value="60" />
+        <property name="maxIdleTime" value="30" />
+        <property name="initialPoolSize" value="10" />
+        <property name="minPoolSize" value="5" />
+        <property name="maxPoolSize" value="20" />
+        <property name="acquireIncrement" value="5" />
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="dataSource" />
+    </bean>
+    <!--数据库相关配置-->
+    
     <!--对静态资源的处理-->
     <mvc:resources location="/web/" mapping="/web/**"/>
+    <mvc:resources location="/image/" mapping="/image/**"/>
     <!--对静态资源的处理-->
 
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="com.alisure.Interceptor.LoginInterceptor">
+                <property name="excludedUrls">
+                    <list>
+                        <value>menu/auth</value>
+                        <value>image</value>
+                        <value>swagger</value>
+                        <value>web/wechat/img</value>
+                        <value>web/wechat/css</value>
+                        <value>api-docs</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--配置拦截器-->
+
+    <!--自动生成API Swagger-->
+    <mvc:resources mapping="/swagger/**" location="/swagger/"/>
+    <bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />
+    <bean name="waggerConfig" class="com.alisure.swagger.SwaggerConfig" />
+    <!--自动生成API Swagger-->
+
     <!--定时任务 注解方式-->
+    <context:component-scan base-package="com.alisure.weixin.task" />
     <task:annotation-driven scheduler="qdScheduler" mode="proxy"/>
     <task:scheduler id="qdScheduler" pool-size="10"/>
 

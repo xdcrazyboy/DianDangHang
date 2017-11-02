@@ -5,11 +5,11 @@ package com.alisure.weixin.task;
 
 /*
 
-    姝ゅ寘涓槸瀹氭椂浠诲姟
-        1.鏇存柊 AccessToken
+    此包中是定时任务
+        1.更新 AccessToken
             GetWeiXinInf.updateAccessToken()
 
-        2.鏇存柊 Ticket
+        2.更新 Ticket
             GetWeiXinInf.updateTicket()
 
  */

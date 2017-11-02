@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- common head and css -->
+    @@include("include/common-head.html", {"title": "时间典当行"})
+    <!-- common head and css -->
+    <!-- ALISURE -->
+    <link rel="stylesheet" href="../css/money-item-style.css" />
+    <!-- ALISURE -->
+</head>
+<body>
+
+    <div id="data" style="display: none">
+        <li class="money-wrapper">
+            <div class="content" data-id="">
+                <div class="left">
+                    <div class="top"></div>
+                    <div class="time"></div>
+                </div>
+                <div class="center">
+                    <div class="reason"></div>
+                </div>
+                <div class="right">
+                    <div class="goldCoins"></div>
+                </div>
+            </div>
+        </li>
+    </div>
+    <div id="fenge" style="display: none">
+        <div class="fenge"><div><img src="../img/publish/money-fenge.png"></div><div class="title">本月</div></div>
+    </div>
+
+    <div id="wrapper" style="background-color: #ffffff">
+        <ul></ul>
+        <div id="task-load-more" class="weui-loadmore" style="display: none">
+            <i class="weui-loading"></i>
+            <span class="weui-loadmore__tips">正在加载</span>
+        </div>
+        <div id="show-no-data" style="display: none">
+            @@include("include/common-error-info.html", {"image": "../img/common/no_data.png", "info": "暂时没有结果！"})
+        </div>
+    </div>
+
+<!-- common js -->
+@@include("include/common-js.html", {"info": "this is info."})
+<!-- common js -->
+
+<!-- for implement refresh goods -->
+<script src="../js/money.js"></script>
+
+</body>
+</html>

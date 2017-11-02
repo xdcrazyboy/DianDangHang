@@ -4,17 +4,17 @@
 package com.alisure.weixin.check;
 
 /*
-    ä¸€ã€æ­¤åŒ…çš„ä½œç”¨ï¼š
-        1.å¾®ä¿¡éªŒè¯æœåŠ¡:
+    Ò»¡¢´Ë°üµÄ×÷ÓÃ£º
+        1.Î¢ĞÅÑéÖ¤·şÎñ:
             SignUtil.checkSignature()
-        2.è·å–access_token:
+        2.»ñÈ¡access_token:
             JSSDKSignUtil.getAccessToken()
-        3.è·å–ticket:
+        3.»ñÈ¡ticket:
             JSSDKSignUtil.getTicket()
-        4.è·å–ç­¾å:
+        4.»ñÈ¡Ç©Ãû:
             JSSDKSignUtil.getSignature()
 
-    äºŒã€æ­¤åŒ…çš„å¼•ç”¨ï¼š
-        1.com.alisure.tool.core.CoreNetworkï¼š
-            æˆ‘å†™çš„è”ç½‘æœåŠ¡ç±»
+    ¶ş¡¢´Ë°üµÄÒıÓÃ£º
+        1.com.CoreNetwork£º
+            ÎÒĞ´µÄÁªÍø·şÎñÀà
  */

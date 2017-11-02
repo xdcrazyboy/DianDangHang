@@ -2,16 +2,17 @@ package com.alisure.tool.core;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 /**
- * 
- * ÓÃÓÚÊä³ö
- * 
+ *
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ *
  * @author ALISURE
  * @version 1507
  */
 public class CorePrint {
 	/**
-	 * Ïò¿ØÖÆÌ¨Êä³öÄÚÈÝ£¬²¢»»ÐÐ£¬¸½´øÊ±¼ä
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 * @param value
 	 */
 	public static void printlnTime(Object value){
@@ -19,15 +20,15 @@ public class CorePrint {
 								.format(new Date())+": "+(value == null ? "" : value).toString());
 	}
 	/**
-	 * Ïò¿ØÖÆÌ¨Êä³öÄÚÈÝ£¬²»»»ÐÐ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param value
 	 */
 	public static void print(Object value){
 		System.out.print((value == null ? "" : value).toString());
 	}
-	
+
 	/**
-	 * Ïò¿ØÖÆÌ¨Êä³öÄÚÈÝ,²¢»»ÐÐ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param value
 	 */
 	public static void println(Object value){

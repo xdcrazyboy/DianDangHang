@@ -4,15 +4,15 @@
 package com.alisure.weixin.image;
 
 /*
-    ä¸€ã€æ­¤åŒ…çš„ä½œç”¨ï¼š
-        1.ä»å¾®ä¿¡æœåŠ¡å™¨è·å–ç”¨æˆ·ä¸Šä¼ çš„å›¾ç‰‡:
+    Ò»¡¢´Ë°üµÄ×÷ÓÃ£º
+        1.´ÓÎ¢ĞÅ·şÎñÆ÷»ñÈ¡ÓÃ»§ÉÏ´«µÄÍ¼Æ¬:
             ImageUtil.getWeiXinImage()
 
-    äºŒã€æ­¤åŒ…çš„å¼•ç”¨ï¼š
-        1.import com.alisure.tool.core.CoreAlisure
-            éœ€è¦é‡æ„çš„æ“ä½œ
-        2.import com.alisure.tool.core.CoreImage
-            æˆ‘å†™çš„å›¾ç‰‡ç›¸å…³ç±»
-        3.import com.alisure.tool.core.CoreNetwork
-            æˆ‘å†™çš„è”ç½‘æœåŠ¡ç±»
+    ¶ş¡¢´Ë°üµÄÒıÓÃ£º
+        1.import com.CoreAlisure
+            ĞèÒªÖØ¹¹µÄ²Ù×÷
+        2.import com.CoreImage
+            ÎÒĞ´µÄÍ¼Æ¬Ïà¹ØÀà
+        3.import com.CoreNetwork
+            ÎÒĞ´µÄÁªÍø·şÎñÀà
  */

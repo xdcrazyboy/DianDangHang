@@ -1,9 +1,13 @@
 package com.alisure.controller;
 
 import com.alisure.weixin.check.SignUtil;
+import com.wordnik.swagger.annotations.Api;
+import com.wordnik.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,27 +16,32 @@ import java.io.PrintWriter;
 
 /**
  * Created by ALISURE on 2017/4/27.
+ *
+ * Î¢ĞÅÑéÖ¤·şÎñÆ÷µÄÕæÊµĞÔ
  */
 @Controller
 @RequestMapping("/token")
+@Api(value = "/token",description = "´¦ÀíToken")
 public class HandleTokenController {
 
     @Autowired
     private HttpServletRequest request;
 
-    @RequestMapping("/token")
+    @RequestMapping(value="/token",method = RequestMethod.GET)
+    @ResponseBody
+    @ApiOperation(value="´¦ÀíToken",httpMethod="GET")
     public void handleToken(HttpServletResponse response) throws IOException {
-        // å¾®ä¿¡åŠ å¯†ç­¾å
+        // Î¢ĞÅ¼ÓÃÜÇ©Ãû
         String signature = request.getParameter("signature");
-        // æ—¶é—´æˆ®
+        // Ê±¼äÂ¾
         String timestamp = request.getParameter("timestamp");
-        // éšæœºæ•°
+        // Ëæ»úÊı
         String nonce = request.getParameter("nonce");
-        // éšæœºå­—ç¬¦ä¸²
+        // Ëæ»ú×Ö·û´®
         String echostr = request.getParameter("echostr");
 
         PrintWriter out = response.getWriter();
-        // é€šè¿‡æ£€éªŒ signature å¯¹è¯·æ±‚è¿›è¡Œæ ¡éªŒï¼Œè‹¥æ ¡éªŒæˆåŠŸåˆ™åŸæ ·è¿”å› echostrï¼Œè¡¨ç¤ºæ¥å…¥æˆåŠŸï¼Œå¦åˆ™æ¥å…¥å¤±è´¥
+        // Í¨¹ı¼ìÑé signature ¶ÔÇëÇó½øĞĞĞ£Ñé£¬ÈôĞ£Ñé³É¹¦ÔòÔ­Ñù·µ»Ø echostr£¬±íÊ¾½ÓÈë³É¹¦£¬·ñÔò½ÓÈëÊ§°Ü
         if(SignUtil.checkSignature(signature, timestamp, nonce)){
             out.print(echostr);
         }

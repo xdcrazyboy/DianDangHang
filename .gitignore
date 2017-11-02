@@ -1,6 +1,8 @@
 # ALISURE
-dist
+
+.idea
 node_modules
 rev
 target
-.idea
+src/main/webapp/web
+src/main/webapp/WEB-INF/config/jdbc.properties
