@@ -13,16 +13,11 @@
 </head>
 
 <body>
-    <div class="user-info-show" id="user-info-show">
-        <!-- 返回 主页面-->
-        <div class="user-backindex">
-            <a href="index.html"><img src="../img/personcenter/index-green.png"></a>
-        </div>
+    <div class="user-info-show" id="user-info-show" user-id="">
         <div class="weui-cells my-user-cells">
-            <div class="user-bg user-bg-blur"></div>
             <div class="weui-cell" id="headPortrait">
                 <div class="weui-cell__hd">
-                    <img class="headimg" src="">
+                    <img class="headimg" src="../img/personCenter/person-img.jpg">
                 </div>
                 <div class="weui-cell__bd">
                 </div>
@@ -38,7 +33,7 @@
                 <div class="weui-cell__bd">
                     <p>地区</p>
                 </div>
-                <div class="weui-cell__ft" id="user-address">陕西 西安</div>
+                <div class="weui-cell__ft" id="user-address">陕西</div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
@@ -55,19 +50,35 @@
         </div>
         <div class="weui-cells__title">一卡通或学生证等证件上传</div>
         <div class="user-card-show" id="user-card-show">
-            <img src="../img/personCenter/person-card.jpg">
+            <img src="../img/personCenter/uerCardInit.png">
         </div>
         <div class="user-edit-btn" style="display:none;"><a href="user-edit.html" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
     </div>
-    <script src="../../common/js/jquery-2.1.4.js"></script>
-    <script src="../../common/js/fastclick.js"></script>
+    <!-- common js -->
+    
+<script src="../../common/js/jquery-2.1.4.js"></script>
+<script src="../../common/js/jquery-weui.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!-- for ios bug -->
+<script src="../../common/js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script src="../js/pre-deal.js"></script>
+
+<!-- task.html for image swiper -->
+<script src="../../common/js/swiper.min.js"></script>
+
+    <!-- common js -->
     <script>
         $(function() {
             FastClick.attach(document.body);
         });
     </script>
-    <script src="../../common/js/jquery-weui.js"></script>
-    <script src="../js/user-info.js"></script>
+    <script src="../js/user-info-show.js"></script>
 
 </body>
 
