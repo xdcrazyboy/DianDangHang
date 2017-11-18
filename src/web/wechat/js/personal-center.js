@@ -52,8 +52,7 @@ $(function() {
 
         /*点击账户值*/
         $(".personal-main-top-money").off("click").on("click", function() {
-            var id = $(this).attr("data-id");
-            location.href = "Money.html?id=" + id;
+            location.href = "money.html";
         });
 
     }
