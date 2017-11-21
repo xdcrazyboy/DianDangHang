@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
 
     <title>个人资料-编辑</title>
 
@@ -43,7 +43,7 @@
                 </div>
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select2" id="user-address-edit">
-                        <!-- <option value="">请选择省份</option> -->
+                        <option value="">请选择省份</option>
                     </select>
                 </div>
             </div>
@@ -65,15 +65,46 @@
                     <input class="weui-input" type="tel" value="" id="user-tel-edit" placeholder="请输入手机号">
                 </div>
             </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label" for="user-qq-edit">QQ号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="tel" value="" id="user-qq-edit" placeholder="请输入QQ号">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label" for="user-weixin-edit">微信号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" value="" id="user-weixin-edit" placeholder="请输入微信号">
+                </div>
+            </div>
         </div>
 
-        <div class="weui-uploader weui-cells_form user-card-edit" id="user-card-edit ">
-            <div class="weui-uploader__bd centerdiv">
-                <div class="weui-uploader__input-box">
-                    <div class="user-card-show" id="user-card-show" display="none">
-                        <img src="">
+        <!--上传校园卡-->
+        <div class="weui-cells weui-cells_form user-card-edit" id="user-card-edit ">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <!--上传-->
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__bd centerdiv">
+                            <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderInput" class="weui-uploader__input" type="button" />
+                            </div>
+                        </div>
                     </div>
-                    <input id="uploader-user-card" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    <!--查看图片-->
+                    <div class="weui-gallery" id="uploaderFiles-gallery">
+                        <span class="weui-gallery__img" data-for-delete=""></span>
+                        <div class="weui-gallery__opr">
+                            <a href="javascript:" class="weui-gallery__del">
+                                <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

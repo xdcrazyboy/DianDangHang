@@ -14,7 +14,7 @@ $(function() {
 
     // 获取个人信息
     $.get(ServerUrl + "my/user", function(datas) {
-        if (datas.status == 1) {
+        if (datas.status == Status.Status_OK) {
             $.toast("数据获取成功");
             // 展示个人资料界面
             initUserInfoAtCenter(datas.data);
@@ -65,7 +65,7 @@ $(function() {
     $(function() {
         /*联网获取数据*/
         $.get(ServerUrl + "my/myTask", function(taskDatas) {
-            if (taskDatas.status == 1) {
+            if (taskDatas.status == Status.Status_OK) {
                 $.toast("数据获取成功");
                 /*初始化任务列表*/
                 initTaskList(taskDatas);
@@ -159,7 +159,43 @@ $(function() {
 
             /*点击任务item的操作*/
             $("#userTaskWrapper .user-goods-wrapper .personal-mytask-content .personal-mytask-content-body .top .operation").off("click").on("click", function() {
-                alert("删除？");
+                //弹出对话框
+                $.actions({
+                    title: "选择操作",
+                    onClose: function() {
+                        console.log("close");
+                    },
+                    actions: [{
+                            text: "发布",
+                            className: "color-primary",
+                            onClick: function() {
+                                $.alert("发布成功");
+                            }
+                        },
+                        {
+                            text: "编辑",
+                            className: "color-warning",
+                            onClick: function() {
+                                $.alert("你选择了“编辑”");
+                            }
+                        },
+                        {
+                            text: "取消",
+                            className: 'color-danger',
+                            onClick: function() {
+                                $.alert("你选择了“取消”");
+                            }
+                        },
+                        {
+                            text: "评论",
+                            className: 'color-danger',
+                            onClick: function() {
+                                $.alert("你选择了“评论”");
+                            }
+                        }
+                    ]
+                });
+
                 //防止点击事件冒泡触发
                 stopBubbling(event);
             });
@@ -174,7 +210,7 @@ $(function() {
     $(function() {
 
         $.get(ServerUrl + "my/myPub", function(pubDatas) {
-            if (pubDatas.status == 1) {
+            if (pubDatas.status == Status.Status_OK) {
                 $.toast("数据获取成功");
                 /*初始化发布列表*/
                 initPublishList(pubDatas);
@@ -264,7 +300,43 @@ $(function() {
 
             /*点击发布item的操作*/
             $("#userPublishWrapper .user-goods-wrapper .personal-mypub-content .personal-mypub-content-body .operation").off("click").on("click", function() {
-                alert("取消？");
+                //弹出对话框
+                $.actions({
+                    title: "选择操作",
+                    onClose: function() {
+                        console.log("close");
+                    },
+                    actions: [{
+                            text: "发布",
+                            className: "color-primary",
+                            onClick: function() {
+                                $.alert("发布成功");
+                            }
+                        },
+                        {
+                            text: "编辑",
+                            className: "color-warning",
+                            onClick: function() {
+                                $.alert("你选择了“编辑”");
+                            }
+                        },
+                        {
+                            text: "取消",
+                            className: 'color-danger',
+                            onClick: function() {
+                                $.alert("你选择了“取消”");
+                            }
+                        },
+                        {
+                            text: "评论",
+                            className: 'color-danger',
+                            onClick: function() {
+                                $.alert("你选择了“评论”");
+                            }
+                        }
+                    ]
+                });
+
                 //防止点击事件冒泡触发
                 stopBubbling(event);
             });

@@ -18,7 +18,7 @@ $(function() {
     }
 
     $.get(ServerUrl + "my/showinfo/" + userId, function(datas) {
-        if (datas.status == 1) {
+        if (datas.status == Status.Status_OK) {
             $.toast("数据获取成功");
             // 展示个人资料界面
             showUserInfo(datas.data);
