@@ -44,11 +44,9 @@ $(function() {
     //编辑个人数据（若原本就有数据需默认填写）
     function editUserInfo(datas) {
         //加载默认数据
-        if (datas[0].openid == "orLZlwVdD7mj6uwJcBHO1BXM-FnQ") {
-            init_edit_data(datas);
-        } else {
-            alert("你不是本人，无法进行修改操作");
-        }
+
+        init_edit_data(datas);
+
     }
 
     /**修改个人信息数据初始化 */

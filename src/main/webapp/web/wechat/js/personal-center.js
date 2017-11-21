@@ -27,7 +27,7 @@ $(function() {
     function initUserInfoAtCenter(datas) {
         $("#user_golds").text(datas[0].goldCoins);
         $(".personal-main-top-user-img img").attr("src", datas[0].headimgurl);
-        $(".personal-main-top-user-img").attr("user-id", datas[1].uid);
+        $(".personal-main-top-user-img").attr("user-id", datas[0].uid);
         $("#user-name").text(datas[0].nickname);
         if (datas[0].sex == "女") {
             $(".personal-main-top-username img").attr("src", "../img/personCenter/gender-girl.png")
@@ -69,9 +69,10 @@ $(function() {
                 $.toast("数据获取成功");
                 /*初始化任务列表*/
                 initTaskList(taskDatas);
-
+            } else if (pubDatas.status == Status_NULL_Result) {
+                $.toast("没有任何任务/发布");
             } else {
-                $.toast("数据获取错误");
+                $.toast("数据获取错误/无任务");
             }
         });
         /**任务状态 */
@@ -119,6 +120,9 @@ $(function() {
                 if (taskDatas.page == 1) $goods.empty();
 
                 var taskDatasDetail = taskDatas.data;
+                if (taskDatasDetail.length == 0) {
+                    $("#user-publish-load-more").css("display", "none");
+                }
                 for (var i = 0; i < taskDatasDetail.length; i++) {
                     /*需要将数据传给buildTask()*/
                     var item = buildTask(taskDatasDetail[i]);
@@ -137,11 +141,14 @@ $(function() {
             /*对taskDatasDetail进行处理*/
             var $html = $("#userTaskData");
             $html.find(".personal-mytask-content-body").attr("myTask-id", data.tid);
-            $html.find(".status-image img").attr("src", data.status_image); //需要写一个状态图片的选择
-            $html.find(".status-name").text(data.recsituation);
-            //小图标还没全完成，地址暂时写死
-            $html.find(".type img").attr("src", "../img/personCenter/dating10.png");;
-            $html.find(".type p").text(data.type);
+            if ((data.recStateId == 1) || (data.recStateId == 2)) {
+                $html.find(".personal-mytask-content-rightTop").css(({ "background": "", "background-size": "" }));
+                $html.find(".personal-mytask-content-leftTop").css(({ "background": "url(../img/personCenter/taskDoing.png)", "background-size": "100%" }));
+            } else {
+                $html.find(".personal-mytask-content-leftTop").css(({ "background": "", "background-size": "" }));
+                $html.find(".personal-mytask-content-rightTop").css(({ "background": "url(../img/personCenter/taskDone.png)", "background-size": "100%" }));
+
+            }
             $html.find(".title").text(data.title.length > 10 ? data.title.substr(0, 10) + "..." : data.title);
             $html.find(".type img").attr("src", "../img/personCenter/categoryType-" + data.category.catId + ".png");;
             $html.find(".type p").text(data.category.category);
@@ -160,45 +167,84 @@ $(function() {
             /*点击任务item的操作*/
             $("#userTaskWrapper .user-goods-wrapper .personal-mytask-content .personal-mytask-content-body .top .operation").off("click").on("click", function() {
                 //弹出对话框
-                $.actions({
-                    title: "选择操作",
-                    onClose: function() {
-                        console.log("close");
-                    },
-                    actions: [{
-                            text: "发布",
-                            className: "color-primary",
-                            onClick: function() {
-                                $.alert("发布成功");
-                            }
-                        },
-                        {
-                            text: "编辑",
-                            className: "color-warning",
-                            onClick: function() {
-                                $.alert("你选择了“编辑”");
-                            }
-                        },
-                        {
-                            text: "取消",
-                            className: 'color-danger',
-                            onClick: function() {
-                                $.alert("你选择了“取消”");
-                            }
-                        },
-                        {
-                            text: "评论",
-                            className: 'color-danger',
-                            onClick: function() {
-                                $.alert("你选择了“评论”");
-                            }
+                var opertionTaskId = $("#userTaskWrapper .user-goods-wrapper .personal-mytask-content .personal-mytask-content-body").attr("myTask-id");
+                $.get(ServerUrl + "my/myTask", function(datas) {
+                    if (datas.status == Status.Status_OK) {
+                        var taskDatas = datas.data;
+                        for (var i = 0; i < taskDatas.length; i++) {
+                            /*需要将数据传给buildTask()*/
+                            if (taskDatas[i].tid == opertionTaskId) var desTask = i;
                         }
-                    ]
+                        // alert(desTask);
+                        // alert(taskDatas[desTask].recStateId);
+                        if (taskDatas[desTask].recStateId == 4) {
+                            $.actions({
+                                title: "选择操作",
+                                onClose: function() {
+                                    console.log("close");
+                                },
+                                actions: [{
+                                    text: "评论",
+                                    className: 'color-primary',
+                                    onClick: function() {
+                                        $.alert("你选择了“评论”");
+                                    }
+                                }]
+                            });
+                        } else if (taskDatas[desTask].recStateId == 2) {
+                            $.actions({
+                                title: "选择操作",
+                                onClose: function() {
+                                    console.log("close");
+                                },
+                                actions: [{
+                                        text: "编辑",
+                                        className: "color-warning",
+                                        onClick: function() {
+                                            $.alert("你选择了“编辑”");
+                                        }
+                                    },
+                                    {
+                                        text: "取消",
+                                        className: 'color-danger',
+                                        onClick: function() {
+                                            $.alert("你选择了“取消”");
+                                        }
+                                    }
+                                ]
+                            });
+                        } else {
+                            $.actions({
+                                title: "选择操作",
+                                onClose: function() {
+                                    console.log("close");
+                                },
+                                actions: [{
+                                        text: "发布",
+                                        className: "color-primary",
+                                        onClick: function() {
+                                            $.alert("发布成功");
+                                        }
+                                    },
+                                    {
+                                        text: "编辑",
+                                        className: "color-warning",
+                                        onClick: function() {
+                                            $.alert("你选择了“编辑”");
+                                        }
+                                    }
+                                ]
+                            });
+                        }
+                    } else {
+                        $.toast("数据获取错误");
+                    }
                 });
 
                 //防止点击事件冒泡触发
                 stopBubbling(event);
             });
+
         }
 
     });
@@ -215,8 +261,10 @@ $(function() {
                 /*初始化发布列表*/
                 initPublishList(pubDatas);
 
+            } else if (pubDatas.status == Status_NULL_Result) {
+                $.toast("没有任何任务/发布");
             } else {
-                $.toast("数据获取错误");
+                $.toast("数据获取错误/无任务");
             }
         });
 
@@ -298,43 +346,81 @@ $(function() {
                 location.href = "task.html?id=" + pubId;
             });
 
-            /*点击发布item的操作*/
+            /*点击发布item的操作,不同状态的任务，操作内容选项不一样*/
             $("#userPublishWrapper .user-goods-wrapper .personal-mypub-content .personal-mypub-content-body .operation").off("click").on("click", function() {
                 //弹出对话框
-                $.actions({
-                    title: "选择操作",
-                    onClose: function() {
-                        console.log("close");
-                    },
-                    actions: [{
-                            text: "发布",
-                            className: "color-primary",
-                            onClick: function() {
-                                $.alert("发布成功");
-                            }
-                        },
-                        {
-                            text: "编辑",
-                            className: "color-warning",
-                            onClick: function() {
-                                $.alert("你选择了“编辑”");
-                            }
-                        },
-                        {
-                            text: "取消",
-                            className: 'color-danger',
-                            onClick: function() {
-                                $.alert("你选择了“取消”");
-                            }
-                        },
-                        {
-                            text: "评论",
-                            className: 'color-danger',
-                            onClick: function() {
-                                $.alert("你选择了“评论”");
-                            }
+                var opertionPubId = $("#userPublishWrapper .user-goods-wrapper .personal-mypub-content .personal-mypub-content-body").attr("myPub-id");
+                $.get(ServerUrl + "my/myPub", function(datas) {
+                    if (datas.status == Status.Status_OK) {
+                        var pubDatas = datas.data;
+                        for (var i = 0; i < pubDatas.length; i++) {
+                            /*需要将数据传给buildTask()*/
+                            if (pubDatas[i].tid == opertionPubId) {
+                                var desPub = i
+                            };
                         }
-                    ]
+                        if (pubDatas[desPub].pubStateId == 4) {
+                            $.actions({
+                                title: "选择操作",
+                                onClose: function() {
+                                    console.log("close");
+                                },
+                                actions: [{
+                                    text: "评论",
+                                    className: 'color-primary',
+                                    onClick: function() {
+                                        $.alert("你选择了“评论”");
+                                    }
+                                }]
+                            });
+                        } else if (pubDatas[desPub].pubStateId == 2) {
+                            $.actions({
+                                title: "选择操作",
+                                onClose: function() {
+                                    console.log("close");
+                                },
+                                actions: [{
+                                        text: "编辑",
+                                        className: "color-warning",
+                                        onClick: function() {
+                                            $.alert("你选择了“编辑”");
+                                        }
+                                    },
+                                    {
+                                        text: "取消",
+                                        className: 'color-danger',
+                                        onClick: function() {
+                                            $.alert("你选择了“取消”");
+                                        }
+                                    }
+                                ]
+                            });
+                        } else {
+                            $.actions({
+                                title: "选择操作",
+                                onClose: function() {
+                                    console.log("close");
+                                },
+                                actions: [{
+                                        text: "发布",
+                                        className: "color-primary",
+                                        onClick: function() {
+                                            $.alert("发布成功");
+                                        }
+                                    },
+                                    {
+                                        text: "编辑",
+                                        className: "color-warning",
+                                        onClick: function() {
+                                            $.alert("你选择了“编辑”");
+                                        }
+                                    }
+                                ]
+                            });
+                        }
+                    } else {
+                        $.toast("数据获取错误");
+                    }
                 });
 
                 //防止点击事件冒泡触发

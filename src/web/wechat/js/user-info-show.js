@@ -32,11 +32,18 @@ $(function() {
     function showUserInfo(datas) {
         /*初始化界面*/
         // 判断访问页面者的是否为本人
-        if (datas[0].openid == "orLZlwbU27TQl_NPpXPP7cZKHfns") {
-            init_show_data(datas, 1);
-        } else {
-            init_show_data(datas, 0);
-        }
+        $.get(ServerUrl + "my/user", function(mydatas) {
+            if (mydatas.status == Status.Status_OK) {
+                if (datas[0].openid == mydatas.data[0].openid) {
+                    init_show_data(datas, 1);
+                } else {
+                    init_show_data(datas, 0);
+                }
+
+            } else {
+                $.toast("数据获取错误");
+            }
+        });
     };
 
     /*初始化界面*/
@@ -47,7 +54,11 @@ $(function() {
         $("#user-gender").text(datas[0].sex);
         $("#user-address").text(datas[1].province);
         $("#user-school").text(datas[1].schoolName);
-        $("#user-tel").text(datas[0].phone);
+        //本人显示编辑按钮
+        if (isSelf) {
+            $("#user-tel").text(datas[0].phone);
+            $("#user-tel").css("display", "block");
+        }
         //如果用户没有上传学生证，使用默认提示图（也就是不变）
         if (datas[0].card != null) {
             $("#user-card-show img").attr("src", datas[0].card);

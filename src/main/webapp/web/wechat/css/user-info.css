@@ -12,6 +12,10 @@
     border-radius: 50%;
 }
 
+.card_title {
+    margin-top: 5px;
+}
+
 .user-card-show,
 .user-card-edit {
     height: 25%;
