@@ -12,7 +12,7 @@
             <!-- 基本信息及入口 -->
             <div class="personal-main-top-user">
                 <div class="personal-main-top-user-img" user-id="1">
-                    <img src="../img/personCenter/person-img.jpg">
+                    <img src="">
                 </div>
                 <div class="personal-main-top-username">
                     <p name="username" id="user-name">还未填写名字</p>&nbsp;
@@ -52,6 +52,9 @@
                     <i class="weui-loading"></i>
                     <span class="weui-loadmore__tips">正在加载</span>
                 </div>
+                <div id="task-show-no-data" style="display: none">
+                    @@include("common-error-info.html", {"image": "../img/common/no_data.png", "info": "暂时没有数据！"})
+                </div>
             </div>
 
         </div>
@@ -71,6 +74,9 @@
                 <div id="user-publish-load-more" class="weui-loadmore">
                     <i class="weui-loading"></i>
                     <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+                <div id="publish-show-no-data" style="display: none">
+                    @@include("common-error-info.html", {"image": "../img/common/no_data.png", "info": "暂时没有数据！"})
                 </div>
             </div>
         </div>

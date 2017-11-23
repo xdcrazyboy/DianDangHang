@@ -128,7 +128,6 @@ $(function() {
         if (page == 1) {
             $("#task-list").empty();
         }
-
         $("#task-load-more").show();
         $("#show-no-data").hide();
 
@@ -154,7 +153,6 @@ $(function() {
         }, function(data) {
             if (data.status == Status.Status_OK) {
                 var datas = data.data;
-
                 var $goods = $("#task-list");
                 /*刷新*/
                 if (page == 1) $goods.empty();
@@ -187,9 +185,11 @@ $(function() {
     function build(data) {
         /*对data进行处理*/
         var $html = $("#taskData");
-        $html.find(".image img").attr("src", data.pub.headimgurl);
-        $html.find(".money span").text(data.pub.goldCoins);
-        $html.find(".name").text(subString(data.pub.nickname, 3, "..."));
+        if (data.pub.length != 0) { //避免出现用户已注销，任务还在大厅的情况
+            $html.find(".image img").attr("src", data.pub.headimgurl);
+            $html.find(".money span").text(data.pub.goldCoins);
+            $html.find(".name").text(subString(data.pub.nickname, 3, "..."));
+        }
         $html.find(".type").text(data.category.category);
         $html.find(".title").text(subString(data.title, 14, "..."));
         $html.find(".time-content").text(data.pubTime);

@@ -118,7 +118,6 @@ $(function() {
     /*提交表单*/
     function submit_form() {
         $("#user-info-submit").click(function() {
-
             var images = [];
             var rawStr = $("#uploaderFiles li").css("background-image");
             if (!rawStr) {
@@ -245,7 +244,7 @@ $(function() {
                                 /*第一次出现错误*/
                                 if (!had_first_error_flog) {
                                     had_first_error_flog = true;
-                                    $.alert("数据上传出现错误：" + data.status, function() {
+                                    $.alert("数据上传出现错误1：" + data.status, function() {
                                         $.hideLoading();
                                     });
                                 }
@@ -339,7 +338,7 @@ $(function() {
             var count = 1 - $("#uploaderFiles li").size();
             if (count <= 0) return;
             wx.chooseImage({
-                count: count, // 默认9
+                count: 1, // 默认9
                 sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
                 sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
                 success: function(res) {
@@ -384,4 +383,4 @@ $(function() {
     }
 
 
-});
+})

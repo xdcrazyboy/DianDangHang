@@ -58,15 +58,32 @@ $(function() {
         if (isSelf) {
             $("#user-tel").text(datas[0].phone);
             $("#user-tel").css("display", "block");
+            $(".user-edit-btn").css("display", "block");
         }
         //如果用户没有上传学生证，使用默认提示图（也就是不变）
         if (datas[0].card != null) {
             $("#user-card-show img").attr("src", datas[0].card);
+            look_image(items);
         }
-        //本人显示编辑按钮
-        if (isSelf) {
-            $(".user-edit-btn").css("display", "block");
-        }
+    }
+
+    /* 查看图片 */
+    function look_image(items) {
+        /*设置图片浏览*/
+        var look_image = $.photoBrowser({
+            items: items,
+            onSlideChange: function(index) {},
+            onOpen: function() {},
+            onClose: function() {}
+        });
+
+        /*点击图片，进入图片浏览模式*/
+        $("#user-card-show img").click(function() {
+            var index = $(this).index();
+            location.hash = "gallery";
+            look_image.open(index);
+        });
+
     }
 
 

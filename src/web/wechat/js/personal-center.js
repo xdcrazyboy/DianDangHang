@@ -69,8 +69,10 @@ $(function() {
                 $.toast("数据获取成功");
                 /*初始化任务列表*/
                 initTaskList(taskDatas);
-            } else if (pubDatas.status == Status_NULL_Result) {
-                $.toast("没有任何任务/发布");
+            } else if (taskDatas.status == Status.Status_NULL_Result) {
+                $.toast("没有任何任务");
+                $("#user-task-load-more").hide();
+                $("#task-show-no-data").show();
             } else {
                 $.toast("数据获取错误/无任务");
             }
@@ -175,8 +177,6 @@ $(function() {
                             /*需要将数据传给buildTask()*/
                             if (taskDatas[i].tid == opertionTaskId) var desTask = i;
                         }
-                        // alert(desTask);
-                        // alert(taskDatas[desTask].recStateId);
                         if (taskDatas[desTask].recStateId == 4) {
                             $.actions({
                                 title: "选择操作",
@@ -187,7 +187,7 @@ $(function() {
                                     text: "评论",
                                     className: 'color-primary',
                                     onClick: function() {
-                                        $.alert("你选择了“评论”");
+                                        location.href = "comment.html" + taskDatas[i].tid;
                                     }
                                 }]
                             });
@@ -201,7 +201,7 @@ $(function() {
                                         text: "编辑",
                                         className: "color-warning",
                                         onClick: function() {
-                                            $.alert("你选择了“编辑”");
+                                            location.href = "modifyTask.html" + taskDatas[i].tid;;
                                         }
                                     },
                                     {
@@ -261,8 +261,10 @@ $(function() {
                 /*初始化发布列表*/
                 initPublishList(pubDatas);
 
-            } else if (pubDatas.status == Status_NULL_Result) {
-                $.toast("没有任何任务/发布");
+            } else if (pubDatas.status == Status.Status_NULL_Result) {
+                $.toast("没有任何发布");
+                $("#user-publish-load-more").hide();
+                $("#publish-show-no-data").show();
             } else {
                 $.toast("数据获取错误/无任务");
             }
@@ -323,8 +325,9 @@ $(function() {
             var stutusTypes = [
                 { typeId: 0, typeImage: "../img/personCenter/pubWaitDo.png", typeName: "待接手" },
                 { typeId: 1, typeImage: "../img/personCenter/pubDoing.png", typeName: "进行中" },
-                { typeId: 2, typeImage: "../img/personCenter/pubDone.png", typeName: "已完成" },
-                { typeId: 3, typeImage: "../img//personCenter/pubCancel.png", typeName: "已取消" },
+                { typeId: 2, typeImage: "../img//personCenter/pubCancel.png", typeName: "已取消" },
+                { typeId: 3, typeImage: "../img/personCenter/pubDone.png", typeName: "已完成" },
+
             ];
             /*对data进行处理*/
             var $html = $("#userPublishData");
@@ -353,6 +356,7 @@ $(function() {
                 $.get(ServerUrl + "my/myPub", function(datas) {
                     if (datas.status == Status.Status_OK) {
                         var pubDatas = datas.data;
+
                         for (var i = 0; i < pubDatas.length; i++) {
                             /*需要将数据传给buildTask()*/
                             if (pubDatas[i].tid == opertionPubId) {
@@ -369,7 +373,7 @@ $(function() {
                                     text: "评论",
                                     className: 'color-primary',
                                     onClick: function() {
-                                        $.alert("你选择了“评论”");
+                                        location.href = "comment.html?tid=" + pubDatas[desPub].tid;
                                     }
                                 }]
                             });
@@ -383,11 +387,11 @@ $(function() {
                                         text: "编辑",
                                         className: "color-warning",
                                         onClick: function() {
-                                            $.alert("你选择了“编辑”");
+                                            location.href = "modifyTask.htmltid=" + pubDatas[desPub].tid;
                                         }
                                     },
                                     {
-                                        text: "取消",
+                                        text: "取消任务",
                                         className: 'color-danger',
                                         onClick: function() {
                                             $.alert("你选择了“取消”");
@@ -412,7 +416,7 @@ $(function() {
                                         text: "编辑",
                                         className: "color-warning",
                                         onClick: function() {
-                                            $.alert("你选择了“编辑”");
+                                            location.href = "modifyTask.html?tid=" + pubDatas[desPub].tid;
                                         }
                                     }
                                 ]
