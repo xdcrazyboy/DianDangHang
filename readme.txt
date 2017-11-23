@@ -8,7 +8,7 @@
 
 三、使用步骤：
     1.用Git进行Clone:
-        git clone https://github.com/ALISURE/DianDangHang.git
+        git clone https://github.com/xdcrazyboy/DianDangHang
     2.设置gulp
         命令行中输入：
             cnpm install --save-dev gulp
